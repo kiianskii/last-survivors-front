@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./BoardFormModal.module.css";
 
-const BoardFormModal = ({ onSubmit, onClose, initialData = {} }) => {
-  const [title, setTitle] = useState(initialData.title || "");
-  const [icon, setIcon] = useState(initialData.icon || "icon1");
-  const [background, setBackground] = useState(
-    initialData.background || "none"
-  );
+const icons = ["icon1", "icon2", "icon3"];
+const backgrounds = ["none", "background1", "background2"];
+
+const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
+  const [title, setTitle] = useState(initialState.title || "");
+  const [icon, setIcon] = useState(icons[0]);
+  const [background, setBackground] = useState(backgrounds[0]);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (initialState) {
+      setTitle(initialState.title || "");
+      setIcon(initialState.icons);
+      setBackground(initialState.backgrounds);
+    }
+  }, [initialState]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,111 +43,33 @@ const BoardFormModal = ({ onSubmit, onClose, initialData = {} }) => {
       <div className={css.icons}>
         <p className={css.icons_p}>Icons</p>
         <div className={css.icons_btn}>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon1"
-              checked={icon === "icon1"}
-              onChange={() => setIcon("icon1")}
-            />
-            1
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon2"
-              checked={icon === "icon2"}
-              onChange={() => setIcon("icon2")}
-            />
-            2
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon3"
-              checked={icon === "icon3"}
-              onChange={() => setIcon("icon3")}
-            />
-            3
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon4"
-              checked={icon === "icon4"}
-              onChange={() => setIcon("icon4")}
-            />
-            4
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon5"
-              checked={icon === "icon5"}
-              onChange={() => setIcon("icon5")}
-            />
-            5
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon6"
-              checked={icon === "icon6"}
-              onChange={() => setIcon("icon6")}
-            />
-            6
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon7"
-              checked={icon === "icon7"}
-              onChange={() => setIcon("icon7")}
-            />
-            7
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="icon"
-              value="icon8"
-              checked={icon === "icon8"}
-              onChange={() => setIcon("icon8")}
-            />
-            8
-          </label>
+          {icons.map((iconOption) => (
+            <label key={iconOption}>
+              <input
+                type="radio"
+                value={iconOption}
+                checked={icon === iconOption}
+                onChange={(e) => setIcon(e.target.value)}
+              />
+              {iconOption}
+            </label>
+          ))}
         </div>
       </div>
       <div>
         <p className={css.icons_p}>Background</p>
         <div className={css.background}>
-          <label>
-            <input
-              type="radio"
-              name="background"
-              value="none"
-              checked={background === "none"}
-              onChange={() => setBackground("none")}
-            />
-            None
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="background"
-              value="background1"
-              checked={background === "background1"}
-              onChange={() => setBackground("background1")}
-            />
-            Background 1
-          </label>
+          {backgrounds.map((backgroundOption) => (
+            <label key={backgroundOption}>
+              <input
+                type="radio"
+                value={backgroundOption}
+                checked={background === backgroundOption}
+                onChange={(e) => setBackground(e.target.value)}
+              />
+              {backgroundOption}
+            </label>
+          ))}
         </div>
       </div>
       <button
