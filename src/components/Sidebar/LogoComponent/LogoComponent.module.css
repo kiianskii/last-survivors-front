@@ -1,0 +1,16 @@
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 107px 70px 14px;
+  width: 104px;
+  height: 32px;
+}
+
+.pro {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  color: #161616;
+}
