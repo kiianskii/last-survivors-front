@@ -1,5 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+import { cardsReducer } from "./cards/slice";
+
 import {
   persistStore,
   persistReducer,
@@ -25,6 +27,7 @@ const persistedReducer = persistReducer(authPersistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     auth: persistedReducer,
+     cards: cardsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -32,6 +35,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
+
 });
 
 export const persistor = persistStore(store);
