@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 350px;
+  height: 433px;
+  margin: 0 auto;
+
+  border-radius: 8px;
+  background: #fcfcfc;
+  position: fixed;
+  inset: 0;
+  z-index: 289;
+  justify-content: center;
+  padding: 24px;
+}
+
+.new_board {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #161616;
+}
+
+.icons_p {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  margin-bottom: 14px;
+}
+
+.input {
+  display: flex;
+  max-width: 287px;
+  padding: 14px 18px 14px 18px;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid #bedbb0;
+
+  opacity: 0.4;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  margin-bottom: 24px;
+}
+
+.btn_create_cancel {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+
+  display: flex;
+  width: 287px;
+  padding: 10px 0px 11px 0px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  background: #bedbb0;
+}
+
+.btn_close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.icons_btn {
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.background {
+  padding-bottom: 40px;
+}
