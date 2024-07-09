@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const projectApi = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "https://last-survivors-back.onrender.com",
 });
 
 export const setToken = (token) => {
