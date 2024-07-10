@@ -1,12 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+
 import { Suspense } from "react";
 import Layout from "./components/Layout/Layout";
-import RegisterForm from "./components/RegisterForm/RegisterForm";
-import LoginForm from "./components/LoginForm/LoginForm";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 // import ScreensPage from "./pages/ScreensPage/ScreensPage";
+
+
 
 function App() {
   return (
@@ -16,8 +20,8 @@ function App() {
           {/* <Route path="board" element={<ScreensPage />} /> */}
         </Route>
         <Route path="welcome" element={<WelcomePage />} />
-        <Route path="login" element={<LoginForm />} />
-        <Route path="register" element={<RegisterForm />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>
