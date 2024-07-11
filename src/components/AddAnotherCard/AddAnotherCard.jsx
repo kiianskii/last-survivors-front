@@ -1,4 +1,5 @@
 import { useToggle } from "../../hooks/useToggle";
+import AddCardForm from "../AddCardForm/AddCardForm";
 import Modal from "../Modal/Modal";
 
 const AddAnotherCard = () => {
@@ -8,7 +9,11 @@ const AddAnotherCard = () => {
       <button type="button" onClick={openModal}>
         <div>icon</div> <p>Add another card</p>
       </button>
-      {isOpen && <Modal closeModal={closeModal}>form</Modal>}
+      {isOpen && (
+        <Modal title="Add card" closeModal={closeModal}>
+          <AddCardForm closeModal={closeModal} />
+        </Modal>
+      )}
     </>
   );
 };
