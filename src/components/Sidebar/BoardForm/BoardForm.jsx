@@ -7,18 +7,24 @@ import {
   createBoard,
   deleteBoard,
   editBoard,
+  fetchBoards,
 } from "../../../redux/boards/operations";
+import { boardsSelector } from "../../../redux/boards/slice";
 
 function BoardForm() {
-  const { openModal, isOpen, closeModal, initialState } = useToggle();
+  const { openModal, isOpen, closeModal } = useToggle();
   const dispatch = useDispatch();
-  const boards = useSelector((state) => state.boards?.boards || []);
+  const boards = useSelector(boardsSelector);
 
   const handleCreateBoard = (formData) => {
+    console.log(formData);
     dispatch(createBoard(formData));
   };
   const handleEditBoard = (formData) => {
     dispatch(editBoard(formData));
+  };
+  const handleFetchBoards = (formData) => {
+    dispatch(fetchBoards(formData));
   };
   const handleDeleteBoard = (id) => {
     dispatch(deleteBoard(id));
@@ -38,22 +44,24 @@ function BoardForm() {
           <BoardFormModal
             onSubmit={handleCreateBoard}
             onClose={closeModal}
-            initialState={
-              initialState || { title: "", icon: "icon1", background: "none" }
-            }
+            initialState={{ name: "", icon: "icon1", background: "none" }}
           />
         )}
 
         <div>
-          {boards.map((board) => (
-            <div key={board.id} className="board-item">
-              <p>{board.title}</p>
-              <button onClick={() => openEditModal(board)}>Edit</button>
-              <button onClick={() => handleDeleteBoard(board.id)}>
-                Delete
-              </button>
-            </div>
-          ))}
+          {boards && boards.length > 0 ? (
+            boards.map((board) => (
+              <div key={board._id} className="board-item">
+                <p>{board.name}</p>
+                <button onClick={() => openEditModal(board)}>Edit</button>
+                <button onClick={() => handleDeleteBoard(board._id)}>
+                  Delete
+                </button>
+              </div>
+            ))
+          ) : (
+            <p>No boards available</p>
+          )}
         </div>
       </div>
     </>

@@ -1,13 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createBoard, deleteBoard, editBoard, fetchBoards } from "./operations";
+
+const initialState = {
+  boards: [],
+  loading: false,
+  error: null,
+};
+
 const boardsSlice = createSlice({
   name: "boards",
-  initialState: {
-    boards: [],
-    loading: false,
-    error: null,
+  initialState,
+  selectors: {
+    boardsSelector: (state) => state.boards.boards || [],
   },
-  reducers: {},
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchBoards.pending, (state) => {
