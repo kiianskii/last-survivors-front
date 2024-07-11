@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import css from "./BoardFormModal.module.css";
 
-const icons = ["icon1", "icon2", "icon3"];
+const icons = [1, 3, 4];
 const backgrounds = ["none", "background1", "background2"];
 
 const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
   const [name, setTitle] = useState(initialState.name || "");
-  const [icon, setIcon] = useState(icons[0]);
-  const [background, setBackground] = useState(backgrounds);
+  const [icon_id, setIcon] = useState(initialState.icon_id || icons[0]);
+  const [background_url, setBackground] = useState(
+    initialState.background_url || backgrounds
+  );
   const [error, setError] = useState("");
 
   useEffect(() => {
     if (initialState) {
       setTitle(initialState.name || "");
-      setIcon(initialState.icons);
-      setBackground(initialState.backgrounds);
+      setIcon(initialState.icon_id || icons[0]);
+      setBackground(initialState.background_url || backgrounds[0]);
     }
   }, [initialState]);
 
@@ -25,7 +27,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
       return;
     }
     setError("");
-    onSubmit({ name, background, icon });
+    onSubmit({ name, background_url, icon_id });
   };
 
   return (
@@ -48,7 +50,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
               <input
                 type="radio"
                 value={iconOption}
-                checked={icon === iconOption}
+                checked={icon_id == iconOption}
                 onChange={(e) => setIcon(e.target.value)}
               />
               {iconOption}
@@ -64,7 +66,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
               <input
                 type="radio"
                 value={backgroundOption}
-                checked={background === backgroundOption}
+                checked={background_url === backgroundOption}
                 onChange={(e) => setBackground(e.target.value)}
               />
               {backgroundOption}
@@ -72,11 +74,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
           ))}
         </div>
       </div>
-      <button
-        className={css.btn_create_cancel}
-        onSubmit={onSubmit}
-        type="submit"
-      >
+      <button className={css.btn_create_cancel} type="submit">
         Create
       </button>
       <button className={css.btn_close} type="button" onClick={onClose}>
