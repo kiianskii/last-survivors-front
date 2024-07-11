@@ -1,5 +1,11 @@
+import AddAnotherCard from "../../components/AddAnotherCard/AddAnotherCard";
+
 function ScreensPage() {
-  return <div>ScreensPage</div>;
+  return (
+    <>
+      <AddAnotherCard />
+    </>
+  );
 }
 
 export default ScreensPage;

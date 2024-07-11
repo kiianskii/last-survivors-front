@@ -1,7 +1,7 @@
 const CardItem = ({ card }) => {
   return (
     <li>
-      <h3>{card.title}</h3>
+      <h4>{card.title}</h4>
       <p>{card.description}</p>
       <div>
         <div>

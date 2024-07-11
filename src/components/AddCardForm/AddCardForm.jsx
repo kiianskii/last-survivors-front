@@ -1,10 +1,13 @@
 import { Formik, Field, Form } from "formik";
-// import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import SelectDate from "../SelectDate/SelectDate";
+import { addCardThunk } from "../../redux/cards/operations";
 
 const AddCardForm = ({ closeModal }) => {
-  //   const dispatch = useDispatch();
+  const [startDate, setStartDate] = useState(new Date());
+  const dispatch = useDispatch();
   const initialValues = {
     title: "",
     description: "",
@@ -12,15 +15,28 @@ const AddCardForm = ({ closeModal }) => {
     deadline: "",
   };
 
-  const validationSchema = Yup.object.shape({
+  const validationSchema = Yup.object().shape({
     title: Yup.string().required("Title is required field"),
     description: Yup.string().required("Description is required field"),
-    priority: Yup.oneOf(["High", "Medium", "Low", "Without"]).required(),
-    deadline: Yup.date().nullable("Deadline is required field"),
+    priority: Yup.string()
+      .oneOf(["High", "Medium", "Low", "Without"])
+      .required(),
+    deadline: Yup.date().nullable(),
   });
 
   function handleSubmit(data, option) {
-    console.log(data);
+    // console.log(data);
+    const query = {
+      ...data,
+      deadline: startDate.toLocaleDateString("en-us", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      }),
+    };
+    console.log(query);
+    if (query.deadline === null) return;
+    dispatch(addCardThunk(query));
     option.resetForm();
     closeModal();
   }
@@ -43,8 +59,9 @@ const AddCardForm = ({ closeModal }) => {
         </label>
         <div>
           <p>Deadline</p>
-          <SelectDate />
+          <SelectDate startDate={startDate} setStartDate={setStartDate} />
         </div>
+        <button type="submit">Add</button>
       </Form>
     </Formik>
   );
