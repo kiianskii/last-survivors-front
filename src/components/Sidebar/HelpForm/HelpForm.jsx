@@ -17,7 +17,7 @@ const HelpForm = () => {
         check out our support resources or reach out to our customer support
         team.
       </p>
-      <button className={css.help_link} onClick={openModal}>
+      <button className={css.help_link}>
         <svg className={css.help_icon} width="20px" height="20px">
           <use href={sprite + "#icon-help"}></use>
         </svg>
