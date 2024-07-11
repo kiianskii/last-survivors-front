@@ -15,7 +15,15 @@
   width: 76px;
   height: 42px;
 }
-
+.create_p {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  width: 88px;
+  height: 21px;
+  padding: 20px 0;
+}
 .create_board {
   display: flex;
   align-items: center;
@@ -23,4 +31,34 @@
   width: 197px;
   height: 70px;
   padding: 0 0 40px 0;
+}
+
+.board_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 225px;
+  height: 61px;
+  background-color: #f6f6f7;
+}
+
+.button_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  width: 40px;
+  height: 16px;
+  padding: 23px 18px 23px 0;
+}
+.button_e {
+  border: none;
+  background: transparent;
+}
+
+.pen_icon {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(22, 22, 22, 0.5);
+  fill: none;
 }
