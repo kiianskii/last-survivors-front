@@ -1,0 +1,100 @@
+.container {
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0) 25%,
+    #bedbb0 92.19%
+  );
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #161616;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  width: 335px;
+  margin: 0 auto 48px auto;
+}
+
+.task {
+  color: #161616;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.12px;
+  margin-bottom: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.linkContainer {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 0;
+  width: 335px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.link {
+  color: #161616;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.linkContainer:hover,
+.linkContainer:focus-within {
+  background: #161616;
+}
+
+.linkContainer:hover .link,
+.linkContainer:focus-within .link {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .task {
+    color: #161616;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1.6px;
+  }
+
+  .title {
+    width: 473px;
+  }
+  .linkContainer {
+    width: 344px;
+  }
+}
+@media screen and (min-width: 1280px) {
+}
