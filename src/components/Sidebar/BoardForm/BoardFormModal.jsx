@@ -5,14 +5,14 @@ const icons = ["icon1", "icon2", "icon3"];
 const backgrounds = ["none", "background1", "background2"];
 
 const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
-  const [title, setTitle] = useState(initialState.title || "");
+  const [name, setTitle] = useState(initialState.name || "");
   const [icon, setIcon] = useState(icons[0]);
-  const [background, setBackground] = useState(backgrounds[0]);
+  const [background, setBackground] = useState(backgrounds);
   const [error, setError] = useState("");
 
   useEffect(() => {
     if (initialState) {
-      setTitle(initialState.title || "");
+      setTitle(initialState.name || "");
       setIcon(initialState.icons);
       setBackground(initialState.backgrounds);
     }
@@ -20,12 +20,12 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title) {
+    if (!name) {
       setError("Title is required");
       return;
     }
     setError("");
-    onSubmit({ title, icon, background });
+    onSubmit({ name, background, icon });
   };
 
   return (
@@ -35,7 +35,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
         <input
           className={css.input}
           type="text"
-          value={title}
+          value={name}
           onChange={(e) => setTitle(e.target.value)}
         />
         {error && <span>{error}</span>}
