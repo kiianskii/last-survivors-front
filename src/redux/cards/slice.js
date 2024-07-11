@@ -16,7 +16,7 @@ const slice = createSlice({
   name: "cards",
   initialState,
   selectors: {
-    cardsSelector: (state) => state.cards,
+    selectCards: (state) => state.cards,
   },
   extraReducers: (builder) => {
     builder
