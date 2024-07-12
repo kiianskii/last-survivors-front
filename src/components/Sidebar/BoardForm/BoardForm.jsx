@@ -11,6 +11,7 @@ import {
 import { boardsSelector } from "../../../redux/boards/slice";
 
 import sprite from "../../../icons/sprite.svg";
+import { Icon } from "../../../icons/Icon";
 
 function BoardForm() {
   const { openModal, isOpen, closeModal } = useToggle();
@@ -39,14 +40,16 @@ function BoardForm() {
       <h1 className={css.boards}>My boards</h1>
       <div className={css.create_board}>
         <p className={css.create}>Create a new board</p>
-        <button onClick={openModal}>+</button>
+        <button onClick={openModal} className={css.button_plus}>
+          <Icon size={20} id="plus" className={css.plus} />
+        </button>
         {isOpen && (
           <BoardFormModal
             onSubmit={handleCreateBoard}
             onClose={closeModal}
             initialState={{
               name: "",
-              icon_id: 1,
+              icon_name: "icon1",
               background_url: "none",
             }}
           />
@@ -56,16 +59,16 @@ function BoardForm() {
       {boards && boards.length > 0 ? (
         boards.map((board) => (
           <div key={board._id} className={css.board_item}>
-            <p className={css.create_p}>ic{board.name}</p>
+            <Icon size={18} id={board.icon_name} className={css.icons} />
+            <p className={css.create_p}>{board.name}</p>
+
             <ul className={css.button_icon}>
               <li>
                 <button
                   className={css.button_e}
                   onClick={() => openEditModal(board)}
                 >
-                  <svg className={css.pen_icon} width="16px" height="16px">
-                    <use href={sprite + "#icon-pencil"}></use>
-                  </svg>
+                  <Icon size={16} id="pencil" className={css.pen_icon} />
                 </button>
               </li>
 
@@ -74,9 +77,7 @@ function BoardForm() {
                   className={css.button_e}
                   onClick={() => handleDeleteBoard(board._id)}
                 >
-                  <svg className={css.pen_icon} width="16px" height="16px">
-                    <use href={sprite + "#icon-trash"}></use>
-                  </svg>
+                  <Icon size={16} id="trash" className={css.pen_icon} />
                 </button>
               </li>
             </ul>

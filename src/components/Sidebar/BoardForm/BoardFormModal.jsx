@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import css from "./BoardFormModal.module.css";
+import { icons } from "../hooks/iconsImages";
+import { Icon } from "../../../icons/Icon";
 
-const icons = [1, 3, 4];
 const backgrounds = ["none", "background1", "background2"];
 
 const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
   const [name, setTitle] = useState(initialState.name || "");
-  const [icon_id, setIcon] = useState(initialState.icon_id || icons[0]);
+  const [icon_name, setIcon] = useState(initialState.icon_name || icons[0]);
   const [background_url, setBackground] = useState(
     initialState.background_url || backgrounds
   );
@@ -15,7 +16,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
   useEffect(() => {
     if (initialState) {
       setTitle(initialState.name || "");
-      setIcon(initialState.icon_id || icons[0]);
+      setIcon(initialState.icon_name || icons[0]);
       setBackground(initialState.background_url || backgrounds[0]);
     }
   }, [initialState]);
@@ -27,7 +28,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
       return;
     }
     setError("");
-    onSubmit({ name, background_url, icon_id });
+    onSubmit({ name, background_url, icon_name });
   };
 
   return (
@@ -46,15 +47,15 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
         <p className={css.icons_p}>Icons</p>
         <div className={css.icons_btn}>
           {icons.map((iconOption) => (
-            <label key={iconOption}>
-              <input
-                type="radio"
-                value={iconOption}
-                checked={icon_id == iconOption}
-                onChange={(e) => setIcon(e.target.value)}
+            <div key={iconOption} onClick={() => setIcon(iconOption)}>
+              <Icon
+                size={18}
+                id={iconOption}
+                className={`${css.icon} ${
+                  icon_name === iconOption ? css.selected : ""
+                }`}
               />
-              {iconOption}
-            </label>
+            </div>
           ))}
         </div>
       </div>
@@ -75,6 +76,7 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {} }) => {
         </div>
       </div>
       <button className={css.btn_create_cancel} type="submit">
+        <Icon size={14} id="plus" className={css.plus} />
         Create
       </button>
       <button className={css.btn_close} type="button" onClick={onClose}>
