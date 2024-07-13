@@ -4,6 +4,7 @@ import { deleteCardThunk } from "../../redux/cards/operations";
 
 const CardItem = ({ card }) => {
   const dispatch = useDispatch();
+
   return (
     <li>
       <h4>{card.title}</h4>
@@ -35,20 +36,7 @@ const CardItem = ({ card }) => {
             <button
               type="button"
               onClick={() => {
-                const payload = {
-                  _id: card._id,
-                  column_id: card.column_id,
-                  board_id: card.board_id,
-                };
-
-                console.log(payload);
-                dispatch(
-                  deleteCardThunk({
-                    _id: card._id,
-                    column_id: card.column_id,
-                    board_id: card.board_id,
-                  })
-                );
+                dispatch(deleteCardThunk({ id: card._id }));
               }}
             >
               <Icon size={16} id={"trash"} />
