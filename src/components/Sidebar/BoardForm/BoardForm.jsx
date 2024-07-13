@@ -7,16 +7,22 @@ import {
   createBoard,
   deleteBoard,
   editBoard,
+  fetchBoards,
 } from "../../../redux/boards/operations";
 import { boardsSelector } from "../../../redux/boards/slice";
 
-import sprite from "../../../icons/sprite.svg";
 import { Icon } from "../../../icons/Icon";
+import { useEffect, useState } from "react";
 
 function BoardForm() {
   const { openModal, isOpen, closeModal } = useToggle();
   const dispatch = useDispatch();
   const boards = useSelector(boardsSelector);
+  const [editingBoard, setEditingBoard] = useState(null);
+
+  useEffect(() => {
+    dispatch(fetchBoards());
+  }, [dispatch]);
 
   const handleCreateBoard = (formData) => {
     dispatch(createBoard(formData));
@@ -31,8 +37,7 @@ function BoardForm() {
     dispatch(deleteBoard(id));
   };
   const openEditModal = (board) => {
-    openModal();
-    handleEditBoard(board);
+    setEditingBoard(board), openModal();
   };
 
   return (
@@ -40,18 +45,30 @@ function BoardForm() {
       <h1 className={css.boards}>My boards</h1>
       <div className={css.create_board}>
         <p className={css.create}>Create a new board</p>
-        <button onClick={openModal} className={css.button_plus}>
+        <button
+          onClick={() => {
+            setEditingBoard(null);
+            openModal();
+          }}
+          className={css.button_plus}
+        >
           <Icon size={20} id="plus" className={css.plus} />
         </button>
         {isOpen && (
           <BoardFormModal
-            onSubmit={handleCreateBoard}
-            onClose={closeModal}
-            initialState={{
-              name: "",
-              icon_name: "icon1",
-              background_url: "none",
+            onSubmit={editingBoard ? handleEditBoard : handleCreateBoard}
+            onClose={() => {
+              closeModal();
+              setEditingBoard(null);
             }}
+            initialState={
+              editingBoard || {
+                name: "",
+                icon_name: "icon1",
+                background_url: "none",
+              }
+            }
+            title={editingBoard ? "Edit Board" : "Create Board"}
           />
         )}
       </div>

@@ -29,7 +29,7 @@ export const editBoard = createAsyncThunk(
   "boards/edit-board",
   async ({ _id, boardsData }, thunkApi) => {
     try {
-      const { data } = await projectApi.put(`/api/board/${_id}`, boardsData);
+      const { data } = await projectApi.patch(`/api/board/${_id}`, boardsData);
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
