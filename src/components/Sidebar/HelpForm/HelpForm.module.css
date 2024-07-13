@@ -3,11 +3,15 @@
   background-color: #f6f6f7;
   margin: 0 0 24px;
   padding: 14px;
+  margin-top: 116px;
 
   /* @media screen and (min-width: 768px) {
     width: 212px;
     padding: 20px;
   } */
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+  }
 }
 
 .kaktus {

@@ -7,16 +7,22 @@ import {
   createBoard,
   deleteBoard,
   editBoard,
+  fetchBoards,
 } from "../../../redux/boards/operations";
 import { boardsSelector } from "../../../redux/boards/slice";
 
-import sprite from "../../../icons/sprite.svg";
 import { Icon } from "../../../icons/Icon";
+import { useEffect, useState } from "react";
 
 function BoardForm() {
   const { openModal, isOpen, closeModal } = useToggle();
   const dispatch = useDispatch();
   const boards = useSelector(boardsSelector);
+  const [editingBoard, setEditingBoard] = useState(null);
+
+  useEffect(() => {
+    dispatch(fetchBoards());
+  }, [dispatch]);
 
   const handleCreateBoard = (formData) => {
     dispatch(createBoard(formData));
@@ -31,27 +37,38 @@ function BoardForm() {
     dispatch(deleteBoard(id));
   };
   const openEditModal = (board) => {
-    openModal();
-    handleEditBoard(board);
+    setEditingBoard(board), openModal();
   };
 
   return (
     <>
-      <h1 className={css.boards}>My boards</h1>
+      <h1 className={css.my_boards}>My boards</h1>
       <div className={css.create_board}>
-        <p className={css.create}>Create a new board</p>
-        <button onClick={openModal} className={css.button_plus}>
+        <p className={css.text_create}>Create a new board</p>
+        <button
+          onClick={() => {
+            setEditingBoard(null);
+            openModal();
+          }}
+          className={css.button_plus}
+        >
           <Icon size={20} id="plus" className={css.plus} />
         </button>
         {isOpen && (
           <BoardFormModal
-            onSubmit={handleCreateBoard}
-            onClose={closeModal}
-            initialState={{
-              name: "",
-              icon_name: "icon1",
-              background_url: "none",
+            onSubmit={editingBoard ? handleEditBoard : handleCreateBoard}
+            onClose={() => {
+              closeModal();
+              setEditingBoard(null);
             }}
+            initialState={
+              editingBoard || {
+                name: "",
+                icon_name: "icon1",
+                background_url: "none",
+              }
+            }
+            title={editingBoard ? "Edit Board" : "Create Board"}
           />
         )}
       </div>
@@ -60,7 +77,7 @@ function BoardForm() {
         boards.map((board) => (
           <div key={board._id} className={css.board_item}>
             <Icon size={18} id={board.icon_name} className={css.icons} />
-            <p className={css.create_p}>{board.name}</p>
+            <p className={css.board_name}>{board.name}</p>
 
             <ul className={css.button_icon}>
               <li>
