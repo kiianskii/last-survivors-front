@@ -33,7 +33,6 @@ const slice = createSlice({
         state.error = payload;
       })
       .addCase(deleteCardThunk.fulfilled, (state, { payload }) => {
-        console.log(payload);
         state.cards = state.cards.filter((card) => card._id !== payload._id);
       })
       .addCase(deleteCardThunk.rejected, (state, { payload }) => {
