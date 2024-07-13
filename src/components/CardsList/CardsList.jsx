@@ -4,6 +4,7 @@ import CardItem from "../CardItem/CardItem";
 
 const CardsList = () => {
   const cards = useSelector(selectCards);
+  console.log(cards);
   return (
     <ul>
       {cards.map((card) => {

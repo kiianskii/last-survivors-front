@@ -28,11 +28,16 @@ const AddCardForm = ({ closeModal }) => {
     // console.log(data);
     const query = {
       ...data,
-      deadline: startDate.toLocaleDateString("en-us", {
-        weekday: "long",
-        month: "long",
-        day: "numeric",
-      }),
+      deadline: startDate
+        .toLocaleDateString("uk-UA", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        })
+        .split(".")
+        .join("/"),
+      board_id: "66924e509e77e436cbb8a1fc",
+      column_id: "66924e7b9e77e436cbb8a1ff",
     };
     console.log(query);
     if (query.deadline === null) return;
