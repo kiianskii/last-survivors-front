@@ -45,6 +45,7 @@
 }
 
 .btn_create_cancel {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
@@ -73,4 +74,20 @@
 
 .background {
   padding-bottom: 40px;
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  stroke: rgba(22, 22, 22, 0.5);
+  fill: none;
+}
+
+.icon.selected {
+  stroke: #bedbb0;
+}
+
+.plus {
+  stroke: rgba(255, 255, 255, 1);
 }

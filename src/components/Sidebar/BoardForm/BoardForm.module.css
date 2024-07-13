@@ -62,3 +62,25 @@
   stroke: rgba(22, 22, 22, 0.5);
   fill: none;
 }
+
+.plus {
+  stroke: rgba(18, 18, 18, 1);
+}
+
+.button_plus {
+  display: flex;
+  border-radius: 6px;
+  background: #bedbb0;
+  width: 40px;
+  height: 36px;
+  padding: 8px 10px 8px 10px;
+}
+
+.icons {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  stroke: rgba(22, 22, 22, 1);
+  fill: none;
+  padding: 22px 0;
+}
