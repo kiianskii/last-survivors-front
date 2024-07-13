@@ -42,9 +42,9 @@ function BoardForm() {
 
   return (
     <>
-      <h1 className={css.boards}>My boards</h1>
+      <h1 className={css.my_boards}>My boards</h1>
       <div className={css.create_board}>
-        <p className={css.create}>Create a new board</p>
+        <p className={css.text_create}>Create a new board</p>
         <button
           onClick={() => {
             setEditingBoard(null);
@@ -77,7 +77,7 @@ function BoardForm() {
         boards.map((board) => (
           <div key={board._id} className={css.board_item}>
             <Icon size={18} id={board.icon_name} className={css.icons} />
-            <p className={css.create_p}>{board.name}</p>
+            <p className={css.board_name}>{board.name}</p>
 
             <ul className={css.button_icon}>
               <li>

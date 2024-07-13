@@ -39,24 +39,27 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {}, title }) => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <div className={css.form_create_modal}>
-        <p className={css.new_board}>
-          {" "}
-          {title === "Edit Board" ? "Edit board" : "Create board"}
-        </p>
-        <input
-          className={css.input}
-          type="text"
-          value={name}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        {error && <span>{error}</span>}
-      </div>
+      <p className={css.new_board}>
+        {title === "Edit Board" ? "Edit board" : "New board"}
+      </p>
+      <input
+        className={css.input}
+        type="text"
+        value={name}
+        placeholder="Title"
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      {error && <span>{error}</span>}
+
       <div className={css.icons}>
         <p className={css.icons_p}>Icons</p>
-        <div className={css.icons_btn}>
+        <ul className={css.icons_btn}>
           {icons.map((iconOption) => (
-            <div key={iconOption} onClick={() => setIcon(iconOption)}>
+            <li
+              key={iconOption}
+              onClick={() => setIcon(iconOption)}
+              className={css.ul_icons}
+            >
               <Icon
                 size={18}
                 id={iconOption}
@@ -64,9 +67,9 @@ const BoardFormModal = ({ onSubmit, onClose, initialState = {}, title }) => {
                   icon_name === iconOption ? css.selected : ""
                 }`}
               />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div>
         <p className={css.icons_p}>Background</p>

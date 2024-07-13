@@ -11,7 +11,6 @@
   position: fixed;
   inset: 0;
   z-index: 289;
-  justify-content: center;
   padding: 24px;
 }
 
@@ -20,6 +19,7 @@
   font-size: 18px;
   letter-spacing: -0.02em;
   color: #161616;
+  margin-bottom: 24px;
 }
 
 .icons_p {
@@ -32,16 +32,15 @@
 
 .input {
   display: flex;
-  max-width: 287px;
-  padding: 14px 18px 14px 18px;
-  align-items: center;
-
   border-radius: 8px;
   border: 1px solid #bedbb0;
 
   opacity: 0.4;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   margin-bottom: 24px;
+  max-width: 302px;
+  padding: 14px 256px 14px 18px;
+  align-items: center;
 }
 
 .btn_create_cancel {
@@ -69,7 +68,6 @@
 
 .icons_btn {
   display: flex;
-  padding-bottom: 24px;
 }
 
 .background {
@@ -90,4 +88,9 @@
 
 .plus {
   stroke: rgba(255, 255, 255, 1);
+}
+
+.ul_icons {
+  display: flex;
+  gap: 8px;
 }
