@@ -1,5 +1,6 @@
 .wrapper {
   position: fixed;
+
   inset: 0;
   display: flex;
   justify-content: center;
@@ -10,6 +11,8 @@
 .content {
   position: relative;
   background-color: white;
+  width: 350px;
+  height: 522px;
   padding: 20px;
   overflow: hidden;
   max-width: 1000px;

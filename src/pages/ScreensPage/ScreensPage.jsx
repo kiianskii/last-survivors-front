@@ -1,5 +1,13 @@
+import AddAnotherCard from "../../components/AddAnotherCard/AddAnotherCard";
+import CardsList from "../../components/CardsList/CardsList";
+
 function ScreensPage() {
-  return <div>ScreensPage</div>;
+  return (
+    <>
+      <CardsList />
+      <AddAnotherCard />
+    </>
+  );
 }
 
 export default ScreensPage;

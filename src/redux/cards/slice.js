@@ -33,7 +33,8 @@ const slice = createSlice({
         state.error = payload;
       })
       .addCase(deleteCardThunk.fulfilled, (state, { payload }) => {
-        state.cards = state.cards.filter((card) => card._id !== payload);
+        console.log(payload);
+        state.cards = state.cards.filter((card) => card._id !== payload._id);
       })
       .addCase(deleteCardThunk.rejected, (state, { payload }) => {
         state.error = payload;
@@ -53,4 +54,4 @@ const slice = createSlice({
 });
 
 export const cardsReducer = slice.reducer;
-export const { cardsSelector } = slice.selectors;
+export const { selectCards } = slice.selectors;
