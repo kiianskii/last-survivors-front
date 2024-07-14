@@ -1,4 +1,3 @@
-import "modern-normalize/modern-normalize.css";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
