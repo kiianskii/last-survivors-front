@@ -4,42 +4,88 @@
 .input {
   width: 287px;
   height: 49px;
-  box-sizing: border-box;
   border: 1px solid rgb(190, 219, 176);
   border-radius: 8px;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   opacity: 0.4;
   padding: 14px 0 14px 18px;
+  margin-bottom: 14px;
+  /* color: rgb(22, 22, 22);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em; */
+  &::placeholder {
+    color: rgb(22, 22, 22);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+  &:focus-visible {
+    outline: 1px solid rgb(190, 219, 176);
+  }
 }
 
 .textarea {
+  width: 287px;
+  height: 154px;
+  border: 1px solid rgb(190, 219, 176);
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  opacity: 0.4;
+  resize: none;
+  margin-bottom: 24px;
+  padding: 14px 0 14px 18px;
+  &::placeholder {
+    color: rgb(22, 22, 22);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+  }
+  &:focus-visible {
+    outline: 1px solid rgb(190, 219, 176);
+  }
 }
 
 .label {
+  color: rgba(22, 22, 22, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  width: 80px;
+  margin-bottom: 14px;
+}
+
+.label_box {
+  display: flex;
+  column-gap: 8px;
 }
 
 .deadline_box {
+  margin-bottom: 40px;
 }
 
-.without {
-  background-color: rgba(22, 22, 22, 0.3);
-}
-
-.high {
-  background-color: rgb(190, 219, 176);
-}
-
-.medium {
-  background-color: rgb(224, 156, 181);
-}
-
-.low {
-  background-color: rgb(143, 161, 208);
+.deadline_text {
+  color: rgba(22, 22, 22, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-bottom: 4px;
 }
 
 .add_btn {
-  width: 335px;
-  height: 56px;
+  width: 287px;
+  height: 49px;
   border-radius: 8px;
   background-color: rgb(190, 219, 176);
   display: flex;
