@@ -1,6 +1,5 @@
 .wrapper {
   position: fixed;
-
   inset: 0;
   display: flex;
   justify-content: center;
@@ -11,9 +10,8 @@
 .content {
   position: relative;
   background-color: white;
-  width: 350px;
-  height: 522px;
-  padding: 20px;
+  width: 335px;
+  padding: 24px;
   overflow: hidden;
   max-width: 1000px;
   border-radius: 5px;
@@ -23,10 +21,26 @@
 }
 .closeBtn {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 14px;
+  right: 14px;
   background-color: transparent;
   border: none;
-  font-size: 20px;
   cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.icon_close {
+  stroke: rgb(22, 22, 22);
+  border: 1px dashed rgba(22, 22, 22, 0.5);
+}
+
+.title {
+  color: rgb(22, 22, 22);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -2%;
+  margin-bottom: 24px;
 }

@@ -1,0 +1,80 @@
+.radio_input {
+  display: none;
+}
+
+/* Кастомний стиль для радіо-кнопки */
+.radio_custom {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio_input:checked + .low {
+  background-color: rgb(143, 161, 208);
+}
+.radio_input:checked + .medium {
+  background-color: rgb(224, 156, 181);
+}
+.radio_input:checked + .high {
+  background-color: rgb(190, 219, 176);
+}
+.radio_input:checked + .without {
+  background-color: rgba(22, 22, 22, 0.3);
+}
+
+.radio_custom::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.radio_input:checked + .radio_custom::after {
+  opacity: 1;
+}
+
+.without {
+  background-color: rgba(22, 22, 22, 0.3);
+  &::after {
+    background-color: rgba(22, 22, 22, 0.3);
+    padding: 3px;
+    border: 3px solid #fff;
+  }
+}
+
+.high {
+  background-color: rgb(190, 219, 176);
+  &::after {
+    background-color: rgb(190, 219, 176);
+    padding: 3px;
+    border: 3px solid #fff;
+  }
+}
+
+.medium {
+  background-color: rgb(224, 156, 181);
+  &::after {
+    background-color: rgb(224, 156, 181);
+    padding: 3px;
+    border: 3px solid #fff;
+  }
+}
+
+.low {
+  background-color: rgb(143, 161, 208);
+  &::after {
+    background-color: rgb(143, 161, 208);
+    padding: 3px;
+    border: 3px solid #fff;
+  }
+}
