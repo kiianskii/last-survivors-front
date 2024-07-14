@@ -1,4 +1,5 @@
 import AddAnotherCard from "../../components/AddAnotherCard/AddAnotherCard";
+import AddColumnBtn from "../../components/AddColumnBtn/AddColumnBtn";
 import CardsList from "../../components/CardsList/CardsList";
 
 function ScreensPage() {
@@ -6,6 +7,7 @@ function ScreensPage() {
     <>
       <CardsList />
       <AddAnotherCard />
+      <AddColumnBtn />
     </>
   );
 }

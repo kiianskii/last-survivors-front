@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import s from "./WelcomePage.module.css";
 
@@ -8,7 +7,7 @@ function WelcomePage() {
       <h1 className={s.task}>Task Pro</h1>
       <p className={s.title}>
         Supercharge your productivity and take control of your tasks with Task
-        Pro - Don't wait, start achieving your goals now!
+        Pro - Don&apos;t wait, start achieving your goals now!
       </p>
       <ul>
         <li>
