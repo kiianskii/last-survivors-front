@@ -8,11 +8,11 @@ const AddAnotherCard = () => {
   const { openModal, closeModal, isOpen } = useToggle();
   return (
     <>
-      <button type="button" onClick={openModal}>
-        <div>
+      <button type="button" onClick={openModal} className={css.add_btn}>
+        <div className={css.icon_wrapper}>
           <Icon size={14} id="plus" className={css.icon} />
         </div>
-        <p>Add another card</p>
+        <p className={css.btn_text}>Add another card</p>
       </button>
       {isOpen && (
         <Modal title="Add card" closeModal={closeModal}>

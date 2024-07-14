@@ -6,6 +6,14 @@ import clsx from "clsx";
 
 const CardItem = ({ card }) => {
   const dispatch = useDispatch();
+  const today = new Date()
+    .toLocaleDateString("uk-UA", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+    .split(".")
+    .join("/");
 
   return (
     <li
@@ -42,10 +50,20 @@ const CardItem = ({ card }) => {
           </div>
         </div>
         <ul className={css.icons_list}>
-          <li></li>
+          {card.deadline === today ? (
+            <li className={css.icon_bell_wrapper}>
+              <Icon size={16} id={"bell"} className={css.icon_bell} />
+            </li>
+          ) : (
+            ""
+          )}
           <li className={css.icon_list_item}>
             <button className={css.icon_btn} type="button">
-              <Icon size={16} id={"done"} className={css.icon} />
+              <Icon
+                size={16}
+                id={"done"}
+                className={`${css.icon} ${css.icon_border}`}
+              />
             </button>
           </li>
           <li className={css.icon_list_item}>
@@ -61,7 +79,11 @@ const CardItem = ({ card }) => {
                 dispatch(deleteCardThunk({ id: card._id }));
               }}
             >
-              <Icon size={16} id={"trash"} className={css.icon} />
+              <Icon
+                size={16}
+                id={"trash"}
+                className={`${css.icon} ${css.icon_border}`}
+              />
             </button>
           </li>
         </ul>
