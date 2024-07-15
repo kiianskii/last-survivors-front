@@ -5,13 +5,17 @@ import {
   logInThunk,
   logOutThunk,
   themeThunk,
+  editUserThunk,
+  editAvatarThunk,
 } from "./operations";
 
 const initialState = {
   user: {
+    id: "",
     name: "",
     email: "",
     theme: "",
+    avatarURL: "",
   },
   token: "",
   isLoggedIn: false,
@@ -22,24 +26,28 @@ const slice = createSlice({
   name: "auth",
   initialState,
   selectors: {
+    selectId: (state) => state.user.id,
     selectToken: (state) => state.token,
     selectUser: (state) => state.user,
     selectIsLoggedIn: (state) => state.isLoggedIn,
     selectIsRefreshing: (state) => state.isRefreshing,
+    selectAvatar: (state) => state.user.avatarURL,
   },
   extraReducers: (builder) => {
     builder
       .addCase(registerThunk.fulfilled, (state, { payload }) => {
-        state.user.name = payload.username;
-        state.user.email = payload.email;
-        state.user.theme = payload.theme;
+        state.user.id = payload.user.id;
+        state.user.name = payload.user.username;
+        state.user.email = payload.user.email;
+        state.user.theme = payload.user.theme;
         state.token = payload.token;
         state.isLoggedIn = true;
       })
       .addCase(logInThunk.fulfilled, (state, { payload }) => {
-        state.user.name = payload.username;
-        state.user.email = payload.email;
-        state.user.theme = payload.theme;
+        state.user.id = payload.user.id;
+        state.user.name = payload.user.username;
+        state.user.email = payload.user.email;
+        state.user.theme = payload.user.theme;
         state.token = payload.token;
         state.isLoggedIn = true;
       })
@@ -47,6 +55,7 @@ const slice = createSlice({
         return initialState;
       })
       .addCase(refreshThunk.fulfilled, (state, { payload }) => {
+        state.user.id = payload.id;
         state.user.theme = payload.theme;
         state.user.name = payload.username;
         state.user.email = payload.email;
@@ -61,10 +70,25 @@ const slice = createSlice({
       })
       .addCase(refreshThunk.rejected, (state) => {
         state.isRefreshing = false;
+      })
+      .addCase(editUserThunk.fulfilled, (state, { payload }) => {
+        state.user.theme = payload.theme;
+        state.user.name = payload.username;
+        state.user.email = payload.email;
+      })
+      .addCase(editAvatarThunk.fulfilled, (state, { payload }) => {
+        state.user.avatarURL = payload;
       });
   },
 });
 
 export const authReducer = slice.reducer;
-export const { selectToken, selectIsLoggedIn, selectUser, selectIsRefreshing } =
-  slice.selectors;
+export const {
+  selectToken,
+  selectIsLoggedIn,
+  selectUser,
+  selectIsRefreshing,
+  selectId,
+  selectAvatar,
+} = slice.selectors;
+

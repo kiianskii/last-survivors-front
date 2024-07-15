@@ -1,0 +1,46 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+.content {
+  position: relative;
+  background-color: white;
+  width: 335px;
+  padding: 24px;
+  overflow: hidden;
+  max-width: 1000px;
+  border-radius: 5px;
+  h1 {
+    font-size: 2rem;
+  }
+}
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.icon_close {
+  stroke: rgb(22, 22, 22);
+  border: 1px dashed rgba(22, 22, 22, 0.5);
+}
+
+.title {
+  color: rgb(22, 22, 22);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -2%;
+  margin-bottom: 24px;
+}

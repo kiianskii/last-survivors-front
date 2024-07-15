@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { cardsApi } from "../../../config/cardsApi";
+import { projectApi } from "../../config/projectAPI";
 
 export const getCardsThunk = createAsyncThunk(
   "cards/get-cards",
   async (_, thunkApi) => {
     try {
-      const { data } = await cardsApi.get("/api/cards");
+      const { data } = await projectApi.get("/api/cards");
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
@@ -17,7 +17,7 @@ export const addCardThunk = createAsyncThunk(
   "cards/add-card",
   async (cardsData, thunkApi) => {
     try {
-      const { data } = await cardsApi.post("/api/cards", cardsData);
+      const { data } = await projectApi.post("/api/cards", cardsData);
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
@@ -29,7 +29,7 @@ export const editCardThunk = createAsyncThunk(
   "cards/edit-card",
   async ({ _id, cardsData }, thunkApi) => {
     try {
-      const { data } = await cardsApi.put(`/api/cards/${_id}`, cardsData);
+      const { data } = await projectApi.put(`/api/cards/${_id}`, cardsData);
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
@@ -39,10 +39,11 @@ export const editCardThunk = createAsyncThunk(
 
 export const deleteCardThunk = createAsyncThunk(
   "cards/delete-card",
-  async (_id, thunkApi) => {
+  async ({ id }, thunkApi) => {
+    console.log(id);
     try {
-      await cardsApi.delete(`/api/cards/${_id}`);
-      return _id;
+      const { data } = await projectApi.delete(`/api/cards/${id}`);
+      return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
     }

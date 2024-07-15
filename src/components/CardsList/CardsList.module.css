@@ -1,0 +1,23 @@
+.card_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  overflow-y: auto;
+  margin-bottom: 14px;
+  max-height: 478px;
+}
+
+.card_list::-webkit-scrollbar {
+  width: 8px;
+  height: 142px;
+}
+
+.card_list::-webkit-scrollbar-track {
+  background-color: rgb(232, 232, 232);
+  border-radius: 12px;
+}
+
+.card_list::-webkit-scrollbar-thumb {
+  background-color: rgba(22, 22, 22, 0.1);
+  border-radius: 12px;
+}

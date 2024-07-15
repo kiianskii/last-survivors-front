@@ -1,0 +1,15 @@
+.calendar {
+  color: rgb(190, 219, 176);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -2%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  height: 21px;
+  &:focus-visible {
+    outline: none;
+  }
+}

@@ -1,0 +1,18 @@
+.logout_wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logout_icon {
+  stroke: #bedbb0;
+  fill: transparent;
+}
+
+.logout_text {
+  color: #161616;
+  font-size: 14px;
+  font-weight: 500;
+}

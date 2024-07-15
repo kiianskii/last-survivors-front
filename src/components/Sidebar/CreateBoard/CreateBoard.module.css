@@ -1,0 +1,57 @@
+.my_boards {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: rgba(22, 22, 22, 0.5);
+  padding: 0 137px 0 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 150px 0 0;
+  }
+}
+
+.text_create {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  width: 76px;
+  height: 42px;
+  line-height: normal;
+  margin: 14px 0;
+}
+.board_name {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  width: 88px;
+  height: 21px;
+  padding: 20px 0;
+}
+.create_board {
+  display: flex;
+  justify-content: space-between;
+  width: 197px;
+  height: 70px;
+  padding: 0;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.1);
+  border-top: 2px solid rgba(22, 22, 22, 0.1);
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 212px;
+  }
+}
+.plus {
+  stroke: rgba(18, 18, 18, 1);
+}
+.button_plus {
+  display: flex;
+  border-radius: 6px;
+  background: #bedbb0;
+  width: 40px;
+  height: 36px;
+  padding: 8px 10px 8px 10px;
+  margin: 14px 0;
+}
