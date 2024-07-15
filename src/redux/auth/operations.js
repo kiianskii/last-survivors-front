@@ -83,3 +83,16 @@ export const editUserThunk = createAsyncThunk(
     }
   }
 );
+
+export const editAvatarThunk = createAsyncThunk(
+  "user/editAvatar",
+  async (credentials, thunkApi) => {
+    try {
+      const { data } = await projectApi.patch(`/api/avatar/`, credentials);
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
