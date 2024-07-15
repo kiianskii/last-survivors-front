@@ -5,10 +5,12 @@ import {
   logInThunk,
   logOutThunk,
   themeThunk,
+  editUserThunk,
 } from "./operations";
 
 const initialState = {
   user: {
+    id: "",
     name: "",
     email: "",
     theme: "",
@@ -22,6 +24,7 @@ const slice = createSlice({
   name: "auth",
   initialState,
   selectors: {
+    selectId: (state) => state.id,
     selectToken: (state) => state.token,
     selectUser: (state) => state.user,
     selectIsLoggedIn: (state) => state.isLoggedIn,
@@ -30,6 +33,7 @@ const slice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(registerThunk.fulfilled, (state, { payload }) => {
+        state.user.id = payload.id;
         state.user.name = payload.username;
         state.user.email = payload.email;
         state.user.theme = payload.theme;
@@ -37,6 +41,7 @@ const slice = createSlice({
         state.isLoggedIn = true;
       })
       .addCase(logInThunk.fulfilled, (state, { payload }) => {
+        state.user.id = payload.id;
         state.user.name = payload.username;
         state.user.email = payload.email;
         state.user.theme = payload.theme;
@@ -47,6 +52,7 @@ const slice = createSlice({
         return initialState;
       })
       .addCase(refreshThunk.fulfilled, (state, { payload }) => {
+        state.user.id = payload.id;
         state.user.theme = payload.theme;
         state.user.name = payload.username;
         state.user.email = payload.email;
@@ -61,10 +67,20 @@ const slice = createSlice({
       })
       .addCase(refreshThunk.rejected, (state) => {
         state.isRefreshing = false;
+      })
+      .addCase(editUserThunk.fulfilled, (state, { payload }) => {
+        state.user.theme = payload.theme;
+        state.user.name = payload.username;
+        state.user.email = payload.email;
       });
   },
 });
 
 export const authReducer = slice.reducer;
-export const { selectToken, selectIsLoggedIn, selectUser, selectIsRefreshing } =
-  slice.selectors;
+export const {
+  selectToken,
+  selectIsLoggedIn,
+  selectUser,
+  selectIsRefreshing,
+  selectId,
+} = slice.selectors;

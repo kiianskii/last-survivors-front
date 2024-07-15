@@ -62,10 +62,22 @@ export const refreshThunk = createAsyncThunk(
 
 export const themeThunk = createAsyncThunk(
   "auth/change-theme",
-  async (id, thunkApi) => {
+  async ({ id, credentials }, thunkApi) => {
     try {
-      const { data } = await projectApi.post(`/api/auth/${id}/theme`);
+      const { data } = await projectApi.patch(`/api/user/${id}`, credentials);
       return data.theme;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const editUserThunk = createAsyncThunk(
+  "user/edit",
+  async ({ id, credentials }, thunkApi) => {
+    try {
+      const { data } = await projectApi.patch(`/api/user/${id}`, credentials);
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }
