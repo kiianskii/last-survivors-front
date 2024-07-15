@@ -1,0 +1,47 @@
+.avatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .avatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .fileInput {
+    display: none;
+   
+  }
+  
+  .uploadButton {
+    background: #BEDBB0;
+    border: none;
+    border-radius: 20%;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  .icon{
+    stroke: black;
+  }
+  .uploadButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
