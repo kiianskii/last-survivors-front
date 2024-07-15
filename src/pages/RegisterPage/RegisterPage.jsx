@@ -1,6 +1,3 @@
-
-
-import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { registerThunk, logInThunk } from "../../redux/auth/operations";
@@ -19,7 +16,9 @@ export default function RegisterPage() {
 
     try {
       await dispatch(registerThunk(info));
-      await dispatch(logInThunk({ email: data.email, password: data.password }));
+      await dispatch(
+        logInThunk({ email: data.email, password: data.password })
+      );
       navigate("/");
     } catch (error) {
       console.error("Error:", error);
@@ -41,4 +40,3 @@ export default function RegisterPage() {
     />
   );
 }
-
