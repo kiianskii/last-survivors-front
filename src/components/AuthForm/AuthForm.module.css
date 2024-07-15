@@ -78,6 +78,8 @@ body {
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   margin: 0 24px;
   padding-left: 18px;
+  width: 287px;
+  color: #fff;
 }
 .field::placeholder {
   color: #fff;
@@ -88,7 +90,10 @@ body {
   line-height: normal;
   letter-spacing: -0.28px;
 }
-
+.field:focus {
+  outline: none;
+  color: #fff;
+}
 .button {
   display: flex;
   width: 287px;
@@ -106,6 +111,38 @@ body {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+}
+.user_error,
+.email_error,
+.password_error {
+  color: rgb(243, 10, 10);
+  font-size: 10px;
+  font-weight: 100;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 45px;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.togglePassword {
+  background: none;
+  stroke: #ffffff;
+  opacity: 0.4;
+  position: absolute;
+  right: 35px;
+  top: 54%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+.passwordField {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,6 +211,7 @@ body {
     box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
     margin: 0 40px;
     padding-left: 18px;
+    width: 344px;
   }
   .field::placeholder {
     color: #fff;
@@ -202,6 +240,17 @@ body {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.28px;
+  }
+  .togglePassword {
+    background: none;
+    stroke: #ffffff;
+    opacity: 0.4;
+    position: absolute;
+    right: 60px;
+    top: 54%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
   }
 }
 @media screen and (min-width: 1280px) {
