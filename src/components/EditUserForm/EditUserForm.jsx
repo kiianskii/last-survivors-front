@@ -7,6 +7,7 @@ import s from "./EditUserForm.module.css";
 import { useSelector } from "react-redux";
 import { selectId, selectUser } from "../../redux/auth/authSlice";
 import { editUserThunk } from "../../redux/auth/operations";
+import EditAvatar from "./EditAvatar";
 
 const EditUserForm = ({ closeModal }) => {
   const dispatch = useDispatch();
@@ -41,35 +42,38 @@ const EditUserForm = ({ closeModal }) => {
   }
 
   return (
-    <Formik
-      onSubmit={handleSubmit}
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-    >
-      <Form className={s.form}>
-        <Field
-          className={s.field}
-          type="text"
-          name="username"
-          placeholder="Enter your name"
-        />
-        <Field
-          className={s.field}
-          type="text"
-          name="email"
-          autoComplete="username"
-        />
-        <Field
-          className={s.field}
-          type="password"
-          name="password"
-          autoComplete="current-password"
-        />
-        <button type="submit" className={s.button}>
-          Send
-        </button>
-      </Form>
-    </Formik>
+    <>
+      <EditAvatar />
+      <Formik
+        onSubmit={handleSubmit}
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+      >
+        <Form className={s.form}>
+          <Field
+            className={s.field}
+            type="text"
+            name="username"
+            placeholder="Enter your name"
+          />
+          <Field
+            className={s.field}
+            type="text"
+            name="email"
+            autoComplete="username"
+          />
+          <Field
+            className={s.field}
+            type="password"
+            name="password"
+            autoComplete="current-password"
+          />
+          <button type="submit" className={s.button}>
+            Send
+          </button>
+        </Form>
+      </Formik>
+    </>
   );
 };
 
