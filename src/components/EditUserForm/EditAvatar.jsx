@@ -1,8 +1,5 @@
-
-
-
-import React, { useState } from 'react';
-import { Icon } from "../../icons/Icon"; 
+import { useState } from "react";
+import { Icon } from "../../icons/Icon";
 import s from "./EditAvatar.module.css";
 
 function EditAvatar() {
@@ -36,11 +33,10 @@ function EditAvatar() {
         className={s.fileInput}
       />
       <label htmlFor="imageUpload" className={s.uploadButton}>
-        <Icon size={10} id="plus" className={s.icon}/> 
+        <Icon size={10} id="plus" className={s.icon} />
       </label>
     </div>
   );
 }
 
 export default EditAvatar;
-
