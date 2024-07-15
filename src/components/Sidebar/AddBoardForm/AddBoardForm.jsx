@@ -1,25 +1,23 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
-import CreateBoard from "../CreateBoard/CreateBoard.jsx";
+
 import * as Yup from "yup";
 import css from "./AddBoardForm.module.css";
-import { icons } from "../hooks/iconsImages.js";
+import { icons, backgrounds } from "../hooks/iconsImages.js";
 import { Icon } from "../../../icons/Icon.jsx";
 import { useState } from "react";
+import { createBoard } from "../../../redux/boards/operations.js";
 
-const backgrounds = ["bg1", "bg2", "bg3", "bg4", "bg5"];
-const AddBoardForm = ({ closeModal, initialState = {} }) => {
-  const [icon_name, setIcon] = useState(initialState.icon_name || icons[0]);
-  const [background_url, setBackground] = useState(
-    initialState.background_url || backgrounds
-  );
+const AddBoardForm = ({ closeModal }) => {
+  const [icon_name, setIcon] = useState(icons[0].id);
+  const [background_url, setBackground] = useState(backgrounds[0]);
 
   const dispatch = useDispatch();
 
   const initialValues = {
     name: "",
-    icon_name: "" || icons[0],
-    background_url: "" || backgrounds[0],
+    icon_name: icons[0].id,
+    background_url: backgrounds[0],
   };
 
   const validationSchema = Yup.object().shape({
@@ -30,12 +28,13 @@ const AddBoardForm = ({ closeModal, initialState = {} }) => {
   const handleSubmit = (data, option) => {
     const query = {
       ...data,
-      board_id: "",
+      icon_name,
+      background_url,
     };
     console.log(query);
     option.resetForm();
     closeModal();
-    dispatch(CreateBoard(query));
+    dispatch(createBoard(query));
   };
 
   return (
