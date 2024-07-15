@@ -15,7 +15,7 @@ const EditUserForm = ({ closeModal }) => {
   const userId = useSelector(selectId);
 
   const initialValues = {
-    username: user.username,
+    username: user.name,
     email: user.email,
     password: "",
   };
@@ -50,12 +50,7 @@ const EditUserForm = ({ closeModal }) => {
         validationSchema={validationSchema}
       >
         <Form className={s.form}>
-          <Field
-            className={s.field}
-            type="text"
-            name="username"
-            placeholder="Enter your name"
-          />
+          <Field className={s.field} type="text" name="username" />
           <Field
             className={s.field}
             type="text"
