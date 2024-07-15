@@ -1,10 +1,10 @@
 export const icons = [
-  "icon1",
-  "icon2",
-  "icon3",
-  "icon4",
-  "icon5",
-  "icon6",
-  "icon7",
-  "icon8",
+  { id: "icon1" },
+  { id: "icon2" },
+  { id: "icon3" },
+  { id: "icon4" },
+  { id: "icon5" },
+  { id: "icon6" },
+  { id: "icon7" },
+  { id: "icon8" },
 ];
