@@ -3,6 +3,9 @@ import { Icon } from "../../icons/Icon";
 import { deleteCardThunk } from "../../redux/cards/operations";
 import css from "./CardItem.module.css";
 import clsx from "clsx";
+import { useToggle } from "../../hooks/useToggle";
+import EditCardForm from "../EditCardForm/EditCardForm";
+import Modal from "../Modal/Modal";
 
 const CardItem = ({ card }) => {
   const dispatch = useDispatch();
@@ -14,6 +17,8 @@ const CardItem = ({ card }) => {
     })
     .split(".")
     .join("/");
+
+  const { openModal, closeModal, isOpen } = useToggle();
 
   return (
     <li
@@ -67,9 +72,14 @@ const CardItem = ({ card }) => {
             </button>
           </li>
           <li className={css.icon_list_item}>
-            <button className={css.icon_btn} type="button">
+            <button className={css.icon_btn} type="button" onClick={openModal}>
               <Icon size={16} id={"pencil"} className={css.icon} />
             </button>
+            {isOpen && (
+              <Modal title="Edit card" closeModal={closeModal}>
+                <EditCardForm closeModal={closeModal} card={card} />
+              </Modal>
+            )}
           </li>
           <li className={css.icon_list_item}>
             <button

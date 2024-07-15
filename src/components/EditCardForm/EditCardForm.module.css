@@ -1,0 +1,119 @@
+.form {
+}
+
+.input {
+  width: 287px;
+  height: 49px;
+  border: 1px solid rgb(190, 219, 176);
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  opacity: 0.4;
+  padding: 14px 0 14px 18px;
+  margin-bottom: 14px;
+  /* color: rgb(22, 22, 22);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em; */
+  &::placeholder {
+    color: rgb(22, 22, 22);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+  &:focus-visible {
+    outline: 1px solid rgb(190, 219, 176);
+  }
+}
+
+.textarea {
+  width: 287px;
+  height: 154px;
+  border: 1px solid rgb(190, 219, 176);
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  opacity: 0.4;
+  resize: none;
+  margin-bottom: 24px;
+  padding: 14px 0 14px 18px;
+  &::placeholder {
+    color: rgb(22, 22, 22);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+  }
+  &:focus-visible {
+    outline: 1px solid rgb(190, 219, 176);
+  }
+}
+
+.label {
+  color: rgba(22, 22, 22, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  width: 80px;
+  margin-bottom: 14px;
+}
+
+.label_box {
+  display: flex;
+  column-gap: 8px;
+}
+
+.deadline_box {
+  margin-bottom: 40px;
+}
+
+.deadline_text {
+  color: rgba(22, 22, 22, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-bottom: 4px;
+}
+
+.add_btn {
+  width: 287px;
+  height: 49px;
+  border-radius: 8px;
+  background-color: rgb(190, 219, 176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(22, 22, 22);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -2%;
+  column-gap: 8px;
+  &:hover {
+    background-color: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
+}
+
+.icon_wrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgb(22, 22, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  stroke: #fff;
+}
