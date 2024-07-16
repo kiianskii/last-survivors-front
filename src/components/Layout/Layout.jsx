@@ -1,7 +1,7 @@
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
-import ScreensPage from "../../pages/ScreensPage/ScreensPage";
+// import ScreensPage from "../../pages/ScreensPage/ScreensPage";
 
 function Layout() {
   return (
@@ -9,8 +9,8 @@ function Layout() {
       <Header />
 
       <Sidebar />
-      {/* <Outlet /> */}
-      <ScreensPage />
+      <Outlet />
+      {/* <ScreensPage /> */}
     </div>
   );
 }
