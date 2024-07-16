@@ -15,6 +15,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import { authReducer } from "./auth/authSlice";
 import { boardsReducer } from "./boards/slice";
+import { columnsReducer } from "./boardByID/slice";
 
 const authPersistConfig = {
   key: "auth",
@@ -30,6 +31,7 @@ export const store = configureStore({
     auth: persistedReducer,
     cards: cardsReducer,
     boards: boardsReducer,
+    columnsByBoard: columnsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
