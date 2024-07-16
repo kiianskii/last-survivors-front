@@ -3,8 +3,7 @@
   font-size: 12px;
   letter-spacing: -0.02em;
   color: rgba(22, 22, 22, 0.5);
-  padding: 0 137px 0 0;
-
+  padding: 0 133px 0 0;
   @media screen and (min-width: 768px) {
     padding: 0 150px 0 0;
   }
@@ -36,7 +35,7 @@
   height: 70px;
   padding: 0;
   border-bottom: 1px solid rgba(22, 22, 22, 0.1);
-  border-top: 2px solid rgba(22, 22, 22, 0.1);
+  border-top: 1px solid rgba(22, 22, 22, 0.1);
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {

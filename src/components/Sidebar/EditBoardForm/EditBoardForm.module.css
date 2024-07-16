@@ -6,7 +6,7 @@
   opacity: 0.4;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   margin-bottom: 24px;
-  width: 287px;
+  max-width: 302px;
   padding: 14px 18px;
   align-items: center;
 }

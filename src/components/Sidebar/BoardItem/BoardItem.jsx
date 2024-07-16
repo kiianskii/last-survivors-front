@@ -8,6 +8,7 @@ import { useToggle } from "../../../hooks/useToggle";
 
 const BoardItem = ({ board }) => {
   const { openModal, isOpen, closeModal } = useToggle();
+
   const dispatch = useDispatch();
   return (
     <div className={css.board_item}>
@@ -19,7 +20,7 @@ const BoardItem = ({ board }) => {
             <Icon size={16} id="pencil" className={css.pen_icon} />
           </button>
           {isOpen && (
-            <Modal title="Edit card" closeModal={closeModal}>
+            <Modal title="Edit board" closeModal={closeModal}>
               <EditBoardForm closeModal={closeModal} board={board} />
             </Modal>
           )}
