@@ -10,8 +10,9 @@ const BoardItem = ({ board }) => {
   const { openModal, isOpen, closeModal } = useToggle();
   const dispatch = useDispatch();
   return (
-    <div>
-      <h1>{board.name}</h1>
+    <div className={css.board_item}>
+      <Icon size={18} id={board.icon_name} className={css.icons} />
+      <h1 className={css.board_name}>{board.name}</h1>
       <ul className={css.button_icon}>
         <li>
           <button className={css.button_e} type="button" onClick={openModal}>
@@ -26,6 +27,7 @@ const BoardItem = ({ board }) => {
 
         <li>
           <button
+            type="button"
             className={css.button_e}
             onClick={() => dispatch(deleteBoard({ id: board._id }))}
           >

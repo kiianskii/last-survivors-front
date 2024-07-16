@@ -2,6 +2,7 @@ import { useToggle } from "../../../hooks/useToggle";
 import { Icon } from "../../../icons/Icon";
 import Modal from "../../Modal/Modal";
 import AddBoardForm from "../AddBoardForm/AddBoardForm";
+import BoardList from "../BoardList/BoardList";
 import css from "./CreateBoard.module.css";
 
 const CreateBoard = () => {
@@ -20,6 +21,7 @@ const CreateBoard = () => {
           </Modal>
         )}
       </div>
+      <BoardList />
     </>
   );
 };

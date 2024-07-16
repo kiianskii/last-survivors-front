@@ -7,17 +7,18 @@ import { icons, backgrounds } from "../hooks/iconsImages.js";
 import { Icon } from "../../../icons/Icon.jsx";
 import { useState } from "react";
 import { createBoard } from "../../../redux/boards/operations.js";
+import BackgroundImage from "../hooks/BackgroundImage.jsx";
 
 const AddBoardForm = ({ closeModal }) => {
   const [icon_name, setIcon] = useState(icons[0].id);
-  const [background_url, setBackground] = useState(backgrounds[0]);
+  const [background_url, setBackground] = useState(backgrounds[0].class);
 
   const dispatch = useDispatch();
 
   const initialValues = {
     name: "",
     icon_name: icons[0].id,
-    background_url: backgrounds[0],
+    background_url: backgrounds[0].class,
   };
 
   const validationSchema = Yup.object().shape({
@@ -53,7 +54,7 @@ const AddBoardForm = ({ closeModal }) => {
 
         <p className={css.icons_p}>Icons</p>
         {icons.map((iconOption) => (
-          <label key={iconOption.id} className={css.radioLabel}>
+          <label key={iconOption.id}>
             <input
               type="radio"
               name="icon_name"
@@ -64,7 +65,7 @@ const AddBoardForm = ({ closeModal }) => {
               }}
             />
             <Icon
-              size={24}
+              size={26}
               id={iconOption.id}
               className={`${css.icon} ${
                 icon_name === iconOption.id ? css.selected : ""
@@ -72,19 +73,35 @@ const AddBoardForm = ({ closeModal }) => {
             />
           </label>
         ))}
-        <p>Backgrounds</p>
-        {backgrounds.map((backgroundOption) => (
-          <label key={backgroundOption}>
-            <input
-              type="radio"
-              value={backgroundOption}
-              checked={background_url === backgroundOption}
-              onChange={(e) => setBackground(e.target.value)}
-            />
-            {backgroundOption}
-          </label>
-        ))}
-        <button type="submit">Create</button>
+        <p className={css.icons_p}>Background</p>
+        <div className={css.backgrounds_div}>
+          {backgrounds.map((backgroundOption) => (
+            <label key={backgroundOption.id} className={css.label}>
+              <input
+                type="radio"
+                value={backgroundOption.class}
+                checked={background_url === backgroundOption.id}
+                onChange={(e) => {
+                  setBackground(e.target.value);
+                }}
+              />
+              <BackgroundImage
+                url={backgroundOption.id}
+                size={28}
+                className={`${css.background} ${
+                  background_url === backgroundOption.id ? css.selected : ""
+                }`}
+              />
+            </label>
+          ))}
+        </div>
+
+        <button type="submit" className={css.btn_create}>
+          <div className={css.icon_wrapper}>
+            <Icon size={14} id="plus" className={css.plus} />
+          </div>
+          Create
+        </button>
       </Form>
     </Formik>
   );
