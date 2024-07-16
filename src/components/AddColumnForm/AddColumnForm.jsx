@@ -1,8 +1,12 @@
 import { Field, Form, Formik } from "formik";
 import css from "./AddColumnForm.module.css";
 import * as Yup from "yup";
+// import { useDispatch } from "react-redux";
+// import { addColumnThunk } from "../../redux/boardByID/operations";
 
 function AddColumnForm({ closeModal }) {
+  // const dispatch = useDispatch();
+
   const initialValues = {
     title: "",
   };
@@ -12,6 +16,7 @@ function AddColumnForm({ closeModal }) {
   });
 
   const handleSubmit = (data, option) => {
+    // dispatch(addColumnThunk());
     option.resetForm();
     closeModal();
   };

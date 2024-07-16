@@ -1,10 +1,10 @@
 import { Icon } from "../../icons/Icon";
 import css from "./ColumnItem.module.css";
 
-function ColumnItem() {
+function ColumnItem({ title }) {
   return (
     <div className={css.column_wrapper}>
-      <h2>ColumnItem</h2>
+      <h2>{title}</h2>
       <ul>
         <li className={css.icon_list_item}>
           <button className={css.icon_btn} type="button">
