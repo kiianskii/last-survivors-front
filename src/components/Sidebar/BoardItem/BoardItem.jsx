@@ -29,7 +29,7 @@ const BoardItem = ({ board }) => {
           <button
             type="button"
             className={css.button_e}
-            onClick={() => dispatch(deleteBoard({ id: board._id }))}
+            onClick={() => dispatch(deleteBoard({ _id: board._id }))}
           >
             <Icon size={16} id="trash" className={css.pen_icon} />
           </button>
