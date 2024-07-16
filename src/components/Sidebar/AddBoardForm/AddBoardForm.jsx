@@ -22,9 +22,9 @@ const AddBoardForm = ({ closeModal }) => {
   };
 
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Title is required field"),
-    icon_name: Yup.string().required("Icon is required"),
-    background_url: Yup.string().required("Background is required"),
+    name: Yup.string(),
+    icon_name: Yup.string(),
+    background_url: Yup.string(),
   });
   const handleSubmit = (data, option) => {
     const query = {
