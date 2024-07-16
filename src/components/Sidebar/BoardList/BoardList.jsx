@@ -5,11 +5,11 @@ import BoardItem from "../BoardItem/BoardItem";
 const BoardList = () => {
   const boards = useSelector(boardsSelector);
   return (
-    <ul>
+    <div>
       {boards.map((board) => {
         return <BoardItem key={board._id} board={board} />;
       })}
-    </ul>
+    </div>
   );
 };
 export default BoardList;

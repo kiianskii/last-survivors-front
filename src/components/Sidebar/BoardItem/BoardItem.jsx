@@ -5,14 +5,18 @@ import { deleteBoard } from "../../../redux/boards/operations";
 import Modal from "../../Modal/Modal";
 import EditBoardForm from "../EditBoardForm/EditBoardForm";
 import { useToggle } from "../../../hooks/useToggle";
+import { NavLink } from "react-router-dom";
 
 const BoardItem = ({ board }) => {
   const { openModal, isOpen, closeModal } = useToggle();
   const dispatch = useDispatch();
   return (
-    <div className={css.board_item}>
+    <li className={css.board_item}>
       <Icon size={18} id={board.icon_name} className={css.icons} />
-      <h1 className={css.board_name}>{board.name}</h1>
+      <NavLink to={`/${board._id}`}>
+        <h1 className={css.board_name}>{board.name}</h1>
+      </NavLink>
+
       <ul className={css.button_icon}>
         <li>
           <button className={css.button_e} type="button" onClick={openModal}>
@@ -35,7 +39,7 @@ const BoardItem = ({ board }) => {
           </button>
         </li>
       </ul>
-    </div>
+    </li>
   );
 };
 export default BoardItem;
