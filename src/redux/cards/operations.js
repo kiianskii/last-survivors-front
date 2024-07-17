@@ -18,6 +18,7 @@ export const addCardThunk = createAsyncThunk(
   async (cardsData, thunkApi) => {
     try {
       const { data } = await projectApi.post("/api/cards", cardsData);
+
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);

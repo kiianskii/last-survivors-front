@@ -28,7 +28,11 @@ const columnsSlice = createSlice({
         state.columns = payload;
       })
       .addCase(addColumnThunk.fulfilled, (state, { payload }) => {
-        state.columns.push(payload);
+        const info = {
+          ...payload,
+          cards: [],
+        };
+        state.columns.push(info);
       })
       .addCase(deleteColumnThunk.fulfilled, (state, { payload }) => {
         state.columns = state.columns.filter(
