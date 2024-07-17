@@ -7,15 +7,17 @@ const SelectDate = ({ startDate, setStartDate }) => {
   const today = new Date();
 
   return (
-    <DatePicker
-      showIcon
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      dateFormat="eeee MMMM, d"
-      className={css.calendar}
-      icon={<Icon size={18} id="arrow-down" className={css.icon} />}
-      minDate={today}
-    />
+    <label>
+      <DatePicker
+        showIcon
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="eeee MMMM, d"
+        className={css.calendar}
+        icon={<Icon size={18} id="arrow-down" className={css.icon} />}
+        minDate={today}
+      />
+    </label>
   );
 };
 
