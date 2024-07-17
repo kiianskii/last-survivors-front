@@ -40,7 +40,6 @@ export const editCardThunk = createAsyncThunk(
 export const deleteCardThunk = createAsyncThunk(
   "cards/delete-card",
   async ({ id }, thunkApi) => {
-    console.log(id);
     try {
       const { data } = await projectApi.delete(`/api/cards/${id}`);
       return data;

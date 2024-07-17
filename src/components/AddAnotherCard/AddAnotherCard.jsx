@@ -4,7 +4,7 @@ import AddCardForm from "../AddCardForm/AddCardForm";
 import Modal from "../Modal/Modal";
 import css from "./AddAnotherCard.module.css";
 
-const AddAnotherCard = () => {
+const AddAnotherCard = ({ column }) => {
   const { openModal, closeModal, isOpen } = useToggle();
   return (
     <>
@@ -16,7 +16,7 @@ const AddAnotherCard = () => {
       </button>
       {isOpen && (
         <Modal title="Add card" closeModal={closeModal}>
-          <AddCardForm closeModal={closeModal} />
+          <AddCardForm closeModal={closeModal} column={column} />
         </Modal>
       )}
     </>
