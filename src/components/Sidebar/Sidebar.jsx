@@ -7,9 +7,9 @@ import LogOut from "./LogOut.jsx/LogOut";
 import LogoComponent from "./LogoComponent/LogoComponent";
 import css from "./Sidebar.module.css";
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   return (
-    <div className={css.sidebar}>
+    <div className={`${css.sidebar} ${isOpen ? css.open : ""}`}>
       <LogoComponent />
       <CreateBoard />
       <HelpForm />
