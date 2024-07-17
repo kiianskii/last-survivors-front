@@ -99,3 +99,7 @@ img {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.active {
+  background-color: #f6f6f7;
+}
