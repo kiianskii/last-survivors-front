@@ -39,7 +39,7 @@ export const editBoard = createAsyncThunk(
 
 export const deleteBoard = createAsyncThunk(
   "boards/delete-board",
-  async (_id, thunkApi) => {
+  async ({ _id }, thunkApi) => {
     try {
       await projectApi.delete(`/api/board/${_id}`);
       return _id;

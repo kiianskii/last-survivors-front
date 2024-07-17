@@ -11,22 +11,41 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ScreensPage from "./pages/ScreensPage/ScreensPage";
 import { useDispatch } from "react-redux";
 import { refreshThunk } from "./redux/auth/operations";
+import { fetchBoards } from "./redux/boards/operations";
+import { PrivateRoute } from "./routes/PrivateRoute";
+import { RestrictedRoute } from "./routes/RestrictedRoute";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(refreshThunk());
+    dispatch(fetchBoards());
   }, [dispatch]);
+
   return (
     <Suspense fallback={<h1>Loading</h1>}>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="board" element={<ScreensPage />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute redirectTo="/welcome" component={<Layout />} />
+          }
+        >
+          <Route path="/:boardId" element={<ScreensPage />}></Route>
         </Route>
-        <Route path="welcome" element={<WelcomePage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="register" element={<RegisterPage />} />
+        <Route
+          path="welcome"
+          element={<RestrictedRoute component={<WelcomePage />} />}
+        />
+        <Route
+          path="login"
+          element={<RestrictedRoute component={<LoginPage />} />}
+        />
+        <Route
+          path="register"
+          element={<RestrictedRoute component={<RegisterPage />} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>

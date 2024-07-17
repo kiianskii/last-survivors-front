@@ -3,8 +3,7 @@
   font-size: 12px;
   letter-spacing: -0.02em;
   color: rgba(22, 22, 22, 0.5);
-  padding: 0 137px 0 0;
-
+  padding: 0 133px 0 0;
   @media screen and (min-width: 768px) {
     padding: 0 150px 0 0;
   }
@@ -36,38 +35,16 @@
   height: 70px;
   padding: 0;
   border-bottom: 1px solid rgba(22, 22, 22, 0.1);
-  border-top: 2px solid rgba(22, 22, 22, 0.1);
+  border-top: 1px solid rgba(22, 22, 22, 0.1);
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     width: 212px;
   }
 }
-
-.board_item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 225px;
-  height: 61px;
-  @media screen and (min-width: 768px) {
-    width: 260px;
-  }
+.plus {
+  stroke: rgba(18, 18, 18, 1);
 }
-
-.button_icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 40px;
-  height: 16px;
-  padding: 23px 18px 23px 0;
-}
-.button_e {
-  border: none;
-  background: transparent;
-}
-
 .button_plus {
   display: flex;
   border-radius: 6px;
@@ -76,24 +53,4 @@
   height: 36px;
   padding: 8px 10px 8px 10px;
   margin: 14px 0;
-}
-
-/* icons style */
-.icons {
-  display: inline-block;
-  cursor: pointer;
-  padding: 5px;
-  stroke: rgba(22, 22, 22, 1);
-  fill: none;
-  padding: 22px 0 22px 7px;
-}
-.pen_icon {
-  width: 16px;
-  height: 16px;
-  stroke: rgba(22, 22, 22, 0.5);
-  fill: none;
-}
-
-.plus {
-  stroke: rgba(18, 18, 18, 1);
 }

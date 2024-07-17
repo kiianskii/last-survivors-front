@@ -1,0 +1,82 @@
+.input {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #bedbb0;
+
+  opacity: 0.4;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  margin-bottom: 24px;
+  width: 287px;
+  padding: 14px 18px;
+  align-items: center;
+}
+.icons_p {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  margin-bottom: 14px;
+}
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  stroke: rgba(22, 22, 22, 0.5);
+  fill: none;
+}
+
+.icon.selected {
+  stroke: #bedbb0;
+}
+input[type="radio"] {
+  display: none;
+}
+.icon_wrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgb(22, 22, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus {
+  stroke: #fff;
+}
+
+.btn_create {
+  width: 287px;
+  height: 49px;
+  border-radius: 8px;
+  background-color: rgb(190, 219, 176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(22, 22, 22);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  column-gap: 8px;
+  &:hover {
+    background-color: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
+}
+
+.backgrounds_div {
+  display: inline-flex;
+  cursor: pointer;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.background {
+  border-radius: 8px;
+}
+
+.label {
+  cursor: pointer;
+}

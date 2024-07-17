@@ -1,0 +1,54 @@
+.board_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* width: 212px; */
+  height: 61px;
+  padding: 0 16px;
+  @media screen and (min-width: 768px) {
+    width: 260px;
+  }
+}
+.board_name {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  width: 88px;
+  height: 21px;
+  padding: 20px 0;
+}
+.button_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 23px 0;
+
+  margin-left: 35px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 54px;
+  }
+}
+.button_e {
+  border: none;
+  background: transparent;
+}
+/* icons style */
+.icons {
+  display: inline-block;
+  cursor: pointer;
+  stroke: rgba(22, 22, 22, 1);
+  fill: none;
+  margin: 22px 8px 22px;
+}
+.pen_icon {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(22, 22, 22, 0.5);
+  fill: none;
+}
+
+.plus {
+  stroke: rgba(18, 18, 18, 1);
+}

@@ -6,6 +6,7 @@ import {
   logOutThunk,
   themeThunk,
   editUserThunk,
+  editAvatarThunk,
 } from "./operations";
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
     name: "",
     email: "",
     theme: "",
+    avatarURL: "",
   },
   token: "",
   isLoggedIn: false,
@@ -24,11 +26,12 @@ const slice = createSlice({
   name: "auth",
   initialState,
   selectors: {
-    selectId: (state) => state.id,
+    selectId: (state) => state.user.id,
     selectToken: (state) => state.token,
     selectUser: (state) => state.user,
     selectIsLoggedIn: (state) => state.isLoggedIn,
     selectIsRefreshing: (state) => state.isRefreshing,
+    selectAvatar: (state) => state.user.avatarURL,
   },
   extraReducers: (builder) => {
     builder
@@ -72,6 +75,9 @@ const slice = createSlice({
         state.user.theme = payload.theme;
         state.user.name = payload.username;
         state.user.email = payload.email;
+      })
+      .addCase(editAvatarThunk.fulfilled, (state, { payload }) => {
+        state.user.avatarURL = payload;
       });
   },
 });
@@ -83,4 +89,6 @@ export const {
   selectUser,
   selectIsRefreshing,
   selectId,
+  selectAvatar,
 } = slice.selectors;
+

@@ -1,4 +1,7 @@
-import BoardForm from "./BoardForm/BoardForm";
+// import BoardList from "./BoardList/BoardList";
+
+// import BoardForm from "./BoardForm/BoardForm";
+import CreateBoard from "./CreateBoard/CreateBoard";
 import HelpForm from "./HelpForm/HelpForm";
 import LogOut from "./LogOut.jsx/LogOut";
 import LogoComponent from "./LogoComponent/LogoComponent";
@@ -8,7 +11,7 @@ function Sidebar() {
   return (
     <div className={css.sidebar}>
       <LogoComponent />
-      <BoardForm />
+      <CreateBoard />
       <HelpForm />
       <LogOut />
     </div>
