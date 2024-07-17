@@ -1,5 +1,5 @@
 import AddAnotherCard from "../AddAnotherCard/AddAnotherCard";
-import CardItem from "../CardItem/CardItem";
+import CardsList from "../CardsList/CardsList";
 import ColumnItem from "../ColumnItem/ColumnItem";
 import s from "./ColumnList.module.css";
 
@@ -8,9 +8,7 @@ function ColumnList({ column }) {
   return (
     <div className={s.wrapper}>
       <ColumnItem column={column} />
-      {cards?.map((card) => {
-        return <CardItem key={card._id} card={card} />;
-      })}
+      <CardsList cards={cards} />
       <AddAnotherCard column={column} />
     </div>
   );
