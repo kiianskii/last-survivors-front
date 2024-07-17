@@ -30,16 +30,16 @@ const EditBoardForm = ({ board, closeModal }) => {
     const id = board._id;
     if (board.name === data.name) {
       const editedBoard = {
-        icon_name: data.icon_name,
-        background_url: data.background_url,
+        icon_name,
+        background_url,
       };
       dispatch(editBoard({ _id: id, boardsData: editedBoard }));
       closeModal();
     } else {
       const editedBoard = {
         name: data.name,
-        icon_name: data.icon_name,
-        background_url: data.background_url,
+        icon_name,
+        background_url,
       };
       dispatch(editBoard({ _id: id, boardsData: editedBoard }));
       closeModal();
