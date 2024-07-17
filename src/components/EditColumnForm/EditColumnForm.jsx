@@ -1,15 +1,15 @@
-import { Field, Form, Formik } from "formik";
-import css from "./AddColumnForm.module.css";
-import * as Yup from "yup";
-import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addColumnThunk } from "../../redux/boardByID/operations";
+import { useParams } from "react-router-dom";
+import * as Yup from "yup";
+import { editColumnThunk } from "../../redux/boardByID/operations";
+import css from "./EditColumnForm.module.css";
+import { Field, Form, Formik } from "formik";
 
-function AddColumnForm({ closeModal }) {
+function EditColumnForm({ closeModal, column }) {
   const dispatch = useDispatch();
   const { boardId } = useParams();
   const initialValues = {
-    title: "",
+    title: column.title,
   };
 
   const validationSchema = Yup.object().shape({
@@ -21,9 +21,8 @@ function AddColumnForm({ closeModal }) {
       ...data,
       board_id: boardId,
     };
-    console.log(credentials);
 
-    dispatch(addColumnThunk(credentials));
+    dispatch(editColumnThunk({ column_id: column._id, credentials }));
     option.resetForm();
     closeModal();
   };
@@ -37,11 +36,11 @@ function AddColumnForm({ closeModal }) {
         <Form>
           <Field name="title" type="text" placeholder="Title" />
 
-          <button type="submit">Add</button>
+          <button type="submit">Edit</button>
         </Form>
       </Formik>
     </div>
   );
 }
 
-export default AddColumnForm;
+export default EditColumnForm;

@@ -8,7 +8,7 @@ import css from "./AddCardForm.module.css";
 import { Icon } from "../../icons/Icon";
 import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 
-const AddCardForm = ({ closeModal }) => {
+const AddCardForm = ({ closeModal, column }) => {
   const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch();
   const initialValues = {
@@ -28,7 +28,6 @@ const AddCardForm = ({ closeModal }) => {
   });
 
   function handleSubmit(data, option) {
-    // console.log(data);
     const query = {
       ...data,
       deadline: startDate
@@ -39,8 +38,8 @@ const AddCardForm = ({ closeModal }) => {
         })
         .split(".")
         .join("/"),
-      board_id: "66924e509e77e436cbb8a1fc",
-      column_id: "66924e7b9e77e436cbb8a1ff",
+      board_id: column.board_id,
+      column_id: column._id,
     };
     console.log(query);
     if (query.deadline === null) return;

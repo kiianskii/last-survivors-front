@@ -8,7 +8,6 @@ import EditCardForm from "../EditCardForm/EditCardForm";
 import Modal from "../Modal/Modal";
 
 const CardItem = ({ card }) => {
-  console.log(card);
   const dispatch = useDispatch();
   const today = new Date()
     .toLocaleDateString("uk-UA", {
