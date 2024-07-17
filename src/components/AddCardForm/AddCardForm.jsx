@@ -28,7 +28,6 @@ const AddCardForm = ({ closeModal }) => {
   });
 
   function handleSubmit(data, option) {
-    // console.log(data);
     const query = {
       ...data,
       deadline: startDate
