@@ -1,6 +1,7 @@
 .logout_wrap {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 14px;
   background-color: transparent;
   cursor: pointer;
@@ -9,6 +10,7 @@
 .logout_icon {
   stroke: #bedbb0;
   fill: transparent;
+  transition: all 150ms linear;
 }
 
 .logout_text {
