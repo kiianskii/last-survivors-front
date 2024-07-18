@@ -5,12 +5,10 @@
   padding: 14px;
   margin-top: 116px;
 
-  /* @media screen and (min-width: 768px) {
-    width: 212px;
-    padding: 20px;
-  } */
   @media screen and (min-width: 768px) {
     margin-top: 40px;
+    width: 212px;
+    padding: 20px;
   }
 }
 
@@ -28,6 +26,13 @@
   letter-spacing: -0.24px;
   width: 168px;
   margin-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    width: 172px;
+  }
 }
 
 .span_text {
@@ -42,7 +47,6 @@
 }
 
 .help_link:hover {
-  /* background-color: rgb(197, 190, 190); */
   background-color: #bedbb0;
   border-radius: 8px;
 }
@@ -56,4 +60,86 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.24px;
+}
+
+.modal_help {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: #fcfcfc;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.05);
+}
+
+.help_email {
+  width: 287px;
+  padding: 14px 170px 14px 18px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #bedbb0;
+  opacity: 0.4;
+  margin-bottom: 14px;
+
+  &:hover {
+    border-color: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
+  &::placeholder {
+    color: #161616;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+}
+
+.help_comment {
+  display: flex;
+  width: 287px;
+  height: 120px;
+  padding: 14px 197px 85px 18px;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid #bedbb0;
+  opacity: 0.4;
+  margin-bottom: 24px;
+  resize: none;
+
+  &::placeholder {
+    color: #161616;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+  &:hover {
+    border-color: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
+}
+
+.send_button {
+  width: 287px;
+  height: 49px;
+  border-radius: 8px;
+  background: #bedbb0;
+  color: #161616;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+  padding-left: 14px;
 }
