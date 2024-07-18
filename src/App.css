@@ -99,3 +99,10 @@ img {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+@media screen and (min-width: 768px) {
+  .class{
+    width: 400px !important;
+  }
+}

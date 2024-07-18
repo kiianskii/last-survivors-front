@@ -32,6 +32,8 @@ const slice = createSlice({
     selectIsLoggedIn: (state) => state.isLoggedIn,
     selectIsRefreshing: (state) => state.isRefreshing,
     selectAvatar: (state) => state.user.avatarURL,
+    selectTheme: (state) => state.user.theme,
+    
   },
   extraReducers: (builder) => {
     builder
@@ -50,6 +52,7 @@ const slice = createSlice({
         state.user.theme = payload.user.theme;
         state.token = payload.token;
         state.isLoggedIn = true;
+        state.user.avatarURL = payload.user.avatarURL;
       })
       .addCase(logOutThunk.fulfilled, () => {
         return initialState;
@@ -61,6 +64,7 @@ const slice = createSlice({
         state.user.email = payload.email;
         state.isLoggedIn = true;
         state.isRefreshing = false;
+        state.user.avatarURL = payload.avatarURL;
       })
       .addCase(themeThunk.fulfilled, (state, { payload }) => {
         state.user.theme = payload;
@@ -77,8 +81,9 @@ const slice = createSlice({
         state.user.email = payload.email;
       })
       .addCase(editAvatarThunk.fulfilled, (state, { payload }) => {
-        state.user.avatarURL = payload;
+        state.user.avatarURL = payload.avatarURL;
       });
+      
   },
 });
 
@@ -90,5 +95,6 @@ export const {
   selectIsRefreshing,
   selectId,
   selectAvatar,
+  selectTheme,
 } = slice.selectors;
 

@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { clearToken, setToken, projectApi } from "../../config/projectAPI";
 
+
 export const registerThunk = createAsyncThunk(
   "auth/register",
   async (credentials, thunkApi) => {
@@ -84,11 +85,13 @@ export const editUserThunk = createAsyncThunk(
   }
 );
 
+
+
 export const editAvatarThunk = createAsyncThunk(
-  "user/editAvatar",
-  async (credentials, thunkApi) => {
+  'user/editAvatar',
+  async (formData, thunkApi) => {
     try {
-      const { data } = await projectApi.patch(`/api/avatar/`, credentials);
+      const { data } = await projectApi.patch('/api/avatar/', formData)
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

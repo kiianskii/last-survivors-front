@@ -10,10 +10,17 @@
   border-radius: 8px;
   border: 1px solid #bedbb0;
   opacity: 0.4;
-  background: #1f1f1f;
+  background: transparent;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
-  margin: 0 24px;
   padding-left: 18px;
+  outline: none;
+}
+
+.field:hover,
+.field:focus {
+  border: 1px solid #bedbb0;
+  outline: none;
+  box-shadow: 0 0 0 1px #bedbb0;
 }
 .field::placeholder {
   color: #fff;
@@ -33,7 +40,7 @@
   align-items: center;
   border-radius: 8px;
   background: #bedbb0;
-  margin: 10px 24px 24px 24px;
+  margin: 14px 0;
   color: #161616;
   text-align: center;
   font-family: Poppins;
@@ -42,4 +49,44 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+}
+
+.passwordFieldContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.passwordField {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.togglePassword {
+  background: none;
+  stroke: #ffffff;
+  opacity: 0.4;
+  position: absolute;
+  right: 18px;
+  top: 54%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 352px;
+  }
+  .togglePassword {
+    background: none;
+    stroke: #ffffff;
+    opacity: 0.4;
+    position: absolute;
+    right: 15px;
+    top: 54%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+  }
 }
