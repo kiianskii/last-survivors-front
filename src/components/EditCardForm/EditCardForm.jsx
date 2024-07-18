@@ -9,6 +9,7 @@ import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 import { editCardThunk } from "../../redux/cards/operations";
 
 const EditCardForm = ({ card, closeModal }) => {
+  console.log(card.deadline);
   const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch();
   const initialValues = {
@@ -22,18 +23,23 @@ const EditCardForm = ({ card, closeModal }) => {
     title: Yup.string(),
     description: Yup.string(),
     priority: Yup.string().oneOf(["High", "Medium", "Low", "Without"]),
-    // deadline: Yup.date(),
+    deadline: Yup.string(),
   });
 
   function handleSubmit(data) {
-    console.log(data.deadline);
-
     const id = card._id;
     const editedCard = {
       title: data.title,
       description: data.description,
       priority: data.priority,
-      deadline: data.deadline,
+      deadline: startDate
+        .toLocaleDateString("uk-UA", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        })
+        .split(".")
+        .join("/"),
       board_id: card.board_id,
       column_id: card.column_id,
     };
