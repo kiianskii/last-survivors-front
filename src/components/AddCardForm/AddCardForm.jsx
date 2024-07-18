@@ -9,6 +9,7 @@ import { Icon } from "../../icons/Icon";
 import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 
 const AddCardForm = ({ closeModal, column }) => {
+  // const date = new Date();
   const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch();
   const initialValues = {
@@ -70,30 +71,6 @@ const AddCardForm = ({ closeModal, column }) => {
         <label className={css.label}>
           Label color
           <div role="group" className={css.label_box}>
-            {/* <Field
-              name="priority"
-              type="radio"
-              value="Low"
-              className={css.low}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="Medium"
-              className={css.medium}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="High"
-              className={css.high}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="Without"
-              className={css.without}
-            /> */}
             <CustomRadioBtn name="priority" value="Low" />
             <CustomRadioBtn name="priority" value="Medium" />
             <CustomRadioBtn name="priority" value="High" />

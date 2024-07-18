@@ -18,7 +18,6 @@ export const addCardThunk = createAsyncThunk(
   async (cardsData, thunkApi) => {
     try {
       const { data } = await projectApi.post("/api/cards", cardsData);
-
       return data;
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
@@ -41,6 +40,7 @@ export const editCardThunk = createAsyncThunk(
 export const deleteCardThunk = createAsyncThunk(
   "cards/delete-card",
   async ({ id }, thunkApi) => {
+    console.log(id);
     try {
       const { data } = await projectApi.delete(`/api/cards/${id}`);
       return data;
