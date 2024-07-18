@@ -5,7 +5,7 @@ import { Icon } from "../../icons/Icon";
 
 const SelectDate = ({ startDate, setStartDate }) => {
   const today = new Date();
-
+  console.log(startDate);
   return (
     <label>
       <DatePicker
