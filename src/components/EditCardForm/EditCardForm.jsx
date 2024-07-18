@@ -10,7 +10,12 @@ import { editCardThunk } from "../../redux/cards/operations";
 
 const EditCardForm = ({ card, closeModal }) => {
   console.log(card.deadline);
-  const [startDate, setStartDate] = useState(new Date());
+  const arr = card.deadline.split("/");
+  const month = arr[1] - 1;
+  const date = new Date(arr[2], month.toString(), arr[0]);
+
+  console.log(date);
+  const [startDate, setStartDate] = useState(date);
   const dispatch = useDispatch();
   const initialValues = {
     title: card.title,

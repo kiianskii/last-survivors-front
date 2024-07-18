@@ -9,6 +9,7 @@ import { Icon } from "../../icons/Icon";
 import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 
 const AddCardForm = ({ closeModal, column }) => {
+  // const date = new Date();
   const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch();
   const initialValues = {
