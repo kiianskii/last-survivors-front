@@ -1,0 +1,7 @@
+.burger {
+  stroke: rgba(22, 22, 22, 1);
+  z-index: 1000;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
