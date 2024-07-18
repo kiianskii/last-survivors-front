@@ -14,7 +14,7 @@ const BoardItem = ({ board }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { boardId } = useParams();
-
+  const isActive = boardId === board._id;
   const boards = useSelector(boardsSelector);
   const onDelete = () => {
     console.log(boards);
@@ -25,11 +25,13 @@ const BoardItem = ({ board }) => {
   };
 
   return (
-    <li className={css.board_item}>
-      <Icon size={18} id={board.icon_name} className={css.icons} />
-      <NavLink to={`/${board._id}`}>
-        <h1 className={css.board_name}>{board.name}</h1>
-      </NavLink>
+    <li className={`${css.board_item} ${isActive ? css.active : ""}`}>
+      <div className={css.icon_name_div}>
+        <Icon size={18} id={board.icon_name} className={css.icons} />
+        <NavLink to={`/${board._id}`}>
+          <h1 className={css.board_name}>{board.name}</h1>
+        </NavLink>
+      </div>
 
       <ul className={css.button_icon}>
         <li>
