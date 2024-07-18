@@ -1,11 +1,7 @@
-import { useSelector } from "react-redux";
-import { selectCards } from "../../redux/cards/slice";
 import CardItem from "../CardItem/CardItem";
 import css from "./CardsList.module.css";
 
-const CardsList = () => {
-  const cards = useSelector(selectCards);
-  console.log(cards);
+const CardsList = ({ cards }) => {
   return (
     <ul className={css.card_list}>
       {cards.map((card) => {

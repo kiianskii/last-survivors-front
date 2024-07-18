@@ -71,6 +71,7 @@ input[type="radio"] {
   align-items: center;
   gap: 4px;
   margin-bottom: 40px;
+  margin-right: 35px;
 }
 
 .background {

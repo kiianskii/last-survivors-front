@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import AddAnotherCard from "../../components/AddAnotherCard/AddAnotherCard";
+
 import AddColumnBtn from "../../components/AddColumnBtn/AddColumnBtn";
-import CardsList from "../../components/CardsList/CardsList";
+
 import EditUserForm from "../../components/EditUserForm/EditUserForm";
 import Modal from "../../components/Modal/Modal";
 import { useToggle } from "../../hooks/useToggle";
@@ -12,6 +12,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
+
+import s from "./ScreensPage.module.css";
 
 function ScreensPage() {
   const { openModal, closeModal, isOpen } = useToggle();
@@ -31,27 +33,27 @@ function ScreensPage() {
     if (board) {
       dispatch(fetchColumnsThunk(boardId));
     }
-  }, [dispatch, boardId]);
+  }, [dispatch, boardId, board]);
 
   const columns = useSelector(selectColumns);
   const classname = "class";
   return (
-    <>
-      {columns
-        ? columns.map((column) => {
-            return <ColumnList key={column._id} column={column} />;
-          })
-        : ""}
-      <AddColumnBtn />
-      <CardsList />
-      <AddAnotherCard />
+    <div>
+      <div className={s.wrapper}>
+        {columns
+          ? columns.map((column) => {
+              return <ColumnList key={column._id} column={column} />;
+            })
+          : ""}
+        <AddColumnBtn />
+      </div>
       <button onClick={openModal}>Update user</button>
       {isOpen && (
         <Modal title="Edit profile" closeModal={closeModal} classname={classname}>
           <EditUserForm closeModal={closeModal} />
         </Modal>
       )}
-    </>
+    </div>
   );
 }
 

@@ -8,7 +8,8 @@ import css from "./AddCardForm.module.css";
 import { Icon } from "../../icons/Icon";
 import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 
-const AddCardForm = ({ closeModal }) => {
+const AddCardForm = ({ closeModal, column }) => {
+  // const date = new Date();
   const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch();
   const initialValues = {
@@ -28,7 +29,6 @@ const AddCardForm = ({ closeModal }) => {
   });
 
   function handleSubmit(data, option) {
-    // console.log(data);
     const query = {
       ...data,
       deadline: startDate
@@ -39,8 +39,8 @@ const AddCardForm = ({ closeModal }) => {
         })
         .split(".")
         .join("/"),
-      board_id: "66924e509e77e436cbb8a1fc",
-      column_id: "66924e7b9e77e436cbb8a1ff",
+      board_id: column.board_id,
+      column_id: column._id,
     };
     console.log(query);
     if (query.deadline === null) return;
@@ -71,30 +71,6 @@ const AddCardForm = ({ closeModal }) => {
         <label className={css.label}>
           Label color
           <div role="group" className={css.label_box}>
-            {/* <Field
-              name="priority"
-              type="radio"
-              value="Low"
-              className={css.low}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="Medium"
-              className={css.medium}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="High"
-              className={css.high}
-            />
-            <Field
-              name="priority"
-              type="radio"
-              value="Without"
-              className={css.without}
-            /> */}
             <CustomRadioBtn name="priority" value="Low" />
             <CustomRadioBtn name="priority" value="Medium" />
             <CustomRadioBtn name="priority" value="High" />

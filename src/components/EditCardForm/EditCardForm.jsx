@@ -9,7 +9,11 @@ import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 import { editCardThunk } from "../../redux/cards/operations";
 
 const EditCardForm = ({ card, closeModal }) => {
-  const [startDate, setStartDate] = useState(new Date());
+  const arr = card.deadline.split("/");
+  const month = arr[1] - 1;
+  const date = new Date(arr[2], month.toString(), arr[0]);
+
+  const [startDate, setStartDate] = useState(date);
   const dispatch = useDispatch();
   const initialValues = {
     title: card.title,
@@ -22,35 +26,25 @@ const EditCardForm = ({ card, closeModal }) => {
     title: Yup.string(),
     description: Yup.string(),
     priority: Yup.string().oneOf(["High", "Medium", "Low", "Without"]),
-    deadline: Yup.date().nullable(),
+    deadline: Yup.string(),
   });
 
   function handleSubmit(data) {
-    console.log(data);
-    // const query = {
-    //   ...data,
-    //   deadline: startDate
-    //     .toLocaleDateString("uk-UA", {
-    //       day: "2-digit",
-    //       month: "2-digit",
-    //       year: "numeric",
-    //     })
-    //     .split(".")
-    //     .join("/"),
-    //   board_id: "66924e509e77e436cbb8a1fc",
-    //   column_id: "66924e7b9e77e436cbb8a1ff",
-    // };
-    // console.log(query);
-    // if (query.deadline === null) return;
-    // // dispatch(addCardThunk(query));
-    // // closeModal();
-
-    const id = card.id;
+    const id = card._id;
     const editedCard = {
       title: data.title,
       description: data.description,
       priority: data.priority,
-      deadline: data.deadline,
+      deadline: startDate
+        .toLocaleDateString("uk-UA", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        })
+        .split(".")
+        .join("/"),
+      board_id: card.board_id,
+      column_id: card.column_id,
     };
     dispatch(editCardThunk({ _id: id, cardsData: editedCard }));
     closeModal();

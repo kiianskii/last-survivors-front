@@ -30,8 +30,22 @@ export const deleteColumnThunk = createAsyncThunk(
   async (credentials, thunkApi) => {
     try {
       const { data } = await projectApi.delete(
-        `/api/columns/${credentials.id}`,
-        { board_id: credentials.board_id }
+        `/api/columns/${credentials.id}`
+      );
+      return data;
+    } catch (error) {
+      thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const editColumnThunk = createAsyncThunk(
+  "columns/edit-column",
+  async ({ column_id, credentials }, thunkApi) => {
+    try {
+      const { data } = await projectApi.patch(
+        `/api/columns/${column_id}`,
+        credentials
       );
       return data;
     } catch (error) {

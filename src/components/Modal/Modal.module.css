@@ -6,6 +6,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
+  z-index: 1000;
 }
 .content {
   position: relative;
@@ -33,7 +34,6 @@
 
 .icon_close {
   stroke: rgb(22, 22, 22);
-
 }
 
 .title {
