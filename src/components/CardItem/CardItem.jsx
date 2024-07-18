@@ -6,6 +6,8 @@ import clsx from "clsx";
 import { useToggle } from "../../hooks/useToggle";
 import EditCardForm from "../EditCardForm/EditCardForm";
 import Modal from "../Modal/Modal";
+import Tooltip from "../Tooltip/Tooltip";
+import { useState } from "react";
 
 const CardItem = ({ card }) => {
   const dispatch = useDispatch();
@@ -19,6 +21,7 @@ const CardItem = ({ card }) => {
     .join("/");
 
   const { openModal, closeModal, isOpen } = useToggle();
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <li
@@ -62,15 +65,21 @@ const CardItem = ({ card }) => {
           ) : (
             ""
           )}
-          <li className={css.icon_list_item}>
-            <button className={css.icon_btn} type="button">
-              <Icon
-                size={16}
-                id={"done"}
-                className={`${css.icon} ${css.icon_border}`}
-              />
-            </button>
-          </li>
+          <Tooltip card={card} showTooltip={showTooltip}>
+            <li className={css.icon_list_item}>
+              <button
+                className={css.icon_btn}
+                type="button"
+                onClick={() => setShowTooltip(!showTooltip)}
+              >
+                <Icon
+                  size={16}
+                  id={"done"}
+                  className={`${css.icon} ${css.icon_border}`}
+                />
+              </button>
+            </li>
+          </Tooltip>
           <li className={css.icon_list_item}>
             <button className={css.icon_btn} type="button" onClick={openModal}>
               <Icon size={16} id={"pencil"} className={css.icon} />
