@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import s from "./WelcomePage.module.css";
 import { Icon } from "../../icons/Icon";
 import { useState, useEffect } from "react";
-
+import welcomeImage from "../../img/user.png"
 function WelcomePage() {
   const [size, setSize] = useState(window.innerWidth);
   const handleResize = () => {
@@ -17,6 +17,7 @@ function WelcomePage() {
   }, []);
   return (
     <div className={s.container}>
+      <img src={welcomeImage} alt="Welcome" className={s.welcome_image} />
       <div className={s.logo}>
         <Icon size={size > 768 ? 48 : 40} id="logo" />
         <h1 className={s.task}>Task Pro</h1>

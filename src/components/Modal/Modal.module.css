@@ -10,7 +10,7 @@
 .content {
   position: relative;
   background-color: white;
-  width: 335px;
+  /* width: 335px; */
   padding: 24px;
   overflow: hidden;
   max-width: 1000px;
@@ -33,7 +33,7 @@
 
 .icon_close {
   stroke: rgb(22, 22, 22);
-  border: 1px dashed rgba(22, 22, 22, 0.5);
+
 }
 
 .title {

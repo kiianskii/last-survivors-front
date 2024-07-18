@@ -34,7 +34,7 @@ function ScreensPage() {
   }, [dispatch, boardId]);
 
   const columns = useSelector(selectColumns);
-
+  const classname = "class";
   return (
     <>
       {columns
@@ -47,7 +47,7 @@ function ScreensPage() {
       <AddAnotherCard />
       <button onClick={openModal}>Update user</button>
       {isOpen && (
-        <Modal title="Edit profile" closeModal={closeModal}>
+        <Modal title="Edit profile" closeModal={closeModal} classname={classname}>
           <EditUserForm closeModal={closeModal} />
         </Modal>
       )}
