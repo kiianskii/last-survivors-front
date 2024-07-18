@@ -1,5 +1,5 @@
-import { Field, Form, Formik } from "formik";
-import { useDispatch } from "react-redux";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
 
 import * as Yup from "yup";
 import css from "./AddBoardForm.module.css";
@@ -8,10 +8,12 @@ import { Icon } from "../../../icons/Icon.jsx";
 import { useState } from "react";
 import { createBoard } from "../../../redux/boards/operations.js";
 import BackgroundImage from "../hooks/BackgroundImage.jsx";
+import { boardsSelector } from "../../../redux/boards/slice.js";
 
 const AddBoardForm = ({ closeModal }) => {
   const [icon_name, setIcon] = useState(icons[0].id);
   const [background_url, setBackground] = useState(backgrounds[0].class);
+  const existingBoards = useSelector(boardsSelector);
 
   const dispatch = useDispatch();
 
@@ -22,7 +24,13 @@ const AddBoardForm = ({ closeModal }) => {
   };
 
   const validationSchema = Yup.object().shape({
-    name: Yup.string(),
+    name: Yup.string()
+      .required("Title is required field!")
+      .test(
+        "unique-name",
+        "A board with this title already exists. Please select a different title!",
+        (value) => !existingBoards.find((board) => board.name === value)
+      ),
     icon_name: Yup.string(),
     background_url: Yup.string(),
   });
@@ -32,10 +40,13 @@ const AddBoardForm = ({ closeModal }) => {
       icon_name,
       background_url,
     };
-    console.log(query);
-    option.resetForm();
-    closeModal();
-    dispatch(createBoard(query));
+    if (existingBoards.find((board) => board.name === data.name)) {
+      option.setFieldError("name", "Назва дошки вже існує");
+    } else {
+      dispatch(createBoard(query));
+      option.resetForm();
+      closeModal();
+    }
   };
 
   return (
@@ -51,7 +62,7 @@ const AddBoardForm = ({ closeModal }) => {
           placeholder="Title"
           className={css.input}
         />
-
+        <ErrorMessage name="name" component="div" className={css.error} />
         <p className={css.icons_p}>Icons</p>
         {icons.map((iconOption) => (
           <label key={iconOption.id}>
