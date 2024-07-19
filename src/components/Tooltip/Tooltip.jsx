@@ -1,13 +1,15 @@
 import { selectColumns } from "../../redux/boardByID/slice";
 import css from "./Tooltip.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "../../icons/Icon";
+import { changeColumnThunk } from "../../redux/cards/operations";
 
 const Tooltip = ({ children, card, showTooltip }) => {
   const columns = useSelector(selectColumns);
   const filteredColumns = columns.filter(
     (column) => column._id !== card.column_id
   );
+  const dispatch = useDispatch();
 
   return (
     <div className={css.container}>
@@ -17,7 +19,21 @@ const Tooltip = ({ children, card, showTooltip }) => {
           {filteredColumns.map((column) => {
             return (
               <li key={column._id}>
-                <button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(
+                      changeColumnThunk({
+                        _id: card._id,
+                        cardsData: {
+                          board_id: card.board_id,
+                          column_id: column._id,
+                          oldColumn_id: card.column_id,
+                        },
+                      })
+                    );
+                  }}
+                >
                   {column.title}
                   <Icon
                     size={16}

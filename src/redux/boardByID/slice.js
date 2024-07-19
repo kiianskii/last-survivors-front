@@ -7,6 +7,7 @@ import {
 } from "./operations";
 import {
   addCardThunk,
+  changeColumnThunk,
   deleteCardThunk,
   editCardThunk,
 } from "../cards/operations";
@@ -77,6 +78,20 @@ const columnsSlice = createSlice({
           );
           if (index !== -1) {
             state.columns[columnIndex].cards[index] = payload;
+          }
+        }
+      })
+      .addCase(changeColumnThunk.fulfilled, (state, { payload }) => {
+        const columnIndex = state.columns.findIndex(
+          (column) => column._id === payload.oldColumn_id
+        );
+        if (columnIndex !== -1) {
+          const index = state.columns[columnIndex].cards.findIndex(
+            (card) => card._id === payload._id
+          );
+          if (index !== -1) {
+            state.columns[columnIndex].cards[index].column_id =
+              payload.column_id;
           }
         }
       });
