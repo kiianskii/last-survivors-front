@@ -78,6 +78,9 @@ img {
   .container {
     max-width: 768px;
   }
+  .class{
+    width: 400px !important;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -100,9 +103,3 @@ img {
   -webkit-text-size-adjust: 100%;
 }
 
-
-@media screen and (min-width: 768px) {
-  .class{
-    width: 400px !important;
-  }
-}
