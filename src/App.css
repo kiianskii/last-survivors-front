@@ -68,24 +68,23 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .container {
   max-width: 320px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
+  .class{
+    width: 400px !important;
+  }
 }
-
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
   }
 }
-
 :root {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -100,9 +99,3 @@ img {
   -webkit-text-size-adjust: 100%;
 }
 
-
-@media screen and (min-width: 768px) {
-  .class{
-    width: 400px !important;
-  }
-}

@@ -6,16 +6,16 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  z-index: 1000;
+  z-index: 10088;
 }
 .content {
   position: relative;
   background-color: white;
-  /* width: 335px; */
   padding: 24px;
   overflow: hidden;
   max-width: 1000px;
   border-radius: 5px;
+  z-index: 1001;
   h1 {
     font-size: 2rem;
   }
@@ -35,7 +35,6 @@
 .icon_close {
   stroke: rgb(22, 22, 22);
 }
-
 .title {
   color: rgb(22, 22, 22);
   font-size: 18px;
