@@ -16,7 +16,6 @@ const Modal = ({
     },
     [closeModal]
   );
-
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
 
@@ -30,7 +29,6 @@ const Modal = ({
       closeModal();
     }
   };
-
   return (
     <div className={s.wrapper} onClick={handleBackdropClick}>
       <div className={`${s.content} ${s.classname}`}>
