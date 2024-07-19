@@ -5,6 +5,7 @@ import {
   addCardThunk,
   editCardThunk,
   deleteCardThunk,
+  changeColumnThunk,
 } from "./operations";
 
 const initialState = {
@@ -47,6 +48,17 @@ const slice = createSlice({
         }
       })
       .addCase(editCardThunk.rejected, (state, { payload }) => {
+        state.error = payload;
+      })
+      .addCase(changeColumnThunk.fulfilled, (state, { payload }) => {
+        const index = state.cards.findIndex((card) => card._id === payload._id);
+        if (index !== -1) {
+          state.cards[index].column_id = payload.column_id;
+        } else {
+          state.cards.push(payload.column_id);
+        }
+      })
+      .addCase(changeColumnThunk.rejected, (state, { payload }) => {
         state.error = payload;
       });
   },
