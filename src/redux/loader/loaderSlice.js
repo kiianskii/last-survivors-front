@@ -4,6 +4,7 @@ import {
   editUserThunk,
   logInThunk,
   logOutThunk,
+  needHelpThunk,
   registerThunk,
 } from "../auth/operations";
 import {
@@ -23,7 +24,6 @@ import {
   deleteBoard,
   editBoard,
   fetchBoards,
-  sendHelpRequest,
 } from "../boards/operations";
 
 const initialState = {
@@ -51,7 +51,7 @@ const slice = createSlice({
           editCardThunk.pending,
           deleteCardThunk.pending,
           changeColumnThunk.pending,
-          sendHelpRequest.pending,
+          needHelpThunk.pending,
           createBoard.pending,
           editBoard.pending,
           deleteBoard.pending,
@@ -76,7 +76,7 @@ const slice = createSlice({
           editCardThunk.fulfilled,
           deleteCardThunk.fulfilled,
           changeColumnThunk.fulfilled,
-          sendHelpRequest.fulfilled,
+          needHelpThunk.fulfilled,
           createBoard.fulfilled,
           editBoard.fulfilled,
           deleteBoard.fulfilled,
@@ -101,7 +101,7 @@ const slice = createSlice({
           editCardThunk.rejected,
           deleteCardThunk.rejected,
           changeColumnThunk.rejected,
-          sendHelpRequest.rejected,
+          needHelpThunk.rejected,
           createBoard.rejected,
           editBoard.rejected,
           deleteBoard.rejected,

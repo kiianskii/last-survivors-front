@@ -101,7 +101,7 @@ export const editAvatarThunk = createAsyncThunk(
 
 export const needHelpThunk = createAsyncThunk(
   "user/help",
-  async ({ id, credentials }, thunkApi) => {
+  async (credentials, thunkApi) => {
     try {
       const { data } = await projectApi.post(`/api/auth/help`, credentials);
       return data;
