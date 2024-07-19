@@ -14,7 +14,7 @@ const initialState = {
     id: "",
     name: "",
     email: "",
-    theme: "",
+    theme: "light",
     avatarURL: "",
   },
   token: "",
@@ -33,7 +33,6 @@ const slice = createSlice({
     selectIsRefreshing: (state) => state.isRefreshing,
     selectAvatar: (state) => state.user.avatarURL,
     selectTheme: (state) => state.user.theme,
-    
   },
   extraReducers: (builder) => {
     builder
@@ -83,7 +82,6 @@ const slice = createSlice({
       .addCase(editAvatarThunk.fulfilled, (state, { payload }) => {
         state.user.avatarURL = payload.avatarURL;
       });
-      
   },
 });
 
@@ -97,4 +95,3 @@ export const {
   selectAvatar,
   selectTheme,
 } = slice.selectors;
-
