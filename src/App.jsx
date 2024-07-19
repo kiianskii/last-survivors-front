@@ -1,24 +1,28 @@
+
+
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
-
-import { Suspense, useEffect } from "react";
-import Layout from "./components/Layout/Layout";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
-
-import WelcomePage from "./pages/WelcomePage/WelcomePage";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import ScreensPage from "./pages/ScreensPage/ScreensPage";
 import { useDispatch, useSelector } from "react-redux";
 import { refreshThunk } from "./redux/auth/operations";
 import { fetchBoards } from "./redux/boards/operations";
+import { selectIsLoggedIn, selectIsRefreshing } from "./redux/auth/authSlice";
 import { PrivateRoute } from "./routes/PrivateRoute";
 import { RestrictedRoute } from "./routes/RestrictedRoute";
-import { selectIsLoggedIn } from "./redux/auth/authSlice";
+import Loader from "./components/Loader/Loader";
+import "./App.css";
+
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import WelcomePage from "./pages/WelcomePage/WelcomePage";
+
+const Layout = React.lazy(() => import("./components/Layout/Layout"));
+const ErrorPage = React.lazy(() => import("./pages/ErrorPage/ErrorPage"));
+const ScreensPage = React.lazy(() => import("./pages/ScreensPage/ScreensPage"));
 
 function App() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
     dispatch(refreshThunk());
@@ -30,8 +34,11 @@ function App() {
     }
   }, [dispatch, isLoggedIn]);
 
-  return (
-    <Suspense fallback={<h1>Loading</h1>}>
+
+  return isRefreshing ? (
+    <Loader />
+  ) : (
+    <Suspense fallback={<Loader/>}>
       <Routes>
         <Route
           path="/"
@@ -39,7 +46,7 @@ function App() {
             <PrivateRoute redirectTo="/welcome" component={<Layout />} />
           }
         >
-          <Route path="/:boardId" element={<ScreensPage />}></Route>
+          <Route path="/:boardId" element={<ScreensPage />} />
         </Route>
         <Route
           path="welcome"
@@ -60,3 +67,5 @@ function App() {
 }
 
 export default App;
+
+
