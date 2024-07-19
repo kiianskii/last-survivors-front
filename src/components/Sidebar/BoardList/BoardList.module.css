@@ -1,6 +1,15 @@
 .board_list {
   margin-left: -14px;
+  max-height: 460px;
+  width: 225px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
   @media screen and (min-width: 768px) {
-    margin-left: 0;
+    margin-left: -24px;
+    width: 260px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-height: 130px;
   }
 }

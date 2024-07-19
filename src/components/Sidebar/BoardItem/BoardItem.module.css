@@ -1,14 +1,15 @@
 .board_item {
   display: flex;
   flex-direction: row;
-  width: 238px;
+  width: 225px;
   margin: 4px 0;
   padding: 0 24px;
   height: 61px;
-  gap: 30px;
+  gap: 20px;
 
   @media screen and (min-width: 768px) {
     width: 260px;
+    gap: 30px;
   }
 }
 .board_name {
@@ -24,6 +25,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  width: 40px;
   @media screen and (min-width: 768px) {
     /* margin-left: 54px; */
   }
