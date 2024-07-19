@@ -49,3 +49,19 @@ export const deleteCardThunk = createAsyncThunk(
     }
   }
 );
+
+export const changeColumnThunk = createAsyncThunk(
+  "cards/change-column",
+  async ({ _id, cardsData }, thunkApi) => {
+    try {
+      const { data } = await projectApi.patch(`/api/cards/column/${_id}`, {
+        board_id: cardsData.board_id,
+        column_id: cardsData.column_id,
+        oldColumn_id: cardsData.oldColumn_id,
+      });
+      return data;
+    } catch (error) {
+      thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
