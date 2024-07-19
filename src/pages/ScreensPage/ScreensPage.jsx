@@ -1,18 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import AddColumnBtn from "../../components/AddColumnBtn/AddColumnBtn";
-
 import EditUserForm from "../../components/EditUserForm/EditUserForm";
 import Modal from "../../components/Modal/Modal";
 import { useToggle } from "../../hooks/useToggle";
 import { selectColumns } from "../../redux/boardByID/slice";
 import ColumnList from "../../components/ColumnList/ColumnList";
 import { useParams } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
-
 import s from "./ScreensPage.module.css";
 
 function ScreensPage() {
@@ -58,3 +54,4 @@ function ScreensPage() {
 }
 
 export default ScreensPage;
+
