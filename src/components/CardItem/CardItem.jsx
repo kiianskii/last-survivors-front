@@ -70,7 +70,10 @@ const CardItem = ({ card }) => {
               <button
                 className={css.icon_btn}
                 type="button"
-                onClick={() => setShowTooltip(!showTooltip)}
+                onClick={() => {
+                  console.log(card);
+                  setShowTooltip(!showTooltip);
+                }}
               >
                 <Icon
                   size={16}
