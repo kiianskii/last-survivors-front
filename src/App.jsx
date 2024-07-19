@@ -9,19 +9,26 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ScreensPage from "./pages/ScreensPage/ScreensPage";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { refreshThunk } from "./redux/auth/operations";
 import { fetchBoards } from "./redux/boards/operations";
 import { PrivateRoute } from "./routes/PrivateRoute";
 import { RestrictedRoute } from "./routes/RestrictedRoute";
+import { selectIsLoggedIn } from "./redux/auth/authSlice";
 
 function App() {
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   useEffect(() => {
     dispatch(refreshThunk());
-    dispatch(fetchBoards());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      dispatch(fetchBoards());
+    }
+  }, [dispatch, isLoggedIn]);
 
   return (
     <Suspense fallback={<h1>Loading</h1>}>

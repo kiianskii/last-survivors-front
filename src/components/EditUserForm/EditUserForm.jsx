@@ -1,10 +1,9 @@
+import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
-
-import { useDispatch } from "react-redux";
+import { Icon } from "../../icons/Icon";
+import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
-
 import s from "./EditUserForm.module.css";
-import { useSelector } from "react-redux";
 import { selectId, selectUser } from "../../redux/auth/authSlice";
 import { editUserThunk } from "../../redux/auth/operations";
 import EditAvatar from "./EditAvatar";
@@ -13,6 +12,7 @@ const EditUserForm = ({ closeModal }) => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const userId = useSelector(selectId);
+  const [showPassword, setShowPassword] = useState(false);
 
   const initialValues = {
     username: user.name,
@@ -30,16 +30,16 @@ const EditUserForm = ({ closeModal }) => {
     password: Yup.string().min(6, "Password: min 6 chars"),
   });
 
-  function handleSubmit(data, option) {
-    const credentials = {
-      ...data,
-    };
-    console.log(credentials);
-
+  const handleSubmit = (data, option) => {
+    const credentials = { ...data };
     dispatch(editUserThunk({ id: userId, credentials }));
     option.resetForm();
     closeModal();
-  }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <>
@@ -57,12 +57,21 @@ const EditUserForm = ({ closeModal }) => {
             name="email"
             autoComplete="username"
           />
-          <Field
-            className={s.field}
-            type="password"
-            name="password"
-            autoComplete="current-password"
-          />
+          <div className={s.passwordFieldContainer}>
+            <Field
+              className={`${s.field} ${s.passwordField}`}
+              type={showPassword ? "text" : "password"}
+              name="password"
+              autoComplete="current-password"
+            />
+            <button
+              type="button"
+              className={s.togglePassword}
+              onClick={togglePasswordVisibility}
+            >
+              <Icon size={18} id="eye" />
+            </button>
+          </div>
           <button type="submit" className={s.button}>
             Send
           </button>

@@ -84,6 +84,10 @@
 .linkContainer:focus-within .link {
   color: #fff;
 }
+.welcome_image{
+  width: 124px;
+  margin-bottom: 14px;
+}
 @media screen and (min-width: 768px) {
   .task {
     color: #161616;
@@ -102,6 +106,10 @@
   .logo {
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
+  }
+  .welcome_image{
+    width: 162px;
     margin-bottom: 24px;
   }
 }
