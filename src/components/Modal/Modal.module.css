@@ -33,7 +33,7 @@
 }
 
 .icon_close {
-  stroke: rgb(22, 22, 22);
+  stroke: var(--text-color-modal);
 }
 .title {
   color: var(--text-color-modal);
