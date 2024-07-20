@@ -10,7 +10,7 @@
 }
 .content {
   position: relative;
-  background-color: white;
+  background-color: var(--modal-bg-color);
   padding: 24px;
   overflow: hidden;
   max-width: 1000px;
@@ -33,10 +33,10 @@
 }
 
 .icon_close {
-  stroke: rgb(22, 22, 22);
+  stroke: var(--card-title-color);
 }
 .title {
-  color: rgb(22, 22, 22);
+  color: var(--card-title-color);
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;

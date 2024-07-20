@@ -23,8 +23,6 @@ const CardItem = ({ card }) => {
   const { openModal, closeModal, isOpen } = useToggle();
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const classname = "classname";
-
   function handleBackdropClick(e) {
     console.log(e.target);
     console.log(e.currentTarget);

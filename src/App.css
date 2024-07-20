@@ -129,6 +129,20 @@ img {
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
   --active-board: rgba(246, 246, 247, 1);
+  --card-bg-color: rgb(255, 255, 255);
+  --card-title-color: rgba(22, 22, 22, 1);
+  --card-desc-color: rgba(22, 22, 22, 0.7);
+  --card-icon-color: rgba(22, 22, 22, 0.5);
+  --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
+  --card-list-scroll-track-color: rgb(232, 232, 232);
+  --priority-without: rgba(22, 22, 22, 0.3);
+  --icon-bell: rgb(190, 219, 176);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --add-another-card-btn-color: rgb(190, 219, 176);
+  --add-another-card-btn-hover-color: rgb(157, 200, 136);
+  --modal-bg-color: rgb(252, 252, 252);
+  --add-card-placeholder: rgb(22, 22, 22);
+  --datepicker-color: rgb(190, 219, 176);
 
   color-scheme: light;
 }
@@ -165,6 +179,20 @@ img {
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
   --active-board: rgba(246, 246, 247, 1);
+  --card-bg-color: rgb(255, 255, 255);
+  --card-title-color: rgba(22, 22, 22, 1);
+  --card-desc-color: rgba(22, 22, 22, 0.7);
+  --card-icon-color: rgba(22, 22, 22, 0.5);
+  --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
+  --card-list-scroll-track-color: rgb(232, 232, 232);
+  --priority-without: rgba(22, 22, 22, 0.3);
+  --icon-bell: rgb(190, 219, 176);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --add-another-card-btn-color: rgb(190, 219, 176);
+  --add-another-card-btn-hover-color: rgb(157, 200, 136);
+  --modal-bg-color: rgb(252, 252, 252);
+  --add-card-placeholder: rgb(22, 22, 22);
+  --datepicker-color: rgb(190, 219, 176);
 
   color-scheme: light;
 }
@@ -201,6 +229,20 @@ img {
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
   --active-board: #1f1f1f;
+  --card-bg-color: rgb(18, 18, 18);
+  --card-title-color: #fff;
+  --card-desc-color: rgba(255, 255, 255, 0.5);
+  --card-icon-color: rgba(225, 225, 225, 0.5);
+  --card-list-scroll-thumb-color: rgb(18, 18, 18);
+  --card-list-scroll-track-color: rgba(255, 255, 255, 0.08);
+  --priority-without: rgba(255, 255, 255, 0.3);
+  --icon-bell: rgb(190, 219, 176);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --add-another-card-btn-color: rgb(190, 219, 176);
+  --add-another-card-btn-hover-color: rgb(157, 200, 136);
+  --modal-bg-color: rgb(21, 21, 21);
+  --add-card-placeholder: rgb(255, 255, 255);
+  --datepicker-color: rgb(190, 219, 176);
 
   color-scheme: dark;
 }
@@ -237,5 +279,20 @@ img {
   --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
   --active-board: rgba(255, 255, 255, 0.5);
+  --card-bg-color: rgb(255, 255, 255);
+  --card-title-color: rgba(22, 22, 22, 1);
+  --card-desc-color: rgba(22, 22, 22, 0.7);
+  --card-icon-color: rgba(22, 22, 22, 0.5);
+  --card-list-scroll-thumb-color: rgb(184, 188, 253);
+  --card-list-scroll-track-color: rgb(255, 255, 255);
+  --priority-without: rgba(22, 22, 22, 0.3);
+  --icon-bell: rgb(82, 85, 188);
+  --icon-plus: rgba(22, 22, 22, 1);
+  --add-another-card-btn-color: rgb(123, 126, 222);
+  --add-another-card-btn-hover-color: rgb(82, 85, 188);
+  --modal-bg-color: rgb(252, 252, 252);
+  --add-card-placeholder: rgb(22, 22, 22);
+  --datepicker-color: rgb(82, 85, 188);
+
   color-scheme: violet;
 }
