@@ -48,14 +48,3 @@ export const deleteBoard = createAsyncThunk(
     }
   }
 );
-
-export const sendHelpRequest = createAsyncThunk(
-  "help/sendHelpRequest",
-  async (formData, thunkApi) => {
-    try {
-      await projectApi.post("/api/help", formData);
-    } catch (error) {
-      return thunkApi.rejectWithValue(error.message);
-    }
-  }
-);

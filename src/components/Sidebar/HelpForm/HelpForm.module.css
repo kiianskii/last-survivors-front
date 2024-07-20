@@ -1,14 +1,18 @@
 .help_wrapper {
   border-radius: 8px;
-  background-color: #f6f6f7;
+  background-color: var(--background-color-help);
   margin: 0 0 24px;
   padding: 14px;
-  margin-top: 116px;
+  margin-top: 136px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 40px;
+    margin-top: 314px;
     width: 212px;
     padding: 20px;
+  }
+
+  @media screen and (min-width: 1260px) {
+    margin-top: 60px;
   }
 }
 
@@ -19,7 +23,7 @@
 }
 
 .help_text {
-  color: #161616;
+  color: var(--text-color);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -36,7 +40,7 @@
 }
 
 .span_text {
-  color: #bedbb0;
+  color: var(--text-color-color);
 }
 
 .help_link {
@@ -47,16 +51,16 @@
 }
 
 .help_link:hover {
-  background-color: #bedbb0;
+  background-color: var(--btn-create);
   border-radius: 8px;
 }
 
 .help_icon {
-  stroke: black;
+  stroke: var(--text-color);
   fill: transparent;
 }
 .need_text {
-  color: #161616;
+  color: var(--text-color);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.24px;
@@ -74,35 +78,42 @@
 
 .help_email {
   width: 287px;
-  padding: 14px 170px 14px 18px;
+  padding: 14px 18px;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid #bedbb0;
+  border: 1px solid var(--btn-create);
   opacity: 0.4;
   margin-bottom: 14px;
 
   &:hover {
-    border-color: rgb(157, 200, 136);
+
+    border-color: var(--btn-create-hover);
+    border: 1.5px solid rgb(157, 200, 136);
     transition: 200ms ease-out;
   }
   &::placeholder {
-    color: #161616;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.02em;
   }
+
+  /* @media screen and (min-width: 768px) {
+    width: 352px;
+    padding: 20px;
+  } */
 }
 
 .help_comment {
   display: flex;
   width: 287px;
   height: 120px;
-  padding: 14px 197px 85px 18px;
+  padding: 14px 18px;
   align-items: center;
 
   border-radius: 8px;
-  border: 1px solid #bedbb0;
+  border: 1px solid var(--btn-create);
   opacity: 0.4;
   margin-bottom: 24px;
   resize: none;
@@ -115,7 +126,9 @@
     letter-spacing: -0.02em;
   }
   &:hover {
-    border-color: rgb(157, 200, 136);
+
+    border-color: var(--btn-create-hover);
+    border: 1.5px solid rgb(157, 200, 136);
     transition: 200ms ease-out;
   }
 }
@@ -124,15 +137,15 @@
   width: 287px;
   height: 49px;
   border-radius: 8px;
-  background: #bedbb0;
-  color: #161616;
+  background: var(--btn-create);
+  color: var(--text-color);
 
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.28px;
   cursor: pointer;
   &:hover {
-    background-color: rgb(157, 200, 136);
+    background-color: var(--btn-create-hover);
     transition: 200ms ease-out;
   }
 }
@@ -142,4 +155,8 @@
   font-size: 10px;
   margin-top: 5px;
   padding-left: 14px;
+}
+
+.help_modal {
+  width: 430px;
 }

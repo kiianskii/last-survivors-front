@@ -3,7 +3,7 @@
   flex-direction: column;
   /* align-items: center; */
   /* justify-content: space-between; */
-  background-color: #fff;
+  background-color: var(--sidebar-color);
   width: 225px;
   height: 100vh;
   position: absolute;

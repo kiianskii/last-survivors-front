@@ -1,29 +1,32 @@
 .board_item {
   display: flex;
   flex-direction: row;
-  width: 238px;
+  width: 225px;
   margin: 4px 0;
   padding: 0 24px;
   height: 61px;
-  gap: 30px;
+  gap: 20px;
 
   @media screen and (min-width: 768px) {
     width: 260px;
+    gap: 30px;
   }
 }
 .board_name {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #161616;
+  color: var(--text-color-secondary);
   width: 88px;
   height: 21px;
   padding: 20px 0;
 }
+
 .button_icon {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  width: 40px;
   @media screen and (min-width: 768px) {
     /* margin-left: 54px; */
   }
@@ -36,24 +39,25 @@
 .icons {
   display: inline-block;
   cursor: pointer;
-  stroke: rgba(22, 22, 22, 1);
+  stroke: var(--text-color);
   fill: none;
   margin: 22px 8px 22px 0;
 }
 .pen_icon {
   width: 16px;
   height: 16px;
-  stroke: rgba(22, 22, 22, 0.5);
+  stroke: var(--fill-icons-color);
   fill: none;
 }
 
 .plus {
-  stroke: rgba(18, 18, 18, 1);
+  stroke: var(--icon-plus);
 }
 .active {
-  background-color: #f6f6f7;
+  background-color: var(--active-board);
   position: relative;
   z-index: 1;
+  color: var(--text-color);
 }
 .active::after {
   content: "";
