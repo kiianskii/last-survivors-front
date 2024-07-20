@@ -16,8 +16,8 @@ function ColumnItem({ column }) {
 
   return (
     <div className={css.column_wrapper}>
-      <h2>{column.title}</h2>
-      <ul>
+      <h2 className={css.title}>{column.title}</h2>
+      <ul className={css.wrap}>
         <li className={css.icon_list_item}>
           <button className={css.icon_btn} type="button" onClick={openModal}>
             <Icon size={16} id={"pencil"} className={css.icon} />

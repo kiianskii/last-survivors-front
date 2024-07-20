@@ -30,7 +30,8 @@ function ScreensPage() {
   const columns = useSelector(selectColumns);
 
   return (
-    <div>
+    <div className={s.wrap}> 
+        <h2 className={s.title}>Project Office</h2>
       <div className={s.wrapper}>
         {columns
           ? columns.map((column) => {

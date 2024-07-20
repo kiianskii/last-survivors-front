@@ -6,7 +6,7 @@
   background-color: var(--sidebar-color);
   width: 225px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -225px;
   padding: 14px;

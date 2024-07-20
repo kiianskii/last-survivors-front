@@ -3,7 +3,7 @@
   flex-direction: column;
   row-gap: 8px;
   overflow-y: auto;
-  margin-bottom: 14px;
+  margin: 14px 0;
   max-height: 478px;
 }
 

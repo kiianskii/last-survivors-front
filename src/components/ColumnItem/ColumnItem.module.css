@@ -17,10 +17,26 @@
   stroke: rgba(22, 22, 22, 0.5);
   fill: transparent;
 }
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 
 .column_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 20px 17px 20px;
+  border-radius: 8px;
+  width: 334px;
+  height: 56px;
+  background-color: #fff;
+}
+.title{
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #161616;
 }
