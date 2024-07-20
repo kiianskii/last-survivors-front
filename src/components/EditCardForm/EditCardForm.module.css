@@ -1,4 +1,7 @@
-
+.form {
+  display: flex;
+  flex-direction: column;
+}
 
 .input {
   width: 287px;
