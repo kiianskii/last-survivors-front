@@ -16,11 +16,12 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #161616;
+  color: var(--text-color-secondary);
   width: 88px;
   height: 21px;
   padding: 20px 0;
 }
+
 .button_icon {
   display: inline-flex;
   align-items: center;
@@ -38,22 +39,23 @@
 .icons {
   display: inline-block;
   cursor: pointer;
-  stroke: rgba(22, 22, 22, 1);
+  stroke: var(--text-color);
   fill: none;
   margin: 22px 8px 22px 0;
 }
 .pen_icon {
   width: 16px;
   height: 16px;
-  stroke: rgba(22, 22, 22, 0.5);
+  stroke: var(--fill-icons-color);
   fill: none;
 }
 
 .plus {
-  stroke: rgba(18, 18, 18, 1);
+  stroke: var(--icon-plus);
 }
 .active {
-  background-color: #f6f6f7;
+  color: var(--text-color);
+  background-color: var(--active-board);
   position: relative;
   z-index: 1;
 }
@@ -72,4 +74,7 @@
 .icon_name_div {
   display: flex;
   flex-direction: row;
+}
+.modal_class {
+  background-color: var(--modal-bg) !important;
 }

@@ -1,12 +1,12 @@
 .icon {
-  stroke: #fff;
+  stroke: var(--icon-plus);
 }
 
 .add_btn {
   width: 335px;
   height: 56px;
   border-radius: 8px;
-  background-color: rgb(190, 219, 176);
+  background-color: var(--add-another-card-btn-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
   letter-spacing: -2%;
   column-gap: 8px;
   &:hover {
-    background-color: rgb(157, 200, 136);
+    background-color: var(--add-another-card-btn-hover-color);
     transition: 200ms ease-out;
   }
 }
@@ -27,7 +27,7 @@
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: rgb(22, 22, 22);
+  background: var(--background-color-btn-plus);
   display: flex;
   justify-content: center;
   align-items: center;
