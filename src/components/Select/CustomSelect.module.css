@@ -1,0 +1,23 @@
+.select {
+    width: fit-content;
+}
+@media only screen and (max-width: 767.98px) {
+}
+
+.icon {
+    transform: rotate(0deg);
+    animation: transformation 0.5s ease-in-out;
+}
+.transformed {
+    transform: rotate(180deg);
+    animation-direction: reverse;
+}
+
+@keyframes transformation {
+    from {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
