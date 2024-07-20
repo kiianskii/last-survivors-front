@@ -7,16 +7,16 @@ const LogOut = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={css.logout_wrap}>
+    <div>
       <button
-        className={css.logout_wrap}
+        className={css.logout_button}
         type="button"
         onClick={() => dispatch(logOutThunk())}
       >
         <svg
           className={css.logout_icon}
-          width="32px"
-          height="32px"
+          width="32"
+          height="32"
           aria-label="logout sign"
         >
           <use href={sprite + "#icon-log-out"}></use>
