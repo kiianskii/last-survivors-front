@@ -4,6 +4,7 @@
   align-items: center;
   gap: 8px;
   padding: 0 93px 0 0;
+
   /* width: 104px; */
   height: 32px;
   margin-bottom: 70px;
@@ -18,5 +19,5 @@
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.04em;
-  color: #161616;
+  color: var(--text-color);
 }

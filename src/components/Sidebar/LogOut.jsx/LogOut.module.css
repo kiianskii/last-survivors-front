@@ -9,16 +9,19 @@
 }
 
 .logout_icon {
-  stroke: #bedbb0;
+  stroke: var(--icon-logout-color);
   fill: transparent;
   &:hover {
     stroke: rgb(157, 200, 136);
     transition: 200ms ease-out;
   }
 }
+.logout_icon:hover {
+  stroke: var(--icon-logout-hover-color);
+}
 
 .logout_text {
-  color: #161616;
+  color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
 }

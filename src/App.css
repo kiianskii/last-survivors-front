@@ -76,7 +76,7 @@ img {
   .container {
     max-width: 768px;
   }
-  .class{
+  .class {
     width: 400px !important;
   }
 }
@@ -97,5 +97,145 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --main-color: #fff;
+  --sidebar-color: #fff;
+  --header-color: #fff;
+  --background-color: #f6f6f7;
+  --background-color-help: #f6f6f7;
+  --text-color: #161616;
+  --text-color-secondary: rgba(22, 22, 22, 0.5);
+  --text-color-color: #bedbb0;
+  --btn-plus-color: rgba(190, 219, 176, 1);
+  --btn-plus-color-hover: rgba(157, 200, 136, 1);
+  --btn-create: #bedbb0;
+  --btn-create-hover: #9dc888;
+  --background-color-btn-plus: rgba(22, 22, 22, 1);
+  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+  --color-borders-input: #bedbb0;
+  --icon-fill-logo: rgba(255, 255, 255, 1);
+  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+  --icon-logout-color: rgba(190, 219, 176, 1);
+  --icon-logout-color-hover: rgba(157, 200, 136, 1);
+  --icon-bell-color: rgba(190, 219, 176, 1);
+  --fill-icons-color: rgba(255, 255, 255, 0.5);
+  --stroke-icons-hover: rgba(22, 22, 22, 1);
+  --icon-in-progress-color: rgba(22, 22, 22, 1);
+  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+  --icon-user-man: rgba(255, 255, 255, 1);
+  --icon-user-man-bg: rgba(246, 246, 247, 1);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-btn-background-plus: rgba(22, 22, 22, 1);
+  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+  --stroke-boards: rgba(22, 22, 22, 0.1);
+  --active-board: rgba(246, 246, 247, 1);
+
+  color-scheme: light;
 }
 
+.light {
+  --main-color: #fff;
+  --sidebar-color: #fff;
+  --header-color: #fff;
+  --background-color: #f6f6f7;
+  --background-color-help: #f6f6f7;
+  --text-color: #161616;
+  --text-color-secondary: rgba(22, 22, 22, 0.5);
+  --text-color-color: #bedbb0;
+  --btn-plus-color: rgba(190, 219, 176, 1);
+  --btn-plus-color-hover: rgba(157, 200, 136, 1);
+  --btn-create: #bedbb0;
+  --btn-create-hover: #9dc888;
+  --background-color-btn-plus: rgba(22, 22, 22, 1);
+  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+  --color-borders-input: #bedbb0;
+  --icon-fill-logo: rgba(255, 255, 255, 1);
+  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+  --icon-logout-color: rgba(190, 219, 176, 1);
+  --icon-logout-color-hover: rgba(157, 200, 136, 1);
+  --icon-bell-color: rgba(190, 219, 176, 1);
+  --fill-icons-color: rgba(255, 255, 255, 0.5);
+  --stroke-icons-hover: rgba(22, 22, 22, 1);
+  --icon-in-progress-color: rgba(22, 22, 22, 1);
+  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+  --icon-user-man: rgba(255, 255, 255, 1);
+  --icon-user-man-bg: rgba(246, 246, 247, 1);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-btn-background-plus: rgba(22, 22, 22, 1);
+  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+  --stroke-boards: rgba(22, 22, 22, 0.1);
+  --active-board: rgba(246, 246, 247, 1);
+
+  color-scheme: light;
+}
+
+.dark {
+  --main-color: #121212;
+  --sidebar-color: #121212;
+  --header0color: #121212;
+  --background-color: #1f1f1f;
+  --background-color-help: #1f1f1f;
+  --text-color: #fff;
+  --text-color-secondary: rgba(255, 255, 255, 0.5);
+  --text-color-color: #bedbb0;
+  --btn-plus-color: rgba(190, 219, 176, 1);
+  --btn-plus-color-hover: rgba(157, 200, 136, 1);
+  --btn-create: #bedbb0;
+  --btn-create-hover: #9dc888;
+  --background-color-btn-plus: rgba(22, 22, 22, 1);
+  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+  --color-borders-input: #bedbb0;
+  --icon-fill-logo: rgba(255, 255, 255, 1);
+  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+  --icon-logout-color: rgba(190, 219, 176, 1);
+  --icon-logout-color-hover: rgba(157, 200, 136, 1);
+  --icon-bell-color: rgba(190, 219, 176, 1);
+  --fill-icons-color: rgba(255, 255, 255, 0.5);
+  --stroke-icons-hover: rgba(255, 255, 255, 1);
+  --icon-in-progress-color: rgba(255, 255, 255, 0.5);
+  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+  --icon-user-man: rgba(21, 21, 21, 1);
+  --icon-user-man-bg: rgba(31, 31, 31, 1);
+  --icon-plus: #121212;
+  --icon-btn-background-plus: rgba(22, 22, 22, 1);
+  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+  --stroke-boards: rgba(255, 255, 255, 0.1);
+  --active-board: #1f1f1f;
+
+  color-scheme: dark;
+}
+
+.violet {
+  --main-color: #5255bc;
+  --sidebar-color: #5255bc;
+  --header-color: #fff;
+  --background-color: #ecedfd;
+  --background-color-help: rgba(236, 237, 253, 0.4);
+  --text-color: #fff;
+  --text-color-secondary: rgba(255, 255, 255, 0.5);
+  --text-color-color: #5255bc;
+  --btn-plus-color: rgba(184, 188, 253, 1);
+  --btn-plus-color-hover: rgba(151, 156, 234, 1);
+  --btn-create: #5255bc;
+  --btn-create-hover: #7b7ede;
+  --background-color-btn-plus: #fff;
+  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+  --color-borders-input: #5255bc;
+  --icon-fill-logo: rgba(82, 85, 188, 1);
+  --icon-fill-logo-bg: rgba(236, 237, 253, 1);
+  --icon-logout-color: rgba(255, 255, 255, 1);
+  --icon-logout-color-hover: rgba(184, 188, 253, 1);
+  --icon-bell-color: rgba(82, 85, 188, 1);
+  --fill-icons-color: rgba(255, 255, 255, 0.5);
+  --stroke-icons-hover: rgba(22, 22, 22, 1);
+  --icon-in-progress-color: rgba(22, 22, 22, 1);
+  --icon-in-progress-color-hover: rgba(82, 85, 188, 1);
+  --icon-user-man: rgba(255, 255, 255, 1);
+  --icon-user-man-bg: rgba(236, 237, 253, 1);
+  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-btn-background-plus: rgba(255, 255, 255, 1);
+  --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
+  --stroke-boards: rgba(255, 255, 255, 0.1);
+  --active-board: rgba(255, 255, 255, 0.5);
+  color-scheme: violet;
+}

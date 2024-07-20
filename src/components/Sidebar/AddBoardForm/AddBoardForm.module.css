@@ -21,12 +21,12 @@
   display: inline-block;
   cursor: pointer;
   padding: 5px;
-  stroke: rgba(22, 22, 22, 0.5);
+  stroke: var(--fill-icons-color);
   fill: none;
 }
 
 .icon.selected {
-  stroke: #bedbb0;
+  stroke: var(--stroke-icons-hover);
 }
 input[type="radio"] {
   display: none;
@@ -35,31 +35,35 @@ input[type="radio"] {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: rgb(22, 22, 22);
+  background: var(--icon-btn-background-plus);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.icon_wrapper:hover {
+  background: var(--icon-btn-background-plus-hover);
+  transition: 200ms ease-out;
+}
 
 .plus {
-  stroke: #fff;
+  stroke: var(--icon-plus);
 }
 
 .btn_create {
   width: 287px;
   height: 49px;
   border-radius: 8px;
-  background-color: rgb(190, 219, 176);
+  background-color: var(--btn-create);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(22, 22, 22);
+  color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   column-gap: 8px;
   &:hover {
-    background-color: rgb(157, 200, 136);
+    background-color: var(--btn-create-hover);
     transition: 200ms ease-out;
   }
 }
@@ -72,6 +76,7 @@ input[type="radio"] {
   gap: 4px;
   margin-bottom: 40px;
   margin-right: 35px;
+  width: 252px;
 }
 
 .background {
