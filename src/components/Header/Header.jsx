@@ -10,10 +10,10 @@ function Header({ toggleSidebar }) {
     // Temp spread and avatarURL and theme
     const themes = ["dark", "light", "violet"];
     const userInfo = { ...useSelector(selectUser) };
-    userInfo.avatarURL =
-        "http://res.cloudinary.com/dmcbkckow/image/upload/v1720970849/avatars/spjg2kpl8qvf2pcfyide.webp";
-    userInfo.theme = "light";
-    console.log(userInfo);
+    //userInfo.avatarURL =
+    //    "http://res.cloudinary.com/dmcbkckow/image/upload/v1720970849/avatars/spjg2kpl8qvf2pcfyide.webp";
+    //userInfo.theme = "light";
+    //console.log(userInfo);
     return (
         <div className={clsx(css.header, userInfo.theme + "-header")}>
             <BurgerMenu toggleSidebar={toggleSidebar} />
