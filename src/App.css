@@ -72,6 +72,7 @@ img {
   max-width: 320px;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -113,6 +114,7 @@ img {
   --background-color-btn-plus: rgba(22, 22, 22, 1);
   --text-color-themes-filter: rgba(22, 22, 22, 0.8);
   --color-borders-input: #bedbb0;
+  --color-borders-input-active: rgba(190, 219, 176, 1);
   --icon-fill-logo: rgba(255, 255, 255, 1);
   --icon-fill-logo-bg: rgba(31, 31, 31, 1);
   --icon-logout-color: rgba(190, 219, 176, 1);
@@ -124,12 +126,17 @@ img {
   --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
   --icon-user-man: rgba(255, 255, 255, 1);
   --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus: #121212;
   --icon-btn-background-plus: rgba(22, 22, 22, 1);
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
   --active-board: rgba(246, 246, 247, 1);
-
+  --icons-modal: rgba(22, 22, 22, 0.5);
+  --icons-modal-active: rgba(22, 22, 22, 1);
+  --icon-plus-modal: rgba(255, 255, 255, 1);
+  --icon-plus-modal-background: rgba(22, 22, 22, 1);
+  --modal-bg: #fcfcfc;
+  --text-color-modal: rgba(22, 22, 22, 1);
   color-scheme: light;
 }
 
@@ -149,6 +156,7 @@ img {
   --background-color-btn-plus: rgba(22, 22, 22, 1);
   --text-color-themes-filter: rgba(22, 22, 22, 0.8);
   --color-borders-input: #bedbb0;
+  --color-borders-input-active: rgba(190, 219, 176, 1);
   --icon-fill-logo: rgba(255, 255, 255, 1);
   --icon-fill-logo-bg: rgba(31, 31, 31, 1);
   --icon-logout-color: rgba(190, 219, 176, 1);
@@ -160,11 +168,17 @@ img {
   --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
   --icon-user-man: rgba(255, 255, 255, 1);
   --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus: #121212;
   --icon-btn-background-plus: rgba(22, 22, 22, 1);
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
   --active-board: rgba(246, 246, 247, 1);
+  --icons-modal: rgba(22, 22, 22, 0.5);
+  --icons-modal-active: rgba(22, 22, 22, 1);
+  --icon-plus-modal: rgba(255, 255, 255, 1);
+  --icon-plus-modal-background: rgba(22, 22, 22, 1);
+  --modal-bg: #fcfcfc;
+  --text-color-modal: rgba(22, 22, 22, 1);
 
   color-scheme: light;
 }
@@ -185,6 +199,7 @@ img {
   --background-color-btn-plus: rgba(22, 22, 22, 1);
   --text-color-themes-filter: rgba(22, 22, 22, 0.8);
   --color-borders-input: #bedbb0;
+  --color-borders-input-active: rgba(190, 219, 176, 1);
   --icon-fill-logo: rgba(255, 255, 255, 1);
   --icon-fill-logo-bg: rgba(31, 31, 31, 1);
   --icon-logout-color: rgba(190, 219, 176, 1);
@@ -201,7 +216,12 @@ img {
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
   --active-board: #1f1f1f;
-
+  --icons-modal: rgba(255, 255, 255, 0.5);
+  --icons-modal-active: rgba(255, 255, 255, 1);
+  --icon-plus-modal: rgba(255, 255, 255, 1);
+  --icon-plus-modal-background: rgba(22, 22, 22, 1);
+  --modal-bg: #151515;
+  --text-color-modal: rgba(255, 255, 255, 1);
   color-scheme: dark;
 }
 
@@ -221,6 +241,7 @@ img {
   --background-color-btn-plus: #fff;
   --text-color-themes-filter: rgba(22, 22, 22, 0.8);
   --color-borders-input: #5255bc;
+  --color-borders-input-active: rgba(82, 85, 188, 1);
   --icon-fill-logo: rgba(82, 85, 188, 1);
   --icon-fill-logo-bg: rgba(236, 237, 253, 1);
   --icon-logout-color: rgba(255, 255, 255, 1);
@@ -237,5 +258,11 @@ img {
   --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
   --active-board: rgba(255, 255, 255, 0.5);
+  --icons-modal: rgba(22, 22, 22, 0.5);
+  --icons-modal-active: rgba(22, 22, 22, 1);
+  --icon-plus-modal: rgba(22, 22, 22, 1);
+  --icon-plus-modal-background: rgba(255, 255, 255, 1);
+  --modal-bg: #fcfcfc;
+  --text-color-modal: rgba(22, 22, 22, 1);
   color-scheme: violet;
 }

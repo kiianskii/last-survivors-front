@@ -16,7 +16,11 @@ const CreateBoard = () => {
           <Icon size={20} id="plus" className={css.plus} />
         </button>
         {isOpen && (
-          <Modal title="New board" closeModal={closeModal}>
+          <Modal
+            title="New board"
+            closeModal={closeModal}
+            classname={css.modal_class}
+          >
             <AddBoardForm closeModal={closeModal} />
           </Modal>
         )}
