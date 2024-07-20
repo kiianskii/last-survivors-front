@@ -19,7 +19,7 @@ const HelpForm = () => {
     email: Yup.string()
       .email("Invalid email")
       .required("Email is required field"),
-    comment: Yup.string()
+    message: Yup.string()
       .min(5, "Comment must be at least 5 characters")
       .max(200, "Comment must be less than 200 characters")
       .required("Comment is required field"),
@@ -27,13 +27,14 @@ const HelpForm = () => {
 
   const initialValues = {
     email: "",
-    comment: "",
+    message: "",
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    const { email, comment } = values;
-    const updateData = { email, comment };
-    dispatch(needHelpThunk(updateData));
+    const { email, message } = values;
+    const credentials = { email, message };
+    console.log(credentials);
+    dispatch(needHelpThunk(credentials));
     resetForm();
     closeModal();
   };
@@ -52,8 +53,13 @@ const HelpForm = () => {
         </svg>
         <span className={css.need_text}>Need help?</span>
       </button>
+
       {isOpen && (
-        <Modal title="Need help" closeModal={closeModal}>
+        <Modal
+          title="Need help"
+          closeModal={closeModal}
+          classname={css.help_modal}
+        >
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -71,19 +77,20 @@ const HelpForm = () => {
                 type="email"
                 placeholder="Email address"
               />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className={css.error}
+              />
 
               <Field
                 className={css.help_comment}
                 component="textarea"
-                name="comment"
+                name="message"
                 type="text"
                 placeholder="Comment"
               />
-              <ErrorMessage
-                name="Comment shouldn't be empty"
-                component="div"
-                className={css.error}
-              />
+
               <button className={css.send_button} type="submit">
                 Send
               </button>

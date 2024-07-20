@@ -1,16 +1,20 @@
-.logout_wrap {
+.logout_button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 14px;
   background-color: transparent;
+  margin-bottom: 24px;
   cursor: pointer;
 }
 
 .logout_icon {
   stroke: var(--icon-logout-color);
   fill: transparent;
-  transition: all 150ms linear;
+  &:hover {
+    stroke: rgb(157, 200, 136);
+    transition: 200ms ease-out;
+  }
 }
 .logout_icon:hover {
   stroke: var(--icon-logout-hover-color);

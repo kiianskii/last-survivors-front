@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { sendHelpRequest } from "./operations";
+import { needHelpThunk } from "../auth/operations";
 
 const helpSlice = createSlice({
   name: "help",
@@ -9,13 +9,13 @@ const helpSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(sendHelpRequest.pending, (state) => {
+      .addCase(needHelpThunk.pending, (state) => {
         state.loading = true;
       })
-      .addCase(sendHelpRequest.fulfilled, (state) => {
+      .addCase(needHelpThunk.fulfilled, (state) => {
         state.loading = false;
       })
-      .addCase(sendHelpRequest.rejected, (state, action) => {
+      .addCase(needHelpThunk.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });

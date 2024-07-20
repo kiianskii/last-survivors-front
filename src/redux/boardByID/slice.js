@@ -90,8 +90,20 @@ const columnsSlice = createSlice({
             (card) => card._id === payload._id
           );
           if (index !== -1) {
-            state.columns[columnIndex].cards[index].column_id =
-              payload.column_id;
+            const selectedCard = state.columns[columnIndex].cards.splice(
+              index,
+              1
+            );
+            console.log(selectedCard);
+            const newColumnIndex = state.columns.findIndex(
+              (column) => column._id === payload.column_id
+            );
+            if (newColumnIndex !== -1) {
+              state.columns[newColumnIndex].cards.push({
+                ...selectedCard[0],
+                column_id: payload.column_id,
+              });
+            }
           }
         }
       });

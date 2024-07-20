@@ -1,14 +1,33 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import {
-  deleteTransactionThunk,
-  editTransactionThunk,
-  sendTransactionThunk,
-  transactionByDateThunk,
-  userTransactionsThunk,
-} from "../transactions/operations";
+  editAvatarThunk,
+  editUserThunk,
+  logInThunk,
+  logOutThunk,
+  needHelpThunk,
+  registerThunk,
+} from "../auth/operations";
+import {
+  addColumnThunk,
+  deleteColumnThunk,
+  editColumnThunk,
+  fetchColumnsThunk,
+} from "../boardByID/operations";
+import {
+  addCardThunk,
+  changeColumnThunk,
+  deleteCardThunk,
+  editCardThunk,
+} from "../cards/operations";
+import {
+  createBoard,
+  deleteBoard,
+  editBoard,
+  fetchBoards,
+} from "../boards/operations";
+
 const initialState = {
   isLoading: false,
-
 };
 
 const slice = createSlice({
@@ -16,17 +35,29 @@ const slice = createSlice({
   initialState,
   selectors: {
     selectIsLoading: (state) => state.isLoading,
-    
   },
   extraReducers: (builder) => {
     builder
       .addMatcher(
         isAnyOf(
-          userTransactionsThunk.pending,
-          transactionByDateThunk.pending,
-          sendTransactionThunk.pending,
-          editTransactionThunk.pending,
-          deleteTransactionThunk.pending
+          registerThunk.pending,
+          logInThunk.pending,
+          logOutThunk.pending,
+          fetchColumnsThunk.pending,
+          addColumnThunk.pending,
+          editColumnThunk.pending,
+          deleteColumnThunk.pending,
+          addCardThunk.pending,
+          editCardThunk.pending,
+          deleteCardThunk.pending,
+          changeColumnThunk.pending,
+          needHelpThunk.pending,
+          createBoard.pending,
+          editBoard.pending,
+          deleteBoard.pending,
+          fetchBoards.pending,
+          editUserThunk.pending,
+          editAvatarThunk.pending
         ),
         (state) => {
           state.isLoading = true;
@@ -34,11 +65,24 @@ const slice = createSlice({
       )
       .addMatcher(
         isAnyOf(
-          userTransactionsThunk.fulfilled,
-          transactionByDateThunk.fulfilled,
-          sendTransactionThunk.fulfilled,
-          editTransactionThunk.fulfilled,
-          deleteTransactionThunk.fulfilled
+          registerThunk.fulfilled,
+          logInThunk.fulfilled,
+          logOutThunk.fulfilled,
+          fetchColumnsThunk.fulfilled,
+          addColumnThunk.fulfilled,
+          editColumnThunk.fulfilled,
+          deleteColumnThunk.fulfilled,
+          addCardThunk.fulfilled,
+          editCardThunk.fulfilled,
+          deleteCardThunk.fulfilled,
+          changeColumnThunk.fulfilled,
+          needHelpThunk.fulfilled,
+          createBoard.fulfilled,
+          editBoard.fulfilled,
+          deleteBoard.fulfilled,
+          fetchBoards.fulfilled,
+          editUserThunk.fulfilled,
+          editAvatarThunk.fulfilled
         ),
         (state) => {
           state.isLoading = false;
@@ -46,11 +90,24 @@ const slice = createSlice({
       )
       .addMatcher(
         isAnyOf(
-          userTransactionsThunk.rejected,
-          transactionByDateThunk.rejected,
-          sendTransactionThunk.rejected,
-          editTransactionThunk.rejected,
-          deleteTransactionThunk.rejected
+          registerThunk.rejected,
+          logInThunk.rejected,
+          logOutThunk.rejected,
+          fetchColumnsThunk.rejected,
+          addColumnThunk.rejected,
+          editColumnThunk.rejected,
+          deleteColumnThunk.rejected,
+          addCardThunk.rejected,
+          editCardThunk.rejected,
+          deleteCardThunk.rejected,
+          changeColumnThunk.rejected,
+          needHelpThunk.rejected,
+          createBoard.rejected,
+          editBoard.rejected,
+          deleteBoard.rejected,
+          fetchBoards.rejected,
+          editUserThunk.rejected,
+          editAvatarThunk.rejected
         ),
         (state) => {
           state.isLoading = false;

@@ -31,7 +31,7 @@ const Modal = ({
   };
   return (
     <div className={s.wrapper} onClick={handleBackdropClick}>
-      <div className={`${s.content} ${s.classname}`}>
+      <div className={`${s.content} ${classname}`}>
         <>
           <h2 className={s.title}>{title}</h2>
         </>
