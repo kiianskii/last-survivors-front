@@ -16,13 +16,12 @@ function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const dispatch = useDispatch();
   const theme = useSelector(selectTheme);
-   const isLoading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectIsLoading);
   useEffect(() => {
     if (!theme) {
       dispatch(themeThunk("light"));
     }
   }, [dispatch, theme]);
-
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

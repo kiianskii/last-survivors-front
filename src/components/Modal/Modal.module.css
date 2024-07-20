@@ -33,10 +33,10 @@
 }
 
 .icon_close {
-  stroke: var(--card-title-color);
+  stroke: var(--text-color-modal);
 }
 .title {
-  color: var(--card-title-color);
+  color: var(--text-color-modal);
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
