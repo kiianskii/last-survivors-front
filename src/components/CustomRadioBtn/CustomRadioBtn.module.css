@@ -22,7 +22,7 @@
   background-color: rgb(190, 219, 176);
 }
 .radio_input:checked + .without {
-  background-color: rgba(22, 22, 22, 0.3);
+  background-color: var(--priority-without);
 }
 
 .radio_custom::after {
@@ -44,11 +44,12 @@
 }
 
 .without {
-  background-color: rgba(22, 22, 22, 0.3);
+  background-color: var(--priority-without);
   &::after {
-    background-color: rgba(22, 22, 22, 0.3);
+    background-color: var(--priority-without);
+
     padding: 3px;
-    border: 3px solid #fff;
+    border: 3px solid var(--modal-bg-color);
   }
 }
 
@@ -57,7 +58,7 @@
   &::after {
     background-color: rgb(190, 219, 176);
     padding: 3px;
-    border: 3px solid #fff;
+    border: 3px solid var(--modal-bg-color);
   }
 }
 
@@ -66,7 +67,7 @@
   &::after {
     background-color: rgb(224, 156, 181);
     padding: 3px;
-    border: 3px solid #fff;
+    border: 3px solid var(--modal-bg-color);
   }
 }
 
@@ -75,6 +76,6 @@
   &::after {
     background-color: rgb(143, 161, 208);
     padding: 3px;
-    border: 3px solid #fff;
+    border: 3px solid var(--modal-bg-color);
   }
 }

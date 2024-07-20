@@ -23,6 +23,14 @@ const CardItem = ({ card }) => {
   const { openModal, closeModal, isOpen } = useToggle();
   const [showTooltip, setShowTooltip] = useState(false);
 
+  function handleBackdropClick(e) {
+    console.log(e.target);
+    console.log(e.currentTarget);
+    if (e.target === e.currentTarget) {
+      setShowTooltip(false);
+    }
+  }
+
   return (
     <li
       className={clsx(
@@ -32,6 +40,7 @@ const CardItem = ({ card }) => {
         card.priority === "Low" && css.low_border,
         card.priority === "Without" && css.without_border
       )}
+      onClick={handleBackdropClick}
     >
       <h4 className={css.card_title}>{card.title}</h4>
       <p className={css.card_desc}>{card.description}</p>
@@ -65,7 +74,11 @@ const CardItem = ({ card }) => {
           ) : (
             ""
           )}
-          <Tooltip card={card} showTooltip={showTooltip}>
+          <Tooltip
+            card={card}
+            showTooltip={showTooltip}
+            handleBackdropClick={handleBackdropClick}
+          >
             <li className={css.icon_list_item}>
               <button
                 className={css.icon_btn}

@@ -1,10 +1,12 @@
 .form {
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
   width: 287px;
   height: 49px;
-  border: 1px solid rgb(190, 219, 176);
+  border: 1px solid var(--datepicker-color);
   border-radius: 8px;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   opacity: 0.4;
@@ -16,21 +18,21 @@
   line-height: 1.5;
   letter-spacing: -0.02em; */
   &::placeholder {
-    color: rgb(22, 22, 22);
+    color: var(--add-card-placeholder);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.02em;
   }
   &:focus-visible {
-    outline: 1px solid rgb(190, 219, 176);
+    outline: 1px solid var(--datepicker-color);
   }
 }
 
 .textarea {
   width: 287px;
   height: 154px;
-  border: 1px solid rgb(190, 219, 176);
+  border: 1px solid var(--datepicker-color);
   border-radius: 8px;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
   opacity: 0.4;
@@ -38,19 +40,19 @@
   margin-bottom: 24px;
   padding: 14px 0 14px 18px;
   &::placeholder {
-    color: rgb(22, 22, 22);
+    color: var(--add-card-placeholder);
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: -0.02em;
   }
   &:focus-visible {
-    outline: 1px solid rgb(190, 219, 176);
+    outline: 1px solid var(--datepicker-color);
   }
 }
 
 .label {
-  color: rgba(22, 22, 22, 0.5);
+  color: var(--card-icon-color);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -72,7 +74,7 @@
 }
 
 .deadline_text {
-  color: rgba(22, 22, 22, 0.5);
+  color: var(--card-icon-color);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -87,7 +89,7 @@
   width: 287px;
   height: 49px;
   border-radius: 8px;
-  background-color: rgb(190, 219, 176);
+  background-color: var(--add-another-card-btn-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +101,7 @@
   letter-spacing: -2%;
   column-gap: 8px;
   &:hover {
-    background-color: rgb(157, 200, 136);
+    background-color: var(--add-another-card-btn-hover-color);
     transition: 200ms ease-out;
   }
 }
@@ -108,12 +110,12 @@
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: rgb(22, 22, 22);
+  background: var(--background-color-btn-plus);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .icon {
-  stroke: #fff;
+  stroke: var(--icon-plus);
 }
