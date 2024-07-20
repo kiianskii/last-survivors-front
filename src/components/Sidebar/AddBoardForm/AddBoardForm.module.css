@@ -1,7 +1,7 @@
 .input {
   display: flex;
   border-radius: 8px;
-  border: 1px solid #bedbb0;
+  border: 1px solid var(--color-borders-input);
 
   opacity: 0.4;
   box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
@@ -10,23 +10,26 @@
   padding: 14px 18px;
   align-items: center;
 }
+.input:active {
+  border: 1.5px solid var(--color-borders-input-active);
+}
 .icons_p {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #161616;
+  color: var(--text-color-modal);
   margin-bottom: 14px;
 }
 .icon {
   display: inline-block;
   cursor: pointer;
   padding: 5px;
-  stroke: var(--fill-icons-color);
+  stroke: var(--icons-modal);
   fill: none;
 }
 
 .icon.selected {
-  stroke: var(--stroke-icons-hover);
+  stroke: var(--icons-modal-active);
 }
 input[type="radio"] {
   display: none;
@@ -35,29 +38,25 @@ input[type="radio"] {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: var(--icon-btn-background-plus);
+  background: var(--icon-plus-modal-background);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.icon_wrapper:hover {
-  background: var(--icon-btn-background-plus-hover);
-  transition: 200ms ease-out;
-}
 
 .plus {
-  stroke: var(--icon-plus);
+  stroke: var(--icon-plus-modal);
 }
 
 .btn_create {
   width: 287px;
   height: 49px;
   border-radius: 8px;
+  color: var(--icon-plus-modal-background);
   background-color: var(--btn-create);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -92,4 +91,8 @@ input[type="radio"] {
   font-size: 12px;
 
   margin-bottom: 5px;
+}
+
+.icon_input {
+  stroke: var(--fill-icons-color);
 }

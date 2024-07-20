@@ -57,3 +57,6 @@
 .button_plus:hover {
   background: var(--btn-plus-color-hover);
 }
+.modal_class {
+  background-color: var(--modal-bg) !important;
+}

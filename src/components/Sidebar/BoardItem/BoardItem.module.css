@@ -54,10 +54,10 @@
   stroke: var(--icon-plus);
 }
 .active {
+  color: var(--text-color);
   background-color: var(--active-board);
   position: relative;
   z-index: 1;
-  color: var(--text-color);
 }
 .active::after {
   content: "";

@@ -36,7 +36,7 @@
   stroke: rgb(22, 22, 22);
 }
 .title {
-  color: rgb(22, 22, 22);
+  color: var(--text-color-modal);
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
