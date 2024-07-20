@@ -1,5 +1,5 @@
 .calendar {
-  color: rgb(190, 219, 176);
+  color: var(--datepicker-color);
   font-family: Poppins;
   font-size: 14px;
   font-weight: 500;
@@ -10,13 +10,14 @@
   cursor: pointer;
   height: 21px;
   padding: 0 !important;
+  background-color: transparent;
   &:focus-visible {
     outline: none;
   }
 }
 
 .icon {
-  stroke: rgb(190, 219, 176);
+  stroke: var(--datepicker-color);
   fill: transparent;
   transition: 200ms ease-out;
   cursor: pointer;

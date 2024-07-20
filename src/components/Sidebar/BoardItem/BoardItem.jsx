@@ -39,7 +39,11 @@ const BoardItem = ({ board }) => {
             <Icon size={16} id="pencil" className={css.pen_icon} />
           </button>
           {isOpen && (
-            <Modal title="Edit board" closeModal={closeModal}>
+            <Modal
+              title="Edit board"
+              closeModal={closeModal}
+              classname={css.modal_class}
+            >
               <EditBoardForm closeModal={closeModal} board={board} />
             </Modal>
           )}
