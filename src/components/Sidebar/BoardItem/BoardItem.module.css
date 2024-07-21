@@ -16,7 +16,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--text-color-secondary);
+  color: var(--text-color);
   width: 88px;
   height: 21px;
   padding: 20px 0;
@@ -46,7 +46,7 @@
 .pen_icon {
   width: 16px;
   height: 16px;
-  stroke: var(--fill-icons-color);
+  stroke: var(--text-color-secondary);
   fill: none;
 }
 

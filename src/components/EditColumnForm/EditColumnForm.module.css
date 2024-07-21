@@ -1,0 +1,69 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.input {
+    border: 1px solid var(--text-color-color);
+    border-radius: 8px;
+    width: 302px;
+    height: 49px;
+    box-shadow: 0 4px 16px 0 var(----text-color-themes-filter);
+    opacity: 0.4;
+    padding: 14px 18px;
+    outline: none;
+}
+
+.input:hover,
+.input:focus {
+    opacity: 1;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: var(--add-card-placeholder);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 119px;
+    gap: 8px;
+    border-radius: 8px;
+    width: 302px;
+    height: 49px;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    background-color: var(--btn-create);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--btn-create-hover);
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+    background-color: var(--icon-btn-background-plus);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.icon {
+    stroke: var(--icon-plus);
+}
+
+.add_title {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+}

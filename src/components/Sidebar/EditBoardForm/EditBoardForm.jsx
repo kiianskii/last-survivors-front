@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { editBoard } from "../../../redux/boards/operations";
