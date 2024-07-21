@@ -24,8 +24,8 @@ const CardItem = ({ card }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   function handleBackdropClick(e) {
-    console.log(e.target);
-    console.log(e.currentTarget);
+    // console.log(e.target);
+    // console.log(e.currentTarget);
     if (e.target === e.currentTarget) {
       setShowTooltip(false);
     }
@@ -84,7 +84,6 @@ const CardItem = ({ card }) => {
                 className={css.icon_btn}
                 type="button"
                 onClick={() => {
-                  console.log(card);
                   setShowTooltip(!showTooltip);
                 }}
               >

@@ -294,6 +294,7 @@ img {
     --modal-bg: #fcfcfc;
     --text-color-modal: rgba(22, 22, 22, 1);
 
+    --text-color-modal: rgba(22, 22, 22, 1);
     color-scheme: light;
 }
 
@@ -344,7 +345,10 @@ img {
     --modal-bg-color: rgb(21, 21, 21);
     --add-card-placeholder: rgb(255, 255, 255);
     --datepicker-color: rgb(190, 219, 176);
-
+    --tooltip-bg-color: rgb(31, 31, 31);
+    --card-icon-hover-color: rgb(190, 219, 176);
+    --tooltip-icon-color: rgba(225, 225, 225, 0.5);
+    --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
     --icons-modal: rgba(255, 255, 255, 0.5);
     --icons-modal-active: rgba(255, 255, 255, 1);
     --icon-plus-modal: rgba(255, 255, 255, 1);
