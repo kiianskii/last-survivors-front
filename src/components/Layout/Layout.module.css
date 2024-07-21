@@ -14,7 +14,7 @@
 }
 .layout {
   background-color: var(--background-color);
-  height: 100vw;
+  height: 100vh;
 }
 
 /* .shiftContent {
