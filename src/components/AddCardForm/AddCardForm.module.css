@@ -29,6 +29,12 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 302px;
+  }
+}
+
 .textarea {
   width: 287px;
   height: 154px;
@@ -48,6 +54,12 @@
   }
   &:focus-visible {
     outline: 1px solid var(--datepicker-color);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .textarea {
+    width: 302px;
   }
 }
 
@@ -106,6 +118,12 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .add_btn {
+    width: 302px;
+  }
+}
+
 .icon_wrapper {
   width: 28px;
   height: 28px;
@@ -118,4 +136,8 @@
 
 .icon {
   stroke: var(--icon-plus);
+}
+
+.date_box {
+  display: flex;
 }

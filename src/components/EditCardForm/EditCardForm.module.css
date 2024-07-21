@@ -24,6 +24,12 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 302px;
+  }
+}
+
 .textarea {
   width: 287px;
   height: 154px;
@@ -43,6 +49,12 @@
   }
   &:focus-visible {
     outline: 1px solid var(--datepicker-color);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .textarea {
+    width: 302px;
   }
 }
 
@@ -98,6 +110,12 @@
   &:hover {
     background-color: var(--add-another-card-btn-hover-color);
     transition: 200ms ease-out;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .add_btn {
+    width: 302px;
   }
 }
 
