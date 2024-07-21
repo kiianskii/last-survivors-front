@@ -1,33 +1,32 @@
-
-.add_title{
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: -0.02em;
-      color: #161616;
+.add_title {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
 }
 
-.button{
+.button {
   display: flex;
   align-items: center;
   border-radius: 8px;
-    width: 334px;
-    height: 56px;
-    padding: 14px 78px;
-    gap: 8px;
-    background-color: #fff;
+  width: 334px;
+  height: 56px;
+  padding: 14px 78px;
+  gap: 8px;
+  background-color: var(--header-color);
 }
 
-.row{
+.row {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 28px;
-    width: 28px;
-    background-color: #161616;
-    border-radius: 6px;
-    cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  background-color: var(--icon-plus);
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .icon {
-  stroke: #fff;
+  stroke: var(--icon-fill-logo-bg);
 }

@@ -14,7 +14,7 @@
 }
 
 .icon {
-  stroke: rgba(22, 22, 22, 0.5);
+  stroke: var(--card-icon-color);
   fill: transparent;
 }
 .wrap {
@@ -32,11 +32,11 @@
   border-radius: 8px;
   width: 334px;
   height: 56px;
-  background-color: #fff;
+  background-color: var(--header-color);
 }
 .title{
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #161616;
+  color: var(--text-color);
 }

@@ -105,8 +105,8 @@ img {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    /* background-color: var(--background-color); */
-    background-color: lightblue;
+    background-color: var(--background-color);
+
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -159,7 +159,7 @@ img {
     --add-another-card-btn-hover-color: rgb(157, 200, 136);
     --modal-bg-color: rgb(252, 252, 252);
     --add-card-placeholder: rgb(22, 22, 22);
-    --datepicker-color: rgb(190, 219, 176);
+    --datepicker-color: #bedbb0;
 
     --icons-modal: rgba(22, 22, 22, 0.5);
     --icons-modal-active: rgba(22, 22, 22, 1);
@@ -230,7 +230,7 @@ img {
   .dark {
     --main-color: #121212;
     --sidebar-color: #121212;
-    --header0color: #121212;
+    --header-color: #121212;
     --background-color: #1f1f1f;
     --background-color-help: #1f1f1f;
     --text-color: #fff;
@@ -330,7 +330,7 @@ img {
     --add-another-card-btn-hover-color: rgb(82, 85, 188);
     --modal-bg-color: rgb(252, 252, 252);
     --add-card-placeholder: rgb(22, 22, 22);
-    --datepicker-color: rgb(82, 85, 188);
+    --datepicker-color: #5255bc;
 
     --icons-modal: rgba(22, 22, 22, 0.5);
     --icons-modal-active: rgba(22, 22, 22, 1);

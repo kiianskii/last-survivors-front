@@ -15,6 +15,9 @@ function ScreensPage() {
 
   const [board, setBoardId] = useState(null);
 
+
+  const index = boards.findIndex((board) => board._id === boardId);
+
   useEffect(() => {
     if (boards.length > 0) {
       setBoardId(boardId);
@@ -31,7 +34,7 @@ function ScreensPage() {
 
   return (
     <div className={s.wrap}> 
-        <h2 className={s.title}>Project Office</h2>
+        <h2 className={s.title}>{boards[index].name}</h2>
       <div className={s.wrapper}>
         {columns
           ? columns.map((column) => {
