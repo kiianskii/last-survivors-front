@@ -43,11 +43,11 @@ function Layout() {
         }`}
       >
         <Header toggleSidebar={toggleSidebar} />
+        <Outlet />
       </div>
       <Sidebar isOpen={isSidebarOpen} />
       <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
       {isLoading && <Loader />}
-      <Outlet />
     </div>
   );
 }
