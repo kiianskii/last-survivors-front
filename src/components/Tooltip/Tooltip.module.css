@@ -1,4 +1,5 @@
 .wrapper {
+  inset: 0;
 }
 
 .container {
@@ -14,7 +15,7 @@
   min-width: 135px;
   padding: 18px;
   border-radius: 8px;
-  background-color: aquamarine;
+  background-color: var(--tooltip-bg-color);
   position: absolute;
   transition: all 300ms ease;
   top: 23px;
@@ -26,7 +27,7 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid aquamarine;
+  border-bottom: 8px solid var(--tooltip-bg-color);
   position: absolute;
   top: -7px;
   left: calc(50% - 7px);
@@ -36,10 +37,47 @@
   min-width: 135px;
   padding: 18px;
   border-radius: 8px;
-  background-color: aquamarine;
+  background-color: var(--tooltip-bg-color);
   position: absolute;
   transition: all 300ms ease;
   top: 18px;
   transform: translateY(10px);
   display: inline;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.btn {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--tooltip-icon-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  transition: 200ms ease-out;
+  &:hover {
+    color: var(--card-icon-hover-color);
+  }
+}
+
+.icon {
+  stroke: var(--card-icon-color);
+  fill: transparent;
+  transition: 200ms ease-out;
+}
+
+.btn:hover .icon {
+  stroke: var(--card-icon-hover-color);
+}
+
+.icon_border {
+  border: 1px dashed var(--card-icon-color);
 }

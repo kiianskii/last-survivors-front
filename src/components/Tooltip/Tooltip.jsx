@@ -18,12 +18,13 @@ const Tooltip = ({ children, card, showTooltip, handleBackdropClick }) => {
       <div className={css.container}>
         {children}
         <div className={showTooltip ? css.open : css.tooltip}>
-          <ul>
+          <ul className={css.list}>
             {filteredColumns.map((column) => {
               return (
                 <li key={column._id}>
                   <button
                     type="button"
+                    className={css.btn}
                     onClick={() => {
                       dispatch(
                         changeColumnThunk({
