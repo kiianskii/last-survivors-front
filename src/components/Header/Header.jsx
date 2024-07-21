@@ -60,7 +60,6 @@ function Header({ toggleSidebar }) {
                     getDefaultIcon(userInfo.theme)
                 )}
             </button>
-            <SelectDate />
         </div>
     );
 }
