@@ -36,7 +36,7 @@ function Layout() {
   const classs = index !== -1 ? boards[index].background_url : "";
 
   return (
-    <div className={`${classs}`}>
+    <div className={`${classs} ${theme}`}>
       <div
         className={`${css.content} ${isSidebarOpen ? css.shiftContent : ""} ${
           isSidebarOpen ? css.contentBlur : ""
