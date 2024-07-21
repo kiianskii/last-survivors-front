@@ -58,7 +58,7 @@ const HelpForm = () => {
         <Modal
           title="Need help"
           closeModal={closeModal}
-          classname={css.help_modal}
+          classname={css.help_form}
         >
           <Formik
             initialValues={initialValues}
