@@ -6,7 +6,6 @@ import { selectId } from "../../redux/auth/authSlice";
 function CustomSelect({
     name,
     values,
-    placeholder,
     currentTheme,
     dispatchFunction = () => {},
 }) {
@@ -16,22 +15,26 @@ function CustomSelect({
         <Select
             name={name}
             id={name}
-            defaultValue={currentTheme}
-            placeholder={placeholder}
+            defaultValue={getSelectOptions(values).find(
+                (elem) => elem.value === currentTheme
+            )}
             closeMenuOnSelect={true}
             options={getSelectOptions(values)}
             styles={styleSelect(currentTheme)}
+            isSearchable={false}
             components={{
                 DropdownIndicator: () => {},
             }}
             onChange={(selected) => {
-                if (currentTheme !== selected.value)
+                if (currentTheme !== selected.value) {
+                    console.log(selected);
                     dispatch(
                         dispatchFunction({
                             id: userId,
                             credentials: { theme: selected.value },
                         })
                     );
+                }
             }}
         />
     );

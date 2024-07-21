@@ -30,13 +30,21 @@ function Header({ toggleSidebar }) {
     return (
         <div className={clsx(css.header, userInfo.theme + "-header")}>
             <BurgerMenu toggleSidebar={toggleSidebar} />
-            <CustomSelect
-                name="themes"
-                values={themes}
-                placeholder="Theme"
-                currentTheme={userInfo.theme}
-                dispatchFunction={themeThunk}
-            />
+            <div className={css.selectContainer}>
+                <div className={css.placeholder}>
+                    <p>Theme</p>
+                    <div className={css.icon_container}>
+                        <Icon size={16} id="arrow-down" />
+                    </div>
+                </div>
+                <CustomSelect
+                    name="themes"
+                    values={themes}
+                    placeholder="Theme"
+                    currentTheme={userInfo.theme}
+                    dispatchFunction={themeThunk}
+                />
+            </div>
             {isOpen && (
                 <Modal
                     title="Edit profile"

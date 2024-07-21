@@ -16,15 +16,6 @@ export function getSelectOptions(options) {
     return newOptions;
 }
 
-export function range({
-    to,
-    from,
-    step,
-    length = Math.ceil((to - from + 1) / step),
-}) {
-    return Array.from({ length }, (_, i) => from + i * step);
-}
-
 export const animatedComponents = makeAnimated();
 
 export function styleSelect(theme) {
@@ -68,7 +59,7 @@ export function styleSelect(theme) {
             width: "100px",
 
             color: themeColors[theme].color1,
-            backgroundColor: themeColors[theme].background2,
+            backgroundColor: "transparent",
             transition: "background-color .5s ease-in-out",
             cursor: "pointer",
             border: "none",
@@ -81,7 +72,7 @@ export function styleSelect(theme) {
             return {
                 ...provided,
                 right: 5,
-                color: themeColors[theme].color1,
+                color: "transparent", //themeColors[theme].color1,
                 fontFamily: "Poppins",
                 fontSize: "14px",
                 fontWeight: "500",
@@ -119,19 +110,6 @@ export function styleSelect(theme) {
                 ...provided,
                 margin: "0px",
                 color: themeColors[theme].color1,
-            };
-        },
-
-        placeholder: (defaultStyles) => {
-            return {
-                ...defaultStyles,
-                opacity: ".7",
-
-                color: themeColors[theme].color1,
-                fontFamily: "Poppins",
-                fontSize: "14px",
-                fontWeight: "500",
-                letterSpacing: "-0.28px",
             };
         },
     };
