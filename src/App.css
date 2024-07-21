@@ -17,7 +17,6 @@
   font-weight: 600;
 }
 
-
 h1,
 h2,
 h3,
@@ -74,12 +73,11 @@ img {
   margin: 0 auto;
 }
 
-
 /* Header Theme */
 .dark-header {
   color: #fff;
   background-color: #161616;
-=======
+}
 /* Datepicker Styles */
 .react-datepicker {
   background-color: var(--background-color) !important;
@@ -176,12 +174,7 @@ img {
       max-width: 1440px;
     }
   }
-  :root {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-
+}
 :root {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -241,18 +234,10 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(190, 219, 176);
+  --tooltip-bg-color: rgb(246, 246, 247);
   --card-icon-hover-color: rgb(190, 219, 176);
   --tooltip-icon-color: rgb(22, 22, 22);
   --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-
-    --icons-modal: rgba(22, 22, 22, 0.5);
-    --icons-modal-active: rgba(22, 22, 22, 1);
-    --icon-plus-modal: rgba(255, 255, 255, 1);
-    --icon-plus-modal-background: rgba(22, 22, 22, 1);
-    --modal-bg: #fcfcfc;
-    --text-color-modal: rgba(22, 22, 22, 1);
-    color-scheme: light;
-  }
 
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
@@ -310,20 +295,17 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(190, 219, 176);
+  --tooltip-bg-color: rgb(246, 246, 247);
+  --card-icon-hover-color: rgb(190, 219, 176);
+  --tooltip-icon-color: rgb(22, 22, 22);
+  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
+
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
   --icon-plus-modal: rgba(255, 255, 255, 1);
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
-  --card-icon-hover-color: rgb(190, 219, 176);
-
-.dark {
-  --main-color: #121212;
-  --sidebar-color: #121212;
-  --header-color: #121212;
-  --text-color-modal: rgba(22, 22, 22, 1);
-  color-scheme: light;
 }
 
 .dark {
@@ -378,15 +360,14 @@ img {
   --card-icon-hover-color: rgb(190, 219, 176);
   --tooltip-icon-color: rgba(225, 225, 225, 0.5);
   --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
-    --icons-modal: rgba(255, 255, 255, 0.5);
-    --icons-modal-active: rgba(255, 255, 255, 1);
-    --icon-plus-modal: rgba(255, 255, 255, 1);
-    --icon-plus-modal-background: rgba(22, 22, 22, 1);
-    --modal-bg: #151515;
-    --text-color-modal: rgba(255, 255, 255, 1);
-    color-scheme: dark;
-  }
-
+  --icons-modal: rgba(255, 255, 255, 0.5);
+  --icons-modal-active: rgba(255, 255, 255, 1);
+  --icon-plus-modal: rgba(255, 255, 255, 1);
+  --icon-plus-modal-background: rgba(22, 22, 22, 1);
+  --modal-bg: #151515;
+  --text-color-modal: rgba(255, 255, 255, 1);
+  color-scheme: dark;
+}
 
 .violet {
   --main-color: #5255bc;
@@ -435,17 +416,15 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(82, 85, 188);
+  --tooltip-bg-color: rgb(236, 237, 253);
   --card-icon-hover-color: rgb(82, 85, 188);
   --tooltip-icon-color: rgb(22, 22, 22);
   --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-
-    --icons-modal: rgba(22, 22, 22, 0.5);
-    --icons-modal-active: rgba(22, 22, 22, 1);
-    --icon-plus-modal: rgba(22, 22, 22, 1);
-    --icon-plus-modal-background: rgba(255, 255, 255, 1);
-    --modal-bg: #fcfcfc;
-    --text-color-modal: rgba(22, 22, 22, 1);
-    color-scheme: violet;
-  }
+  --icons-modal: rgba(22, 22, 22, 0.5);
+  --icons-modal-active: rgba(22, 22, 22, 1);
+  --icon-plus-modal: rgba(22, 22, 22, 1);
+  --icon-plus-modal-background: rgba(255, 255, 255, 1);
+  --modal-bg: #fcfcfc;
+  --text-color-modal: rgba(22, 22, 22, 1);
+  color-scheme: violet;
 }
-

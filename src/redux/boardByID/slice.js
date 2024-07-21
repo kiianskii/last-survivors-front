@@ -11,6 +11,7 @@ import {
   deleteCardThunk,
   editCardThunk,
 } from "../cards/operations";
+import { logOutThunk } from "../auth/operations";
 
 const initialState = {
   columns: [],
@@ -106,6 +107,9 @@ const columnsSlice = createSlice({
             }
           }
         }
+      })
+      .addCase(logOutThunk.fulfilled, (state) => {
+        state.columns = [];
       });
   },
 });

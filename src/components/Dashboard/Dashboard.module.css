@@ -1,0 +1,7 @@
+.modal_class {
+  background-color: var(--modal-bg) !important;
+}
+.btn {
+  background: transparent;
+  border: none;
+}

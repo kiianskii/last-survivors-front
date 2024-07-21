@@ -17,6 +17,7 @@ function Layout() {
   const dispatch = useDispatch();
   const theme = useSelector(selectTheme);
   const isLoading = useSelector(selectIsLoading);
+
   useEffect(() => {
     if (!theme) {
       dispatch(themeThunk("light"));
