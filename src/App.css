@@ -245,6 +245,10 @@ img {
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
+
+  --text-color-sidebar: #161616;
+  --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
+  --stroke-active: url("./img/mobile/Background.png");
   color-scheme: light;
 }
 
@@ -299,13 +303,15 @@ img {
   --card-icon-hover-color: rgb(190, 219, 176);
   --tooltip-icon-color: rgb(22, 22, 22);
   --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
   --icon-plus-modal: rgba(255, 255, 255, 1);
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
+  --text-color-sidebar: #161616;
+  --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
+  --stroke-active: url("./img/mobile/Background.png");
 }
 
 .dark {
@@ -366,6 +372,9 @@ img {
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #151515;
   --text-color-modal: rgba(255, 255, 255, 1);
+  --text-color-sidebar: #fff;
+  --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
+  --stroke-active: url("./img/mobile/Background.png");
   color-scheme: dark;
 }
 
@@ -426,5 +435,8 @@ img {
   --icon-plus-modal-background: rgba(255, 255, 255, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
+  --text-color-sidebar: #fff;
+  --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
+  --stroke-active: url("./img/mobile/Backgroundwhite.png");
   color-scheme: violet;
 }

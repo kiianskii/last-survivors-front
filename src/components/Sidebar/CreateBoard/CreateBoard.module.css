@@ -2,7 +2,7 @@
   font-weight: 400;
   font-size: 12px;
   letter-spacing: -0.02em;
-  color: var(--text-color-secondary);
+  color: var(--text-color-secondary-sidebar);
   padding: 0 133px 0 0;
   @media screen and (min-width: 768px) {
     padding: 0 150px 0 0;
@@ -13,7 +13,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--text-color);
+  color: var(--text-color-sidebar);
   width: 76px;
   height: 42px;
   line-height: normal;
@@ -23,7 +23,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #161616;
+  color: var(--text-color-secondary-sidebar);
   width: 88px;
   height: 21px;
   padding: 20px 0;
