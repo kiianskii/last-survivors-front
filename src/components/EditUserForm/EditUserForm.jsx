@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Formik, Field, Form } from "formik";
 import { Icon } from "../../icons/Icon";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,15 +24,23 @@ const EditUserForm = ({ closeModal }) => {
     username: Yup.string()
       .min(3, "Name: min 3 chars")
       .max(15, "Name: max 15 chars"),
-    email: Yup.string()
-      .email("Invalid email")
-      .required("Email is required field"),
+    email: Yup.string().email("Invalid email"),
+
     password: Yup.string().min(6, "Password: min 6 chars"),
   });
 
   const handleSubmit = (data, option) => {
-    const credentials = { ...data };
-    dispatch(editUserThunk({ id: userId, credentials }));
+    const credentials = { username: data.username, email: data.email };
+    if (!data.password) {
+      dispatch(editUserThunk({ id: userId, credentials }));
+    } else {
+      dispatch(
+        editUserThunk({
+          id: userId,
+          credentials: { ...credentials, password: data.password },
+        })
+      );
+    }
     option.resetForm();
     closeModal();
   };

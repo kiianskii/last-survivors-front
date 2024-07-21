@@ -7,7 +7,7 @@ function Dashboard() {
   const { isOpen, closeModal, openModal } = useToggle();
 
   return (
-    <div>
+    <div className={css.dashboard}>
       <h3 className={css.wrapper}>
         Before starting your project, it is essential&#x20;
         <span onClick={openModal} className={css.span}>

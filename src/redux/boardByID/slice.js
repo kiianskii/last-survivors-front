@@ -47,9 +47,7 @@ const columnsSlice = createSlice({
           (column) => column._id === payload._id
         );
         if (index !== -1) {
-          state.columns[index] = payload;
-        } else {
-          state.columns.push(payload);
+          state.columns[index].title = payload.title;
         }
       })
       .addCase(addCardThunk.fulfilled, (state, { payload }) => {

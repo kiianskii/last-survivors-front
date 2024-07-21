@@ -40,3 +40,9 @@
     margin: 281px 347px 349px 607px !important;
   }
 }
+
+.dashboard {
+  display: flex;
+  background-color: var(--color-background-dashboard);
+  height: 100vh;
+}

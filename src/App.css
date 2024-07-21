@@ -251,7 +251,7 @@ img {
   --stroke-active: url("./img/mobile/Background.png");
   --text-color-dashboard: rgba(22, 22, 22, 0.7);
   --filter-btn-color: rgba(22, 22, 22, 0.8);
-
+  --color-background-dashboard: #f6f6f7;
   color-scheme: light;
 }
 
@@ -317,6 +317,8 @@ img {
   --stroke-active: url("./img/mobile/Background.png");
   --text-color-dashboard: rgba(22, 22, 22, 0.7);
   --filter-btn-color: rgba(22, 22, 22, 0.8);
+  --color-background-dashboard: #f6f6f7;
+
 }
 
 .dark {
@@ -382,6 +384,7 @@ img {
   --stroke-active: url("./img/mobile/Background.png");
   --text-color-dashboard: rgba(255, 255, 255, 0.5);
   --filter-btn-color: rgba(255, 255, 255, 0.8);
+  --color-background-dashboard: #1f1f1f;
   color-scheme: dark;
 }
 
@@ -446,7 +449,8 @@ img {
   --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
   --stroke-active: url("./img/mobile/Backgroundwhite.png");
   --text-color-dashboard: rgba(22, 22, 22, 0.7);
-  --filter-btn-color: rgba(22, 22, 22, 0.8);
 
+  --filter-btn-color: rgba(22, 22, 22, 0.8);
+  --color-background-dashboard: #ecedfd;
   color-scheme: violet;
 }
