@@ -9,7 +9,6 @@ import { useToggle } from "../../hooks/useToggle.jsx";
 import EditUserForm from "../EditUserForm/EditUserForm.jsx";
 import Modal from "../Modal/Modal.jsx";
 import { Icon } from "../../icons/Icon.jsx";
-import SelectDate from "../SelectDate/SelectDate.jsx";
 
 function Header({ toggleSidebar }) {
     // Temp spread and avatarURL and theme
@@ -20,12 +19,12 @@ function Header({ toggleSidebar }) {
     const getDefaultIcon = (theme) => {
         switch (theme) {
             case "dark":
-                return <Icon size={68} id="user-2" />;
+                return <Icon size={32} id="user-2" className={css.img} />;
             case "colorful":
-                return <Icon size={68} id="user" />;
+                return <Icon size={32} id="user" className={css.img} />;
             case "light":
             default:
-                return <Icon size={68} id="user-1" />;
+                return <Icon size={32} id="user-1" className={css.img} />;
         }
     };
     return (
@@ -60,7 +59,6 @@ function Header({ toggleSidebar }) {
                     getDefaultIcon(userInfo.theme)
                 )}
             </button>
-            <SelectDate />
         </div>
     );
 }

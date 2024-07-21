@@ -43,10 +43,11 @@ export function styleSelect(theme) {
 
                 backgroundColor: themeColors[theme].background2,
                 transition:
-                    "background-color .5s ease-in-out, color .5s ease-in-out",
+                    "color .5s ease-in-out, background-color .5s ease-in-out",
                 cursor: "pointer",
                 "&:hover, &:focus": {
                     color: themeColors[theme].color2,
+                    backgroundColor: themeColors[theme].hoverColor,
                 },
             };
         },
@@ -55,11 +56,13 @@ export function styleSelect(theme) {
             width: "100px",
 
             color: themeColors[theme].color1,
-            border: "none",
             backgroundColor: themeColors[theme].background2,
-            transition:
-                "background-color .5s ease-in-out, color .5s ease-in-out",
+            transition: "background-color .5s ease-in-out",
             cursor: "pointer",
+            border: "none",
+            "&:hover, &:focus, &:focus-within": {
+                backgroundColor: themeColors[theme].hoverColor,
+            },
         }),
 
         singleValue: (provided) => {
@@ -103,6 +106,7 @@ export function styleSelect(theme) {
             return {
                 ...provided,
                 margin: "0px",
+                color: themeColors[theme].color1,
             };
         },
 
