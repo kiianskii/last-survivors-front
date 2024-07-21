@@ -4,6 +4,7 @@ import {
   deleteColumnThunk,
   editColumnThunk,
   fetchColumnsThunk,
+  filterColumnThunk,
 } from "./operations";
 import {
   addCardThunk,
@@ -110,6 +111,9 @@ const columnsSlice = createSlice({
       })
       .addCase(logOutThunk.fulfilled, (state) => {
         state.columns = [];
+      })
+      .addCase(filterColumnThunk.fulfilled, (state, { payload }) => {
+        state.columns = payload;
       });
   },
 });
