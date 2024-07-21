@@ -6,7 +6,7 @@ const CustomRadioBtn = ({ ...props }) => {
   const [field] = useField(props);
   // const [checked, setCheked] = useState(true);
   return (
-    <label>
+    <label className={css.label}>
       <input
         type="radio"
         {...field}

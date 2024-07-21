@@ -7,12 +7,14 @@ function Dashboard() {
   const { isOpen, closeModal, openModal } = useToggle();
 
   return (
-    <div>
+    <div className={css.dashboard}>
       <h3 className={css.wrapper}>
-        Before starting your project, it is essential
-        <span onClick={openModal}>to create a board</span>
-        to visualize and track all the necessary tasks and milestones. This
-        board serves as a powerful tool to organize the workflow and ensure
+        Before starting your project, it is essential&#x20;
+        <span onClick={openModal} className={css.span}>
+          to create a board
+        </span>
+        &#x20; to visualize and track all the necessary tasks and milestones.
+        This board serves as a powerful tool to organize the workflow and ensure
         effective collaboration among team members.
       </h3>
       {isOpen && (

@@ -1,20 +1,20 @@
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
+    font-family: "Poppins";
+    font-style: normal;
+    src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
 }
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
+    font-family: "Poppins";
+    font-style: normal;
+    src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
 }
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+    font-family: "Poppins";
+    font-style: normal;
+    src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
 }
 
 h1,
@@ -24,89 +24,84 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+    margin: 0;
 }
 
 p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul,
 ol,
 li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 a {
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
 }
 
 button {
-  cursor: pointer;
-  border: none;
+    cursor: pointer;
+    border: none;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .container {
-  max-width: 320px;
-  margin: 0 auto;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
-/* Header Theme */
-.dark-header {
-  color: #fff;
-  background-color: #161616;
-}
 /* Datepicker Styles */
 .react-datepicker {
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-  font-weight: 500 !important;
-  border-radius: 8px !important;
-  border: 1px solid var(--text-color-color) !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--text-color-color) !important;
 }
 .react-datepicker__header {
-  border-bottom: none !important;
-  padding: 18px 0 8px !important;
+    border-bottom: none !important;
+    padding: 18px 0 8px !important;
 }
 .react-datepicker__month {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 .react-datepicker__current-month {
-  margin-bottom: 28px;
-  position: relative;
-  &::after {
-    content: "";
-    background-color: var(--text-color);
-    width: 90%;
-    height: 1px;
-    position: absolute;
-    bottom: -14px;
-    left: 50%;
-    opacity: 0.2;
-    transform: translateX(-50%);
-  }
+    margin-bottom: 28px;
+    position: relative;
+    &::after {
+        content: "";
+        background-color: var(--text-color);
+        width: 90%;
+        height: 1px;
+        position: absolute;
+        bottom: -14px;
+        left: 50%;
+        opacity: 0.2;
+        transform: translateX(-50%);
+    }
 }
 .react-datepicker__header,
 .react-datepicker__current-month,
@@ -115,330 +110,345 @@ img {
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker__time-name {
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-  border-radius: 50% !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 50% !important;
 }
 .react-datepicker__day {
-  &:hover {
-    background-color: var(--text-color-color) !important;
-    color: var(--background-color) !important;
-    opacity: 0.9 !important;
-  }
+    &:hover {
+        background-color: var(--text-color-color) !important;
+        color: var(--background-color) !important;
+        opacity: 0.9 !important;
+    }
 }
 .react-datepicker__day--keyboard-selected {
-  background-color: var(--btn-create-hover) !important;
-  color: var(--background-color) !important;
+    background-color: var(--btn-create-hover) !important;
+    color: var(--background-color) !important;
 }
 .react-datepicker__day--outside-month {
-  opacity: 0.2;
+    opacity: 0.2;
 }
 .react-datepicker__day-name {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .react-datepicker__day--disabled {
-  opacity: 0.2;
+    opacity: 0.2;
 
-  &:hover {
-    background-color: var(--background-color) !important;
-    color: currentColor !important;
-    opacity: 0.2 !important;
-  }
+    &:hover {
+        background-color: var(--background-color) !important;
+        color: currentColor !important;
+        opacity: 0.2 !important;
+    }
 }
 .react-datepicker__navigation {
-  top: 12px !important;
+    top: 12px !important;
 }
 .react-datepicker__navigation ::before {
-  border-color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
 }
 .react-datepicker__navigation:hover ::before {
-  border-color: var(--text-color-color) !important;
+    border-color: var(--text-color-color) !important;
 }
 .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
 .react-datepicker__month-year-read-view--down-arrow,
 .react-datepicker__navigation-icon::before {
-  border-width: 2px 2px 0 0 !important;
+    border-width: 2px 2px 0 0 !important;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-  .class {
-    width: 400px !important;
-  }
-  @media screen and (min-width: 1440px) {
     .container {
-      max-width: 1440px;
+        max-width: 768px;
     }
-  }
+    .class {
+        width: 400px !important;
+    }
+    @media screen and (min-width: 1440px) {
+        .container {
+            max-width: 1440px;
+        }
+    }
 }
 :root {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  /* color: white; */
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 
-  --main-color: #fff;
-  --sidebar-color: #fff;
-  --header-color: #fcfcfc;
-  --background-color: #f6f6f7;
-  --background-color-help: #f6f6f7;
-  --text-color: #161616;
-  --text-color-secondary: rgba(22, 22, 22, 0.5);
-  --text-color-color: #bedbb0;
-  --btn-plus-color: rgba(190, 219, 176, 1);
-  --btn-plus-color-hover: rgba(157, 200, 136, 1);
-  --btn-create: #bedbb0;
-  --btn-create-hover: #9dc888;
-  --background-color-btn-plus: rgba(22, 22, 22, 1);
-  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
-  --color-borders-input: #bedbb0;
-  --color-borders-input-active: rgba(190, 219, 176, 1);
-  --icon-fill-logo: rgba(255, 255, 255, 1);
-  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
-  --icon-logout-color: rgba(190, 219, 176, 1);
-  --icon-logout-color-hover: rgba(157, 200, 136, 1);
-  --icon-bell-color: rgba(190, 219, 176, 1);
-  --fill-icons-color: rgba(255, 255, 255, 0.5);
-  --stroke-icons-hover: rgba(22, 22, 22, 1);
-  --icon-in-progress-color: rgba(22, 22, 22, 1);
-  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
-  --icon-user-man: rgba(255, 255, 255, 1);
-  --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus-one: #121212;
-  --icon-btn-background-plus: rgba(22, 22, 22, 1);
-  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
-  --stroke-boards: rgba(22, 22, 22, 0.1);
-  --active-board: rgba(246, 246, 247, 1);
-  --card-bg-color: rgb(255, 255, 255);
-  --card-title-color: rgba(22, 22, 22, 1);
-  --card-desc-color: rgba(22, 22, 22, 0.7);
-  --card-icon-color: rgba(22, 22, 22, 0.5);
-  --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
-  --card-list-scroll-track-color: rgb(232, 232, 232);
-  --priority-without: rgba(22, 22, 22, 0.3);
-  --icon-bell: rgb(190, 219, 176);
-  --icon-plus: rgb(255, 255, 255);
-  --add-another-card-btn-color: rgb(190, 219, 176);
-  --add-another-card-btn-hover-color: rgb(157, 200, 136);
-  --modal-bg-color: rgb(252, 252, 252);
-  --add-card-placeholder: rgb(22, 22, 22);
-  --datepicker-color: rgb(190, 219, 176);
-  --tooltip-bg-color: rgb(246, 246, 247);
-  --card-icon-hover-color: rgb(190, 219, 176);
-  --tooltip-icon-color: rgb(22, 22, 22);
-  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
+    --main-color: #fff;
+    --sidebar-color: #fff;
+    --header-color: #fcfcfc;
+    --background-color: #f6f6f7;
+    --background-color-help: #f6f6f7;
+    --text-color: #161616;
+    --text-color-secondary: rgba(22, 22, 22, 0.5);
+    --text-color-color: #bedbb0;
+    --btn-plus-color: rgba(190, 219, 176, 1);
+    --btn-plus-color-hover: rgba(157, 200, 136, 1);
+    --btn-create: #bedbb0;
+    --btn-create-hover: #9dc888;
+    --background-color-btn-plus: rgba(22, 22, 22, 1);
+    --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+    --color-borders-input: #bedbb0;
+    --color-borders-input-active: rgba(190, 219, 176, 1);
+    --icon-fill-logo: rgba(255, 255, 255, 1);
+    --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+    --icon-logout-color: rgba(190, 219, 176, 1);
+    --icon-logout-color-hover: rgba(157, 200, 136, 1);
+    --icon-bell-color: rgba(190, 219, 176, 1);
+    --fill-icons-color: rgba(255, 255, 255, 0.5);
+    --stroke-icons-hover: rgba(22, 22, 22, 1);
+    --icon-in-progress-color: rgba(22, 22, 22, 1);
+    --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+    --icon-user-man: rgba(255, 255, 255, 1);
+    --icon-user-man-bg: rgba(246, 246, 247, 1);
+    --icon-plus-one: #121212;
+    --icon-btn-background-plus: rgba(22, 22, 22, 1);
+    --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+    --stroke-boards: rgba(22, 22, 22, 0.1);
+    --active-board: rgba(246, 246, 247, 1);
+    --card-bg-color: rgb(255, 255, 255);
+    --card-title-color: rgba(22, 22, 22, 1);
+    --card-desc-color: rgba(22, 22, 22, 0.7);
+    --card-icon-color: rgba(22, 22, 22, 0.5);
+    --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
+    --card-list-scroll-track-color: rgb(232, 232, 232);
+    --priority-without: rgba(22, 22, 22, 0.3);
+    --icon-bell: rgb(190, 219, 176);
+    --icon-plus: rgb(255, 255, 255);
+    --add-another-card-btn-color: rgb(190, 219, 176);
+    --add-another-card-btn-hover-color: rgb(157, 200, 136);
+    --modal-bg-color: rgb(252, 252, 252);
+    --add-card-placeholder: rgb(22, 22, 22);
+    --datepicker-color: rgb(190, 219, 176);
+    --tooltip-bg-color: rgb(246, 246, 247);
+    --card-icon-hover-color: rgb(190, 219, 176);
+    --tooltip-icon-color: rgb(22, 22, 22);
+    --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
 
-  --icons-modal: rgba(22, 22, 22, 0.5);
-  --icons-modal-active: rgba(22, 22, 22, 1);
-  --icon-plus-modal: rgba(255, 255, 255, 1);
-  --icon-plus-modal-background: rgba(22, 22, 22, 1);
-  --modal-bg: #fcfcfc;
-  --text-color-modal: rgba(22, 22, 22, 1);
+    --icons-modal: rgba(22, 22, 22, 0.5);
+    --icons-modal-active: rgba(22, 22, 22, 1);
+    --icon-plus-modal: rgba(255, 255, 255, 1);
+    --icon-plus-modal-background: rgba(22, 22, 22, 1);
+    --modal-bg: #fcfcfc;
+    --text-color-modal: rgba(22, 22, 22, 1);
 
-  --text-color-sidebar: #161616;
-  --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
-  --stroke-active: url("./img/mobile/Background.png");
-  color-scheme: light;
+    --text-color-sidebar: #161616;
+    --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
+    --stroke-active: url("./img/mobile/Background.png");
+    --text-color-dashboard: rgba(22, 22, 22, 0.7);
+    --filter-btn-color: rgba(22, 22, 22, 0.8);
+    --color-background-dashboard: #f6f6f7;
+    color-scheme: light;
 }
 
 .light {
-  --main-color: #fff;
-  --sidebar-color: #fff;
-  --header-color: #fcfcfc;
-  --background-color: #f6f6f7;
-  --background-color-help: #f6f6f7;
-  --text-color: #161616;
-  --text-color-secondary: rgba(22, 22, 22, 0.5);
-  --text-color-color: #bedbb0;
-  --btn-plus-color: rgba(190, 219, 176, 1);
-  --btn-plus-color-hover: rgba(157, 200, 136, 1);
-  --btn-create: #bedbb0;
-  --btn-create-hover: #9dc888;
-  --background-color-btn-plus: rgba(22, 22, 22, 1);
-  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
-  --color-borders-input: #bedbb0;
-  --color-borders-input-active: rgba(190, 219, 176, 1);
-  --icon-fill-logo: rgba(255, 255, 255, 1);
-  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
-  --icon-logout-color: rgba(190, 219, 176, 1);
-  --icon-logout-color-hover: rgba(157, 200, 136, 1);
-  --icon-bell-color: rgba(190, 219, 176, 1);
-  --fill-icons-color: rgba(255, 255, 255, 0.5);
-  --stroke-icons-hover: rgba(22, 22, 22, 1);
-  --icon-in-progress-color: rgba(22, 22, 22, 1);
-  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
-  --icon-user-man: rgba(255, 255, 255, 1);
-  --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus-one: #121212;
-  --icon-btn-background-plus: rgba(22, 22, 22, 1);
-  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
-  --stroke-boards: rgba(22, 22, 22, 0.1);
-  --active-board: rgba(246, 246, 247, 1);
-  --card-bg-color: rgb(255, 255, 255);
-  --card-title-color: rgba(22, 22, 22, 1);
-  --card-desc-color: rgba(22, 22, 22, 0.7);
-  --card-icon-color: rgba(22, 22, 22, 0.5);
-  --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
-  --card-list-scroll-track-color: rgb(232, 232, 232);
-  --priority-without: rgba(22, 22, 22, 0.3);
-  --icon-bell: rgb(190, 219, 176);
-  --icon-plus: rgba(255, 255, 255, 1);
-  --icon-plus-theme: rgb(22, 22, 22);
-  --add-another-card-btn-color: rgb(190, 219, 176);
-  --add-another-card-btn-hover-color: rgb(157, 200, 136);
-  --modal-bg-color: rgb(252, 252, 252);
-  --add-card-placeholder: rgb(22, 22, 22);
-  --datepicker-color: rgb(190, 219, 176);
-  --tooltip-bg-color: rgb(246, 246, 247);
-  --card-icon-hover-color: rgb(190, 219, 176);
-  --tooltip-icon-color: rgb(22, 22, 22);
-  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-  --icons-modal: rgba(22, 22, 22, 0.5);
-  --icons-modal-active: rgba(22, 22, 22, 1);
-  --icon-plus-modal: rgba(255, 255, 255, 1);
-  --icon-plus-modal-background: rgba(22, 22, 22, 1);
-  --modal-bg: #fcfcfc;
-  --text-color-modal: rgba(22, 22, 22, 1);
-  --text-color-sidebar: #161616;
-  --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
-  --stroke-active: url("./img/mobile/Background.png");
+    --main-color: #fff;
+    --sidebar-color: #fff;
+    --header-color: #fcfcfc;
+    --background-color: #f6f6f7;
+    --background-color-help: #f6f6f7;
+    --text-color: #161616;
+    --text-color-secondary: rgba(22, 22, 22, 0.5);
+    --text-color-color: #bedbb0;
+    --btn-plus-color: rgba(190, 219, 176, 1);
+    --btn-plus-color-hover: rgba(157, 200, 136, 1);
+    --btn-create: #bedbb0;
+    --btn-create-hover: #9dc888;
+    --background-color-btn-plus: rgba(22, 22, 22, 1);
+    --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+    --color-borders-input: #bedbb0;
+    --color-borders-input-active: rgba(190, 219, 176, 1);
+    --icon-fill-logo: rgba(255, 255, 255, 1);
+    --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+    --icon-logout-color: rgba(190, 219, 176, 1);
+    --icon-logout-color-hover: rgba(157, 200, 136, 1);
+    --icon-bell-color: rgba(190, 219, 176, 1);
+    --fill-icons-color: rgba(255, 255, 255, 0.5);
+    --stroke-icons-hover: rgba(22, 22, 22, 1);
+    --icon-in-progress-color: rgba(22, 22, 22, 1);
+    --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+    --icon-user-man: rgba(255, 255, 255, 1);
+    --icon-plus-theme: rgb(255, 255, 255);
+    --icon-user-man-bg: rgba(246, 246, 247, 1);
+    --icon-plus-one: #121212;
+    --icon-btn-background-plus: rgba(22, 22, 22, 1);
+    --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+    --stroke-boards: rgba(22, 22, 22, 0.1);
+    --active-board: rgba(246, 246, 247, 1);
+    --card-bg-color: rgb(255, 255, 255);
+    --card-title-color: rgba(22, 22, 22, 1);
+    --card-desc-color: rgba(22, 22, 22, 0.7);
+    --card-icon-color: rgba(22, 22, 22, 0.5);
+    --card-list-scroll-thumb-color: rgba(22, 22, 22, 0.1);
+    --card-list-scroll-track-color: rgb(232, 232, 232);
+    --priority-without: rgba(22, 22, 22, 0.3);
+    --icon-bell: rgb(190, 219, 176);
+    --icon-plus: rgba(255, 255, 255, 1);
+    --add-another-card-btn-color: rgb(190, 219, 176);
+    --add-another-card-btn-hover-color: rgb(157, 200, 136);
+    --modal-bg-color: rgb(252, 252, 252);
+    --add-card-placeholder: rgb(22, 22, 22);
+    --datepicker-color: rgb(190, 219, 176);
+    --tooltip-bg-color: rgb(246, 246, 247);
+    --card-icon-hover-color: rgb(190, 219, 176);
+    --tooltip-icon-color: rgb(22, 22, 22);
+    --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
+    --icons-modal: rgba(22, 22, 22, 0.5);
+    --icons-modal-active: rgba(22, 22, 22, 1);
+    --icon-plus-modal: rgba(255, 255, 255, 1);
+    --icon-plus-modal-background: rgba(22, 22, 22, 1);
+    --modal-bg: #fcfcfc;
+    --text-color-modal: rgba(22, 22, 22, 1);
+    --text-color-sidebar: #161616;
+    --text-color-secondary-sidebar: rgba(22, 22, 22, 0.5);
+    --stroke-active: url("./img/mobile/Background.png");
+    --text-color-dashboard: rgba(22, 22, 22, 0.7);
+    --filter-btn-color: rgba(22, 22, 22, 0.8);
+    --color-background-dashboard: #f6f6f7;
+    --icon-plus-theme: rgb(22, 22, 22);
 }
 
 .dark {
-  --main-color: #121212;
-  --sidebar-color: #121212;
-  --header-color: #161616;
-  --background-color: #1f1f1f;
-  --background-color-help: #1f1f1f;
-  --text-color: #fff;
-  --text-color-secondary: rgba(255, 255, 255, 0.5);
-  --text-color-color: #bedbb0;
-  --btn-plus-color: rgba(190, 219, 176, 1);
-  --btn-plus-color-hover: rgba(157, 200, 136, 1);
-  --btn-create: #bedbb0;
-  --btn-create-hover: #9dc888;
-  --background-color-btn-plus: rgba(22, 22, 22, 1);
-  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
-  --color-borders-input: #bedbb0;
-  --color-borders-input-active: rgba(190, 219, 176, 1);
-  --icon-fill-logo: rgba(255, 255, 255, 1);
-  --icon-fill-logo-bg: rgba(31, 31, 31, 1);
-  --icon-logout-color: rgba(190, 219, 176, 1);
-  --icon-logout-color-hover: rgba(157, 200, 136, 1);
-  --icon-bell-color: rgba(190, 219, 176, 1);
-  --fill-icons-color: rgba(255, 255, 255, 0.5);
-  --stroke-icons-hover: rgba(255, 255, 255, 1);
-  --icon-in-progress-color: rgba(255, 255, 255, 0.5);
-  --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
-  --icon-user-man: rgba(21, 21, 21, 1);
-  --icon-user-man-bg: rgba(31, 31, 31, 1);
-  --icon-plus-one: #121212;
-  --icon-btn-background-plus: rgba(22, 22, 22, 1);
-  --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
-  --stroke-boards: rgba(255, 255, 255, 0.1);
-  --active-board: #1f1f1f;
-  --card-bg-color: rgb(18, 18, 18);
-  --card-title-color: #fff;
-  --card-desc-color: rgba(255, 255, 255, 0.5);
-  --card-icon-color: rgba(225, 225, 225, 0.5);
-  --card-list-scroll-thumb-color: rgb(18, 18, 18);
-  --card-list-scroll-track-color: rgba(255, 255, 255, 0.08);
-  --priority-without: rgba(255, 255, 255, 0.3);
-  --icon-bell: rgb(190, 219, 176);
-  --icon-plus: rgba(255, 255, 255, 1);
-  --icon-plus-theme:rgb(255, 255, 255);
-  --add-another-card-btn-color: rgb(190, 219, 176);
-  --add-another-card-btn-hover-color: rgb(157, 200, 136);
-  --modal-bg-color: rgb(21, 21, 21);
-  --add-card-placeholder: rgb(255, 255, 255);
-  --datepicker-color: rgb(190, 219, 176);
-  --tooltip-bg-color: rgb(31, 31, 31);
-  --card-icon-hover-color: rgb(190, 219, 176);
-  --tooltip-icon-color: rgba(225, 225, 225, 0.5);
-  --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
-  --icons-modal: rgba(255, 255, 255, 0.5);
-  --icons-modal-active: rgba(255, 255, 255, 1);
-  --icon-plus-modal: rgba(255, 255, 255, 1);
-  --icon-plus-modal-background: rgba(22, 22, 22, 1);
-  --modal-bg: #151515;
-  --text-color-modal: rgba(255, 255, 255, 1);
-  --text-color-sidebar: #fff;
-  --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
-  --stroke-active: url("./img/mobile/Background.png");
-  color-scheme: dark;
+    --main-color: #121212;
+    --sidebar-color: #121212;
+    --header-color: #161616;
+
+    --background-color: #1f1f1f;
+    --background-color-help: #1f1f1f;
+    --text-color: #fff;
+    --text-color-secondary: rgba(255, 255, 255, 0.5);
+    --text-color-color: #bedbb0;
+    --btn-plus-color: rgba(190, 219, 176, 1);
+    --btn-plus-color-hover: rgba(157, 200, 136, 1);
+    --btn-create: #bedbb0;
+    --btn-create-hover: #9dc888;
+    --background-color-btn-plus: rgba(22, 22, 22, 1);
+    --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+    --color-borders-input: #bedbb0;
+    --color-borders-input-active: rgba(190, 219, 176, 1);
+    --icon-fill-logo: rgba(255, 255, 255, 1);
+    --icon-fill-logo-bg: rgba(31, 31, 31, 1);
+    --icon-logout-color: rgba(190, 219, 176, 1);
+    --icon-logout-color-hover: rgba(157, 200, 136, 1);
+    --icon-bell-color: rgba(190, 219, 176, 1);
+    --fill-icons-color: rgba(255, 255, 255, 0.5);
+    --stroke-icons-hover: rgba(255, 255, 255, 1);
+    --icon-in-progress-color: rgba(255, 255, 255, 0.5);
+    --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
+    --icon-user-man: rgba(21, 21, 21, 1);
+    --icon-user-man-bg: rgba(31, 31, 31, 1);
+    --icon-plus-one: #121212;
+    --icon-btn-background-plus: rgba(22, 22, 22, 1);
+    --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
+    --stroke-boards: rgba(255, 255, 255, 0.1);
+    --active-board: #1f1f1f;
+    --card-bg-color: rgb(18, 18, 18);
+    --card-title-color: #fff;
+    --card-desc-color: rgba(255, 255, 255, 0.5);
+    --card-icon-color: rgba(225, 225, 225, 0.5);
+    --card-list-scroll-thumb-color: rgb(18, 18, 18);
+    --card-list-scroll-track-color: rgba(255, 255, 255, 0.08);
+    --priority-without: rgba(255, 255, 255, 0.3);
+    --icon-bell: rgb(190, 219, 176);
+    --icon-plus: rgba(255, 255, 255, 1);
+    --add-another-card-btn-color: rgb(190, 219, 176);
+    --add-another-card-btn-hover-color: rgb(157, 200, 136);
+    --modal-bg-color: rgb(21, 21, 21);
+    --add-card-placeholder: rgb(255, 255, 255);
+    --datepicker-color: rgb(190, 219, 176);
+    --tooltip-bg-color: rgb(31, 31, 31);
+    --card-icon-hover-color: rgb(190, 219, 176);
+    --tooltip-icon-color: rgba(225, 225, 225, 0.5);
+    --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
+    --icons-modal: rgba(255, 255, 255, 0.5);
+    --icons-modal-active: rgba(255, 255, 255, 1);
+    --icon-plus-modal: rgba(255, 255, 255, 1);
+    --icon-plus-modal-background: rgba(22, 22, 22, 1);
+    --modal-bg: #151515;
+    --text-color-modal: rgba(255, 255, 255, 1);
+    --text-color-sidebar: #fff;
+    --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
+    --stroke-active: url("./img/mobile/Background.png");
+    --text-color-dashboard: rgba(255, 255, 255, 0.5);
+    --filter-btn-color: rgba(255, 255, 255, 0.8);
+    --color-background-dashboard: #1f1f1f;
+    color-scheme: dark;
+    --icon-plus-theme: rgb(255, 255, 255);
 }
 
 .violet {
-  --main-color: #5255bc;
-  --sidebar-color: #5255bc;
-  --header-color: #fcfcfc;
-  --background-color: #ecedfd;
-  --background-color-help: rgba(236, 237, 253, 0.4);
-  --text-color: #161616;
-  --text-color-secondary: rgba(157, 120, 120, 0.5);
-  --text-color-color: #5255bc;
-  --btn-plus-color: rgba(184, 188, 253, 1);
-  --btn-plus-color-hover: rgba(151, 156, 234, 1);
-  --btn-create: #5255bc;
-  --btn-create-hover: #7b7ede;
-  --background-color-btn-plus: rgb(255, 255, 255);
-  --text-color-themes-filter: rgba(22, 22, 22, 0.8);
-  --color-borders-input: #5255bc;
-  --color-borders-input-active: rgba(82, 85, 188, 1);
-  --icon-fill-logo: rgba(82, 85, 188, 1);
-  --icon-fill-logo-bg: rgba(236, 237, 253, 1);
-  --icon-logout-color: rgba(255, 255, 255, 1);
-  --icon-logout-color-hover: rgba(184, 188, 253, 1);
-  --icon-bell-color: rgba(82, 85, 188, 1);
-  --fill-icons-color: rgba(255, 255, 255, 0.5);
-  --stroke-icons-hover: rgba(22, 22, 22, 1);
-  --icon-in-progress-color: rgba(22, 22, 22, 1);
-  --icon-in-progress-color-hover: rgba(82, 85, 188, 1);
-  --icon-user-man: rgba(255, 255, 255, 1);
-  --icon-user-man-bg: rgba(236, 237, 253, 1);
-  --icon-plus-one: rgba(255, 255, 255, 1);
-  --icon-btn-background-plus: rgba(255, 255, 255, 1);
-  --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
-  --stroke-boards: rgba(255, 255, 255, 0.1);
-  --active-board: rgba(255, 255, 255, 0.5);
-  --card-bg-color: rgb(255, 255, 255);
-  --card-title-color: rgba(22, 22, 22, 1);
-  --card-desc-color: rgba(22, 22, 22, 0.7);
-  --card-icon-color: rgba(22, 22, 22, 0.5);
-  --card-list-scroll-thumb-color: rgb(184, 188, 253);
-  --card-list-scroll-track-color: rgb(255, 255, 255);
-  --priority-without: rgba(22, 22, 22, 0.3);
-  --icon-bell: rgb(82, 85, 188);
-  --icon-plus: rgba(22, 22, 22, 1);
-  --icon-plus-theme: rgb(82, 85, 188);
-  --add-another-card-btn-color: rgb(123, 126, 222);
-  --add-another-card-btn-hover-color: rgb(82, 85, 188);
-  --modal-bg-color: rgb(252, 252, 252);
-  --add-card-placeholder: rgb(22, 22, 22);
-  --datepicker-color: rgb(82, 85, 188);
-  --tooltip-bg-color: rgb(236, 237, 253);
-  --card-icon-hover-color: rgb(82, 85, 188);
-  --tooltip-icon-color: rgb(22, 22, 22);
-  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-  --icons-modal: rgba(22, 22, 22, 0.5);
-  --icons-modal-active: rgba(22, 22, 22, 1);
-  --icon-plus-modal: rgba(22, 22, 22, 1);
-  --icon-plus-modal-background: rgba(255, 255, 255, 1);
-  --modal-bg: #fcfcfc;
-  --text-color-modal: rgba(22, 22, 22, 1);
-  --text-color-sidebar: #fff;
-  --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
-  --stroke-active: url("./img/mobile/Backgroundwhite.png");
-  color-scheme: violet;
+    --main-color: #5255bc;
+    --sidebar-color: #5255bc;
+    --header-color: #fcfcfc;
+    --background-color: #ecedfd;
+    --background-color-help: rgba(236, 237, 253, 0.4);
+    --text-color: #161616;
+    --text-color-secondary: rgba(22, 22, 22, 0.5);
+    --text-color-color: #5255bc;
+    --btn-plus-color: rgba(184, 188, 253, 1);
+    --btn-plus-color-hover: rgba(151, 156, 234, 1);
+    --btn-create: #5255bc;
+    --btn-create-hover: #7b7ede;
+    --background-color-btn-plus: #fff;
+    --text-color-themes-filter: rgba(22, 22, 22, 0.8);
+    --color-borders-input: #5255bc;
+    --color-borders-input-active: rgba(82, 85, 188, 1);
+    --icon-fill-logo: rgba(82, 85, 188, 1);
+    --icon-fill-logo-bg: rgba(236, 237, 253, 1);
+    --icon-logout-color: rgba(255, 255, 255, 1);
+    --icon-logout-color-hover: rgba(184, 188, 253, 1);
+    --icon-bell-color: rgba(82, 85, 188, 1);
+    --fill-icons-color: rgba(255, 255, 255, 0.5);
+    --stroke-icons-hover: rgba(22, 22, 22, 1);
+    --icon-in-progress-color: rgba(22, 22, 22, 1);
+    --icon-in-progress-color-hover: rgba(82, 85, 188, 1);
+    --icon-user-man: rgba(255, 255, 255, 1);
+    --icon-user-man-bg: rgba(236, 237, 253, 1);
+    --icon-plus-one: rgba(255, 255, 255, 1);
+    --icon-btn-background-plus: rgba(255, 255, 255, 1);
+    --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
+    --stroke-boards: rgba(255, 255, 255, 0.1);
+    --active-board: rgba(255, 255, 255, 0.5);
+    --card-bg-color: rgb(255, 255, 255);
+    --card-title-color: rgba(22, 22, 22, 1);
+    --card-desc-color: rgba(22, 22, 22, 0.7);
+    --card-icon-color: rgba(22, 22, 22, 0.5);
+    --card-list-scroll-thumb-color: rgb(184, 188, 253);
+    --card-list-scroll-track-color: rgb(255, 255, 255);
+    --priority-without: rgba(22, 22, 22, 0.3);
+    --icon-bell: rgb(82, 85, 188);
+    --icon-plus: rgba(22, 22, 22, 1);
+    --add-another-card-btn-color: rgb(123, 126, 222);
+    --add-another-card-btn-hover-color: rgb(82, 85, 188);
+    --modal-bg-color: rgb(252, 252, 252);
+    --add-card-placeholder: rgb(22, 22, 22);
+    --datepicker-color: rgb(82, 85, 188);
+    --tooltip-bg-color: rgb(236, 237, 253);
+    --card-icon-hover-color: rgb(82, 85, 188);
+    --tooltip-icon-color: rgb(22, 22, 22);
+    --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
+    --icons-modal: rgba(22, 22, 22, 0.5);
+    --icons-modal-active: rgba(22, 22, 22, 1);
+    --icon-plus-modal: rgba(22, 22, 22, 1);
+    --icon-plus-modal-background: rgba(255, 255, 255, 1);
+    --modal-bg: #fcfcfc;
+    --text-color-modal: rgba(22, 22, 22, 1);
+    --text-color-sidebar: #fff;
+    --text-color-secondary-sidebar: rgba(255, 255, 255, 0.5);
+    --stroke-active: url("./img/mobile/Backgroundwhite.png");
+    --text-color-dashboard: rgba(22, 22, 22, 0.7);
+
+    --filter-btn-color: rgba(22, 22, 22, 0.8);
+    --color-background-dashboard: #ecedfd;
+    --icon-plus-theme: rgb(82, 85, 188);
+    color-scheme: violet;
 }

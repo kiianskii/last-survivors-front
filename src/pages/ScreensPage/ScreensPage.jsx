@@ -8,6 +8,10 @@ import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
 import s from "./ScreensPage.module.css";
 import { useParams } from "react-router-dom";
+import { useToggle } from "../../hooks/useToggle";
+import Modal from "../../components/Modal/Modal";
+import FilterForm from "../../components/FilterForm/FilterForm";
+import { Icon } from "../../icons/Icon";
 
 function ScreensPage() {
   const boards = useSelector(boardsSelector);
@@ -15,6 +19,7 @@ function ScreensPage() {
   const { boardId } = useParams();
 
   const [board, setBoardId] = useState(null);
+  const { openModal, closeModal, isOpen } = useToggle();
 
   const index = boards.findIndex((board) => board._id === boardId);
 
@@ -42,6 +47,15 @@ function ScreensPage() {
             })
           : ""}
         <AddColumnBtn />
+        <button className={s.btn} onClick={openModal}>
+          <Icon size={16} id={"filter"} className={s.icon} />
+          Filter
+        </button>
+        {isOpen && (
+          <Modal title="Filter" closeModal={closeModal}>
+            <FilterForm closeModal={closeModal} />
+          </Modal>
+        )}
       </div>
     </div>
   );
