@@ -41,8 +41,8 @@ const slice = createSlice({
         state.user.name = payload.username;
         state.user.email = payload.email;
         state.user.theme = payload.theme;
-        state.token = payload.token;
-        state.isLoggedIn = true;
+        // state.token = payload.token;
+        // state.isLoggedIn = true;
       })
       .addCase(logInThunk.fulfilled, (state, { payload }) => {
         state.user.id = payload.user.id;

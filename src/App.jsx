@@ -12,7 +12,7 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
-import Dashboard from "./components/Dashboard/Dashboard";
+// import Dashboard from "./components/Dashboard/Dashboard";
 
 const Layout = React.lazy(() => import("./components/Layout/Layout"));
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage/ErrorPage"));
@@ -44,7 +44,7 @@ function App() {
             <PrivateRoute redirectTo="/welcome" component={<Layout />} />
           }
         >
-          <Route index element={<Dashboard />} />
+          {/* <Route index element={<Dashboard />} /> */}
           <Route path="/:boardId" element={<ScreensPage />} />
         </Route>
         <Route

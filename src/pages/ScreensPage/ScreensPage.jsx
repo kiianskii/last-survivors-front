@@ -2,11 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import AddColumnBtn from "../../components/AddColumnBtn/AddColumnBtn";
 import { selectColumns } from "../../redux/boardByID/slice";
 import ColumnList from "../../components/ColumnList/ColumnList";
-import { useParams } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
 import s from "./ScreensPage.module.css";
+import { useParams } from "react-router-dom";
 
 function ScreensPage() {
   const boards = useSelector(boardsSelector);
@@ -14,7 +15,6 @@ function ScreensPage() {
   const { boardId } = useParams();
 
   const [board, setBoardId] = useState(null);
-
 
   const index = boards.findIndex((board) => board._id === boardId);
 
@@ -33,8 +33,8 @@ function ScreensPage() {
   const columns = useSelector(selectColumns);
 
   return (
-    <div className={s.wrap}> 
-        <h2 className={s.title}>{boards[index].name}</h2>
+    <div className={s.wrap}>
+      <h2 className={s.title}>{boards[index]?.name}</h2>
       <div className={s.wrapper}>
         {columns
           ? columns.map((column) => {
