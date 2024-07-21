@@ -1,7 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    padding: 8px;
+}
 .burger {
-  stroke: var(--icon-in-progress-color);
-  z-index: 1000;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+    stroke: var(--icon-in-progress-color);
+    z-index: 1000;
+    transition: stroke .5s ease-in-out;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    cursor: pointer;
+}
+.burger:hover,
+.burger:focus,
+.burger:active {
+    stroke: var(--text-color-color);
 }

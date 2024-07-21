@@ -4,7 +4,7 @@ import { Icon } from "../../../icons/Icon";
 
 const BurgerMenu = ({ toggleSidebar }) => {
   return (
-    <div onClick={toggleSidebar}>
+    <div className={css.container} onClick={toggleSidebar}>
       <Icon size={20} id="menu" className={css.burger} />
     </div>
   );

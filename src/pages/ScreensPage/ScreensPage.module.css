@@ -1,4 +1,19 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px;
+  overflow: scroll;
+}
+
 .wrapper {
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  gap: 34px;
+  margin: 10px auto 10px 24px;
+}
+.title {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  margin: 10px auto auto 24px;
+  color: var(--text-color);
 }

@@ -14,7 +14,7 @@
   padding: 24px;
   overflow: hidden;
   max-width: 1000px;
-  border-radius: 5px;
+  border-radius: 8px;
   z-index: 1001;
   h1 {
     font-size: 2rem;

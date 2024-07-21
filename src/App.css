@@ -73,6 +73,11 @@ img {
   margin: 0 auto;
 }
 
+/* Header Theme */
+.dark-header {
+  color: #fff;
+  background-color: #161616;
+}
 /* Datepicker Styles */
 .react-datepicker {
   background-color: var(--background-color) !important;
@@ -170,7 +175,6 @@ img {
     }
   }
 }
-
 :root {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -211,7 +215,7 @@ img {
   --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
   --icon-user-man: rgba(255, 255, 255, 1);
   --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus: #121212;
+  --icon-plus-one: #121212;
   --icon-btn-background-plus: rgba(22, 22, 22, 1);
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
@@ -224,7 +228,7 @@ img {
   --card-list-scroll-track-color: rgb(232, 232, 232);
   --priority-without: rgba(22, 22, 22, 0.3);
   --icon-bell: rgb(190, 219, 176);
-  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus: rgb(255, 255, 255);
   --add-another-card-btn-color: rgb(190, 219, 176);
   --add-another-card-btn-hover-color: rgb(157, 200, 136);
   --modal-bg-color: rgb(252, 252, 252);
@@ -272,7 +276,7 @@ img {
   --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
   --icon-user-man: rgba(255, 255, 255, 1);
   --icon-user-man-bg: rgba(246, 246, 247, 1);
-  --icon-plus: #121212;
+  --icon-plus-one: #121212;
   --icon-btn-background-plus: rgba(22, 22, 22, 1);
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(22, 22, 22, 0.1);
@@ -302,15 +306,13 @@ img {
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
-
-  --text-color-modal: rgba(22, 22, 22, 1);
-  color-scheme: light;
 }
 
 .dark {
   --main-color: #121212;
   --sidebar-color: #121212;
   --header-color: #161616;
+
   --background-color: #1f1f1f;
   --background-color-help: #1f1f1f;
   --text-color: #fff;
@@ -335,7 +337,7 @@ img {
   --icon-in-progress-color-hover: rgba(190, 219, 176, 1);
   --icon-user-man: rgba(21, 21, 21, 1);
   --icon-user-man-bg: rgba(31, 31, 31, 1);
-  --icon-plus: #121212;
+  --icon-plus-one: #121212;
   --icon-btn-background-plus: rgba(22, 22, 22, 1);
   --icon-btn-background-plus-hover: rgba(22, 22, 22, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
@@ -395,7 +397,7 @@ img {
   --icon-in-progress-color-hover: rgba(82, 85, 188, 1);
   --icon-user-man: rgba(255, 255, 255, 1);
   --icon-user-man-bg: rgba(236, 237, 253, 1);
-  --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus-one: rgba(255, 255, 255, 1);
   --icon-btn-background-plus: rgba(255, 255, 255, 1);
   --icon-btn-background-plus-hover: rgba(255, 255, 255, 1);
   --stroke-boards: rgba(255, 255, 255, 0.1);
