@@ -9,10 +9,8 @@ function Dashboard() {
   return (
     <div>
       <h3 className={css.wrapper}>
-        Before starting your project, it is essential{" "}
-        <button className={css.btn} onClick={openModal}>
-          to create a board
-        </button>{" "}
+        Before starting your project, it is essential
+        <span onClick={openModal}>to create a board</span>
         to visualize and track all the necessary tasks and milestones. This
         board serves as a powerful tool to organize the workflow and ensure
         effective collaboration among team members.
