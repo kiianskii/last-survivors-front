@@ -247,7 +247,7 @@ img {
 .light {
   --main-color: #fff;
   --sidebar-color: #fff;
-  --header-color: #fff;
+  --header-color: #fcfcfc;
   --background-color: #f6f6f7;
   --background-color-help: #f6f6f7;
   --text-color: #161616;
