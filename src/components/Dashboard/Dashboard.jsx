@@ -8,7 +8,7 @@ function Dashboard() {
 
   return (
     <div>
-      <h3>
+      <h3 className={css.wrapper}>
         Before starting your project, it is essential{" "}
         <button className={css.btn} onClick={openModal}>
           to create a board

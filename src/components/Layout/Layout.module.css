@@ -12,10 +12,6 @@
 .contentBlur {
   filter: blur(5px);
 }
-.layout {
-  background-color: var(--background-color);
-  height: 100vh;
-}
 
 /* .shiftContent {
   margin-left: 225px;
