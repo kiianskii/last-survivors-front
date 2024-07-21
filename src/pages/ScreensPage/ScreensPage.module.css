@@ -19,7 +19,30 @@
 }
 
 .btn {
-  width: 60px;
-  height: 40px;
-  background: #fff;
+  width: 64px;
+  height: 20px;
+  background: transparent;
+  color: var(--filter-btn-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 200ms ease;
+}
+
+.icon {
+  fill: transparent;
+  stroke: var(--filter-btn-color);
+  transition: 200ms ease;
+}
+
+.btn:hover {
+  color: var(--card-icon-hover-color);
+}
+
+.btn:hover .icon {
+  stroke: var(--card-icon-hover-color);
 }
