@@ -145,6 +145,10 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(190, 219, 176);
+  --tooltip-bg-color: rgb(246, 246, 247);
+  --card-icon-hover-color: rgb(190, 219, 176);
+  --tooltip-icon-color: rgb(22, 22, 22);
+  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
 
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
@@ -202,6 +206,11 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(190, 219, 176);
+  --tooltip-bg-color: rgb(246, 246, 247);
+  --card-icon-hover-color: rgb(190, 219, 176);
+  --tooltip-icon-color: rgb(22, 22, 22);
+  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
+
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
   --icon-plus-modal: rgba(255, 255, 255, 1);
@@ -259,6 +268,10 @@ img {
   --modal-bg-color: rgb(21, 21, 21);
   --add-card-placeholder: rgb(255, 255, 255);
   --datepicker-color: rgb(190, 219, 176);
+  --tooltip-bg-color: rgb(31, 31, 31);
+  --card-icon-hover-color: rgb(190, 219, 176);
+  --tooltip-icon-color: rgba(225, 225, 225, 0.5);
+  --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
 
   --icons-modal: rgba(255, 255, 255, 0.5);
   --icons-modal-active: rgba(255, 255, 255, 1);
@@ -316,6 +329,10 @@ img {
   --modal-bg-color: rgb(252, 252, 252);
   --add-card-placeholder: rgb(22, 22, 22);
   --datepicker-color: rgb(82, 85, 188);
+  --tooltip-bg-color: rgb(236, 237, 253);
+  --card-icon-hover-color: rgb(82, 85, 188);
+  --tooltip-icon-color: rgb(22, 22, 22);
+  --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
 
   --icons-modal: rgba(22, 22, 22, 0.5);
   --icons-modal-active: rgba(22, 22, 22, 1);
