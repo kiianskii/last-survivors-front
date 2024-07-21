@@ -1,156 +1,17 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .conteiner {
-  background: linear-gradient(
-    180deg,
-    rgba(196, 196, 196, 0) 25%,
-    #bedbb0 92.19%
-  );
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.formAuth {
-  width: 335px;
-  border-radius: 8px;
-  background: #151515;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-}
-
-.links {
-  margin-top: 24px;
-  margin-left: 24px;
-  margin-bottom: 40px;
-  display: flex;
-  gap: 14px;
-}
-.link {
-  color: rgba(255, 255, 255, 0.3);
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.36px;
-}
-.link.active {
-  color: #fff;
-}
-
-.form {
-  gap: 14px;
-  display: flex;
-  flex-direction: column;
-}
-.field {
-  display: inline-flex;
-  padding: 14px 0;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid #bedbb0;
-  opacity: 0.4;
-  background: #1f1f1f;
-  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
-  margin: 0 24px;
-  padding-left: 18px;
-  width: 287px;
-  color: #fff;
-}
-.field::placeholder {
-  color: #fff;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.28px;
-}
-.field:focus {
-  outline: none;
-  color: #fff;
-}
-.button {
-  display: flex;
-  width: 287px;
-  padding: 14px 99px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  background: #bedbb0;
-  margin: 10px 24px 24px 24px;
-  color: #161616;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.28px;
-}
-.user_error,
-.email_error,
-.password_error {
-  color: rgb(243, 10, 10);
-  font-size: 10px;
-  font-weight: 100;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 45px;
-}
-
-.inputContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.togglePassword {
-  background: none;
-  stroke: #ffffff;
-  opacity: 0.4;
-  position: absolute;
-  right: 35px;
-  top: 54%;
-  transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
-}
-.passwordField {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .conteiner {
     background: linear-gradient(
-      180deg,
-      rgba(196, 196, 196, 0) 25%,
-      #bedbb0 92.19%
+        180deg,
+        rgba(196, 196, 196, 0) 25%,
+        #bedbb0 92.19%
     );
     width: 100%;
     height: 100vh;
@@ -159,10 +20,10 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-  }
+}
 
-  .formAuth {
-    width: 424px;
+.formAuth {
+    width: 335px;
     border-radius: 8px;
     background: #151515;
     display: flex;
@@ -173,16 +34,16 @@ body {
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-  }
+}
 
-  .links {
-    margin-top: 40px;
-    margin-left: 40px;
+.links {
+    margin-top: 24px;
+    margin-left: 24px;
     margin-bottom: 40px;
     display: flex;
     gap: 14px;
-  }
-  .link {
+}
+.link {
     color: rgba(255, 255, 255, 0.3);
     font-family: Poppins;
     font-size: 18px;
@@ -190,17 +51,17 @@ body {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.36px;
-  }
-  .link.active {
+}
+.link.active {
     color: #fff;
-  }
+}
 
-  .form {
+.form {
     gap: 14px;
     display: flex;
     flex-direction: column;
-  }
-  .field {
+}
+.field {
     display: inline-flex;
     padding: 14px 0;
     align-items: center;
@@ -209,11 +70,12 @@ body {
     opacity: 0.4;
     background: #1f1f1f;
     box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
-    margin: 0 40px;
+    margin: 0 24px;
     padding-left: 18px;
-    width: 344px;
-  }
-  .field::placeholder {
+    width: 287px;
+    color: #fff;
+}
+.field::placeholder {
     color: #fff;
     font-family: Poppins;
     font-size: 14px;
@@ -221,17 +83,20 @@ body {
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.28px;
-  }
-
-  .button {
+}
+.field:focus {
+    outline: none;
+    color: #fff;
+}
+.button {
     display: flex;
-    width: 344px;
+    width: 287px;
     padding: 14px 99px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     background: #bedbb0;
-    margin: 10px 40px 40px 40px;
+    margin: 10px 24px 24px 24px;
     color: #161616;
     text-align: center;
     font-family: Poppins;
@@ -240,32 +105,161 @@ body {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.28px;
-  }
-  .togglePassword {
+}
+.user_error,
+.email_error,
+.password_error {
+    color: rgb(243, 10, 10);
+    font-size: 10px;
+    font-weight: 100;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 45px;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.togglePassword {
     background: none;
     stroke: #ffffff;
     opacity: 0.4;
     position: absolute;
-    right: 60px;
+    right: 35px;
     top: 54%;
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
-  }
+}
+.passwordField {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .conteiner {
+        background: linear-gradient(
+            180deg,
+            rgba(196, 196, 196, 0) 25%,
+            #bedbb0 92.19%
+        );
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .formAuth {
+        width: 424px;
+        border-radius: 8px;
+        background: #151515;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+    }
+
+    .links {
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        gap: 14px;
+    }
+    .link {
+        color: rgba(255, 255, 255, 0.3);
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.36px;
+    }
+    .link.active {
+        color: #fff;
+    }
+
+    .form {
+        gap: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .field {
+        display: inline-flex;
+        padding: 14px 0;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid #bedbb0;
+        opacity: 0.4;
+        background: #1f1f1f;
+        box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+        margin: 0 40px;
+        padding-left: 18px;
+        width: 344px;
+    }
+    .field::placeholder {
+        color: #fff;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+
+    .button {
+        display: flex;
+        width: 344px;
+        padding: 14px 99px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: #bedbb0;
+        margin: 10px 40px 40px 40px;
+        color: #161616;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+    .togglePassword {
+        background: none;
+        stroke: #ffffff;
+        opacity: 0.4;
+        position: absolute;
+        right: 60px;
+        top: 54%;
+        transform: translateY(-50%);
+        border: none;
+        cursor: pointer;
+    }
 }
 @media screen and (min-width: 1280px) {
-  .conteiner {
-    background: linear-gradient(
-      180deg,
-      rgba(196, 196, 196, 0) 25%,
-      #bedbb0 92.19%
-    );
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
+    .conteiner {
+        background: linear-gradient(
+            180deg,
+            rgba(196, 196, 196, 0) 25%,
+            #bedbb0 92.19%
+        );
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }

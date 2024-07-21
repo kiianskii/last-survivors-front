@@ -5,12 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import Validation from "./Validation";
 import s from "./AuthForm.module.css";
 
-function AuthForm({
-  type = "register",
-  onSubmit,
-  initialValues,
-  title = "Submit",
-}) {
+function AuthForm({ type = "register", onSubmit, initialValues }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
