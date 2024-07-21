@@ -13,7 +13,11 @@ const SelectDate = ({ startDate, setStartDate }) => {
         onChange={(date) => setStartDate(date)}
         dateFormat="eeee MMMM, d"
         className={css.calendar}
-        icon={<Icon size={18} id="arrow-down" className={css.icon} />}
+        icon={
+          <div className={css.icon}>
+            <Icon size={18} id="arrow-down" />
+          </div>
+        }
         minDate={today}
       />
     </label>

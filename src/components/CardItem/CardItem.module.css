@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid var(--stroke-boards);
+  border-top: 1px solid var(--card-wrapper-border-color);
 }
 
 .inner_wrapper {
@@ -112,7 +112,7 @@
 }
 
 .icon_list_item:hover .icon {
-  stroke: rgb(190, 219, 176);
+  stroke: var(--card-icon-hover-color);
 }
 
 .without {
