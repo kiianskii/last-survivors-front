@@ -11,14 +11,19 @@
     background-color: var(--header-color);
     color: var(--text-color);
 }
-.burger {
-    stroke: currentColor;
-}
 
 .profile {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: currentColor;
+    transition: color 0.5s ease-in-out;
+}
+
+.profile:hover,
+.profile:focus,
+.profile:active {
+    color: var(--text-color-color);
 }
 
 .text {

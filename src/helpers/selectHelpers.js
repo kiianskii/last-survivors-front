@@ -103,6 +103,7 @@ export function styleSelect(theme) {
             return {
                 ...provided,
                 margin: "0px",
+                color: themeColors[theme].color1,
             };
         },
 
