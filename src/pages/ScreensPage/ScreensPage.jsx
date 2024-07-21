@@ -8,6 +8,10 @@ import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
 import s from "./ScreensPage.module.css";
 import { useParams } from "react-router-dom";
+import { useToggle } from "../../hooks/useToggle";
+import Modal from "../../components/Modal/Modal";
+import FilterForm from "../../components/FilterForm/FilterForm";
+import { Icon } from "../../icons/Icon";
 
 function ScreensPage() {
   const boards = useSelector(boardsSelector);
@@ -15,6 +19,7 @@ function ScreensPage() {
   const { boardId } = useParams();
 
   const [board, setBoardId] = useState(null);
+  const { openModal, closeModal, isOpen } = useToggle();
 
   const index = boards.findIndex((board) => board._id === boardId);
 
@@ -32,11 +37,6 @@ function ScreensPage() {
 
   const columns = useSelector(selectColumns);
 
-  // const filter = {
-  //   board_id: "66983076e09faa82544602e9",
-  //   credentials: { priority: "High" },
-  // };
-
   return (
     <div className={s.wrap}>
       <h2 className={s.title}>{boards[index]?.name}</h2>
@@ -47,22 +47,15 @@ function ScreensPage() {
             })
           : ""}
         <AddColumnBtn />
-        {/* <button
-          className={s.btn}
-          onClick={() => {
-            dispatch(filterColumnThunk(filter));
-          }}
-        >
-          Send Filter
+        <button className={s.btn} onClick={openModal}>
+          <Icon size={16} id={"filter"} className={s.icon} />
+          Filter
         </button>
-        <button
-          className={s.btn}
-          onClick={() => {
-            dispatch(fetchColumnsThunk(boardId));
-          }}
-        >
-          Reset Filter
-        </button> */}
+        {isOpen && (
+          <Modal title="Filter" closeModal={closeModal}>
+            <FilterForm closeModal={closeModal} />
+          </Modal>
+        )}
       </div>
     </div>
   );
