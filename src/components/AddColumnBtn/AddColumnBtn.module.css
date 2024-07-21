@@ -2,7 +2,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--text-color);
+  color: var(--stroke-icons-hover);
 }
 
 .button {
@@ -22,11 +22,11 @@
   align-items: center;
   height: 28px;
   width: 28px;
-  background-color: var(--icon-plus);
+  background-color: var(--icon-plus-one);
   border-radius: 6px;
   cursor: pointer;
 }
 
 .icon {
-  stroke: var(--icon-fill-logo-bg);
+  stroke: var(--icon-plus);
 }
