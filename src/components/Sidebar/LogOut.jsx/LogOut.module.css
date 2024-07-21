@@ -17,7 +17,7 @@
   }
 }
 .logout_icon:hover {
-  stroke: var(--icon-logout-hover-color);
+  stroke: var(--icon-logout-color-hover);
 }
 
 .logout_text {

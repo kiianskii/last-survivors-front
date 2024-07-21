@@ -4,6 +4,8 @@
   row-gap: 8px;
   overflow-y: auto;
   margin: 14px 0;
+  overflow-y: scroll;
+  margin-bottom: 14px;
   max-height: 478px;
 }
 
