@@ -26,15 +26,13 @@ function CustomSelect({
                 DropdownIndicator: () => {},
             }}
             onChange={(selected) => {
-                if (currentTheme !== selected.value) {
-                    console.log(selected);
+                if (currentTheme !== selected.value)
                     dispatch(
                         dispatchFunction({
                             id: userId,
                             credentials: { theme: selected.value },
                         })
                     );
-                }
             }}
         />
     );
