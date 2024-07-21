@@ -21,7 +21,7 @@
 }
 
 .logout_text {
-  color: var(--text-color);
+  color: var(--text-color-sidebar);
   font-size: 14px;
   font-weight: 500;
 }
