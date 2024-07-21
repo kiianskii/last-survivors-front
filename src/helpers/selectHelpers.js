@@ -72,7 +72,7 @@ export function styleSelect(theme) {
             return {
                 ...provided,
                 right: 5,
-                color: "transparent", //themeColors[theme].color1,
+                color: "transparent",
                 fontFamily: "Poppins",
                 fontSize: "14px",
                 fontWeight: "500",
