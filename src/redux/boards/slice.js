@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createBoard, deleteBoard, editBoard, fetchBoards } from "./operations";
+import { logOutThunk } from "../auth/operations";
 
 const initialState = {
   boards: [],
@@ -46,6 +47,9 @@ const boardsSlice = createSlice({
       })
       .addCase(editBoard.rejected, (state, { payload }) => {
         state.error = payload;
+      })
+      .addCase(logOutThunk.fulfilled, (state) => {
+        state.boards = [];
       });
   },
 });
