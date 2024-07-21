@@ -52,11 +52,11 @@ input[type="radio"] {
   width: 287px;
   height: 49px;
   border-radius: 8px;
+  color: var(--icon-plus-modal-background);
   background-color: var(--btn-create);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;

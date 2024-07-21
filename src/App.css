@@ -73,6 +73,20 @@ img {
   margin: 0 auto;
 }
 
+/* Header Theme */
+.dark-header {
+  color: #fff;
+  background-color: #161616;
+}
+.light-header {
+  color: #161616;
+  background-color: #fcfcfc;
+}
+.violet-header {
+  color: #161616;
+  background-color: #fcfcfc;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -80,24 +94,24 @@ img {
   .class {
     width: 400px !important;
   }
-}
-@media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+    .container {
+      max-width: 1440px;
+    }
   }
-}
-:root {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  /* color: white; */
+  :root {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    /* color: white; */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
 
   --main-color: #fff;
   --sidebar-color: #fff;
@@ -150,14 +164,16 @@ img {
   --tooltip-icon-color: rgb(22, 22, 22);
   --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
 
-  --icons-modal: rgba(22, 22, 22, 0.5);
-  --icons-modal-active: rgba(22, 22, 22, 1);
-  --icon-plus-modal: rgba(255, 255, 255, 1);
-  --icon-plus-modal-background: rgba(22, 22, 22, 1);
-  --modal-bg: #fcfcfc;
-  --text-color-modal: rgba(22, 22, 22, 1);
-  color-scheme: light;
-}
+
+    --icons-modal: rgba(22, 22, 22, 0.5);
+    --icons-modal-active: rgba(22, 22, 22, 1);
+    --icon-plus-modal: rgba(255, 255, 255, 1);
+    --icon-plus-modal-background: rgba(22, 22, 22, 1);
+    --modal-bg: #fcfcfc;
+    --text-color-modal: rgba(22, 22, 22, 1);
+    color-scheme: light;
+  }
+
 
 .light {
   --main-color: #fff;
@@ -217,9 +233,9 @@ img {
   --icon-plus-modal-background: rgba(22, 22, 22, 1);
   --modal-bg: #fcfcfc;
   --text-color-modal: rgba(22, 22, 22, 1);
+    color-scheme: light;
+  }
 
-  color-scheme: light;
-}
 
 .dark {
   --main-color: #121212;
@@ -272,15 +288,14 @@ img {
   --card-icon-hover-color: rgb(190, 219, 176);
   --tooltip-icon-color: rgba(225, 225, 225, 0.5);
   --card-wrapper-border-color: rgba(255, 255, 255, 0.1);
-
-  --icons-modal: rgba(255, 255, 255, 0.5);
-  --icons-modal-active: rgba(255, 255, 255, 1);
-  --icon-plus-modal: rgba(255, 255, 255, 1);
-  --icon-plus-modal-background: rgba(22, 22, 22, 1);
-  --modal-bg: #151515;
-  --text-color-modal: rgba(255, 255, 255, 1);
-  color-scheme: dark;
-}
+    --icons-modal: rgba(255, 255, 255, 0.5);
+    --icons-modal-active: rgba(255, 255, 255, 1);
+    --icon-plus-modal: rgba(255, 255, 255, 1);
+    --icon-plus-modal-background: rgba(22, 22, 22, 1);
+    --modal-bg: #151515;
+    --text-color-modal: rgba(255, 255, 255, 1);
+    color-scheme: dark;
+  }
 
 .violet {
   --main-color: #5255bc;
@@ -333,12 +348,12 @@ img {
   --card-icon-hover-color: rgb(82, 85, 188);
   --tooltip-icon-color: rgb(22, 22, 22);
   --card-wrapper-border-color: rgba(22, 22, 22, 0.1);
-
-  --icons-modal: rgba(22, 22, 22, 0.5);
-  --icons-modal-active: rgba(22, 22, 22, 1);
-  --icon-plus-modal: rgba(22, 22, 22, 1);
-  --icon-plus-modal-background: rgba(255, 255, 255, 1);
-  --modal-bg: #fcfcfc;
-  --text-color-modal: rgba(22, 22, 22, 1);
-  color-scheme: violet;
+    --icons-modal: rgba(22, 22, 22, 0.5);
+    --icons-modal-active: rgba(22, 22, 22, 1);
+    --icon-plus-modal: rgba(22, 22, 22, 1);
+    --icon-plus-modal-background: rgba(255, 255, 255, 1);
+    --modal-bg: #fcfcfc;
+    --text-color-modal: rgba(22, 22, 22, 1);
+    color-scheme: violet;
+  }
 }
