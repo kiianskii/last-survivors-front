@@ -17,3 +17,9 @@
   margin: 10px auto auto 24px;
   color: var(--text-color);
 }
+
+.btn {
+  width: 60px;
+  height: 40px;
+  background: #fff;
+}
