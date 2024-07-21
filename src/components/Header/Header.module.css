@@ -7,6 +7,9 @@
     justify-content: flex-end;
     align-items: center;
     gap: 14px;
+
+    background-color: var(--header-color);
+    color: var(--text-color);
 }
 .burger {
     stroke: currentColor;
