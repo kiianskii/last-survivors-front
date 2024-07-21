@@ -29,25 +29,37 @@ export const animatedComponents = makeAnimated();
 
 export function styleSelect(theme) {
     return {
-        option: (provided) => {
+        option: (provided, state) => {
             return {
                 ...provided,
                 border: "none",
                 textAlign: "left",
 
-                color: themeColors[theme].color1,
+                color: state.isSelected
+                    ? themeColors[theme].background1
+                    : themeColors[theme].color1,
                 fontFamily: "Poppins",
                 fontSize: "14px",
                 fontWeight: "500",
                 letterSpacing: "-0.28px",
 
-                backgroundColor: themeColors[theme].background2,
+                backgroundColor: state.isSelected
+                    ? themeColors[theme].color2
+                    : themeColors[theme].background2,
                 transition:
                     "color .5s ease-in-out, background-color .5s ease-in-out",
                 cursor: "pointer",
                 "&:hover, &:focus": {
-                    color: themeColors[theme].color2,
-                    backgroundColor: themeColors[theme].hoverColor,
+                    color: state.isSelected
+                        ? themeColors[theme].background1
+                        : themeColors[theme].color2,
+                    backgroundColor: state.isSelected
+                        ? themeColors[theme].color2
+                        : themeColors[theme].hoverColor,
+                },
+                "&:disabled": {
+                    color: themeColors[theme].background1,
+                    backgroundColor: themeColors[theme].color2,
                 },
             };
         },
