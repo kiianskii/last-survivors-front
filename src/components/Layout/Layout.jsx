@@ -11,12 +11,17 @@ import { selectTheme } from "../../redux/auth/authSlice";
 import { themeThunk } from "../../redux/auth/operations";
 import { selectIsLoading } from "../../redux/loader/loaderSlice";
 import Loader from "../Loader/Loader";
+import { boardsSelector } from "../../redux/boards/slice";
+import NoBoards from "../NoBoards/NoBoards";
 
 function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const dispatch = useDispatch();
   const theme = useSelector(selectTheme);
   const isLoading = useSelector(selectIsLoading);
+
+  const boards = useSelector(boardsSelector);
+
   useEffect(() => {
     if (!theme) {
       dispatch(themeThunk("light"));
@@ -39,6 +44,7 @@ function Layout() {
       <Sidebar isOpen={isSidebarOpen} />
       <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
       {isLoading && <Loader />}
+      {!boards.length && <NoBoards />}
       <Outlet />
     </div>
   );
