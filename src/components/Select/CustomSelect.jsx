@@ -4,35 +4,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectId } from "../../redux/auth/authSlice";
 
 function CustomSelect({
-  name,
-  values,
-  placeholder,
-  currentTheme,
-  dispatchFunction = () => {},
+    name,
+    values,
+    currentTheme,
+    dispatchFunction = () => {},
 }) {
-  const userId = useSelector(selectId);
-  const dispatch = useDispatch();
-  return (
-    <Select
-      name={name}
-      id={name}
-      placeholder={placeholder}
-      closeMenuOnSelect={true}
-      options={getSelectOptions(values)}
-      styles={styleSelect(currentTheme)}
-      components={{
-        DropdownIndicator: () => {},
-      }}
-      onChange={(selected) => {
-        dispatch(
-          dispatchFunction({
-            id: userId,
-            credentials: { theme: selected.value },
-          })
-        );
-      }}
-    />
-  );
+    const userId = useSelector(selectId);
+    const dispatch = useDispatch();
+    return (
+        <Select
+            name={name}
+            id={name}
+            defaultValue={getSelectOptions(values).find(
+                (elem) => elem.value === currentTheme
+            )}
+            closeMenuOnSelect={true}
+            options={getSelectOptions(values)}
+            styles={styleSelect(currentTheme)}
+            isSearchable={false}
+            components={{
+                DropdownIndicator: () => {},
+            }}
+            onChange={(selected) => {
+                if (currentTheme !== selected.value)
+                    dispatch(
+                        dispatchFunction({
+                            id: userId,
+                            credentials: { theme: selected.value },
+                        })
+                    );
+            }}
+        />
+    );
 }
 
 export default CustomSelect;
