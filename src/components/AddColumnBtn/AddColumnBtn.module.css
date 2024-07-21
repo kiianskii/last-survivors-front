@@ -22,11 +22,11 @@
   align-items: center;
   height: 28px;
   width: 28px;
-  background-color: var(--icon-plus-one);
+  background-color: var(--icon-plus-theme);
   border-radius: 6px;
   cursor: pointer;
 }
 
 .icon {
-  stroke: var(--icon-plus);
+  stroke: var(--icon-user-man);
 }

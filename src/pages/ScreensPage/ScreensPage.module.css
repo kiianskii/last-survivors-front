@@ -1,19 +1,37 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  margin-left: 260px;
-  overflow: scroll;
+  overflow-x: auto;
+
+  @media screen and (min-width: 1440px){
+    margin-left: 260px;
+  }
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
   gap: 34px;
-  margin: 10px auto 10px 24px;
+  margin: 39px auto 24px 20px;
+
+  @media screen and (min-width: 768px) {
+    margin: 26px auto 26px 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 10px auto 10px 24px;
+  }
 }
 .title {
   font-size: 18px;
   letter-spacing: -0.02em;
-  margin: 10px auto auto 24px;
+  margin: 14px auto auto 20px;
   color: var(--text-color);
+
+  @media screen and (min-width: 768px) {
+    margin: 26px auto auto 32px;
+  }
+
+   @media screen and (min-width: 1440px) {
+    margin: 10px auto auto 24px;
+   }
 }

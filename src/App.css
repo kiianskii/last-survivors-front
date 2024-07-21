@@ -294,6 +294,7 @@ img {
   --priority-without: rgba(22, 22, 22, 0.3);
   --icon-bell: rgb(190, 219, 176);
   --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus-theme: rgb(22, 22, 22);
   --add-another-card-btn-color: rgb(190, 219, 176);
   --add-another-card-btn-hover-color: rgb(157, 200, 136);
   --modal-bg-color: rgb(252, 252, 252);
@@ -318,7 +319,6 @@ img {
   --main-color: #121212;
   --sidebar-color: #121212;
   --header-color: #161616;
-
   --background-color: #1f1f1f;
   --background-color-help: #1f1f1f;
   --text-color: #fff;
@@ -357,6 +357,7 @@ img {
   --priority-without: rgba(255, 255, 255, 0.3);
   --icon-bell: rgb(190, 219, 176);
   --icon-plus: rgba(255, 255, 255, 1);
+  --icon-plus-theme:rgb(255, 255, 255);
   --add-another-card-btn-color: rgb(190, 219, 176);
   --add-another-card-btn-hover-color: rgb(157, 200, 136);
   --modal-bg-color: rgb(21, 21, 21);
@@ -385,13 +386,13 @@ img {
   --background-color: #ecedfd;
   --background-color-help: rgba(236, 237, 253, 0.4);
   --text-color: #161616;
-  --text-color-secondary: rgba(22, 22, 22, 0.5);
+  --text-color-secondary: rgba(157, 120, 120, 0.5);
   --text-color-color: #5255bc;
   --btn-plus-color: rgba(184, 188, 253, 1);
   --btn-plus-color-hover: rgba(151, 156, 234, 1);
   --btn-create: #5255bc;
   --btn-create-hover: #7b7ede;
-  --background-color-btn-plus: #fff;
+  --background-color-btn-plus: rgb(255, 255, 255);
   --text-color-themes-filter: rgba(22, 22, 22, 0.8);
   --color-borders-input: #5255bc;
   --color-borders-input-active: rgba(82, 85, 188, 1);
@@ -420,6 +421,7 @@ img {
   --priority-without: rgba(22, 22, 22, 0.3);
   --icon-bell: rgb(82, 85, 188);
   --icon-plus: rgba(22, 22, 22, 1);
+  --icon-plus-theme: rgb(82, 85, 188);
   --add-another-card-btn-color: rgb(123, 126, 222);
   --add-another-card-btn-hover-color: rgb(82, 85, 188);
   --modal-bg-color: rgb(252, 252, 252);
