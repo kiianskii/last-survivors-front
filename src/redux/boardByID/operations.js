@@ -53,3 +53,18 @@ export const editColumnThunk = createAsyncThunk(
     }
   }
 );
+
+export const filterColumnThunk = createAsyncThunk(
+  "columns/filter-column",
+  async ({ board_id, credentials }, thunkApi) => {
+    try {
+      const { data } = await projectApi.post(
+        `/api/columns/${board_id}`,
+        credentials
+      );
+      return data;
+    } catch (error) {
+      thunkApi.rejectWithValue(error.message);
+    }
+  }
+);

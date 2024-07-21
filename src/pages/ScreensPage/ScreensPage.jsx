@@ -32,6 +32,11 @@ function ScreensPage() {
 
   const columns = useSelector(selectColumns);
 
+  // const filter = {
+  //   board_id: "66983076e09faa82544602e9",
+  //   credentials: { priority: "High" },
+  // };
+
   return (
     <div className={s.wrap}>
       <h2 className={s.title}>{boards[index]?.name}</h2>
@@ -42,6 +47,22 @@ function ScreensPage() {
             })
           : ""}
         <AddColumnBtn />
+        {/* <button
+          className={s.btn}
+          onClick={() => {
+            dispatch(filterColumnThunk(filter));
+          }}
+        >
+          Send Filter
+        </button>
+        <button
+          className={s.btn}
+          onClick={() => {
+            dispatch(fetchColumnsThunk(boardId));
+          }}
+        >
+          Reset Filter
+        </button> */}
       </div>
     </div>
   );
