@@ -28,6 +28,8 @@
   letter-spacing: -2%;
   text-align: left;
   margin-bottom: 14px;
+  height: 32px;
+  overflow-y: auto;
 }
 
 .card_wrapper {
