@@ -94,7 +94,7 @@ const columnsSlice = createSlice({
               index,
               1
             );
-            console.log(selectedCard);
+
             const newColumnIndex = state.columns.findIndex(
               (column) => column._id === payload.column_id
             );

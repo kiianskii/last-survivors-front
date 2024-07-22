@@ -1,16 +1,13 @@
 .help_wrapper {
   border-radius: 8px;
   background-color: var(--background-color-help);
-  margin: 0 0 24px;
+  margin-bottom: 24px;
   padding: 14px;
+  margin-top: auto;
 
   @media screen and (min-width: 768px) {
     width: 212px;
     padding: 20px;
-  }
-
-  @media screen and (min-width: 1260px) {
-    margin-top: 60px;
   }
 }
 
@@ -97,7 +94,7 @@
     opacity: 1;
   }
   &::placeholder {
-    color: var(--text-color-sidebar);
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -122,20 +119,13 @@
   resize: none;
   outline: none;
 
-  /* ::placeholder {
-    color: var(--text-color-sidebar);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  } */
   &:hover {
     border-color: var(--btn-create-hover);
     border: 1.5px solid rgb(157, 200, 136);
     transition: 200ms ease-out;
     opacity: 1;
   }
-    ::placeholder {
+     &::placeholder {
       color: var(--text-color-sidebar);
       font-size: 14px;
       font-weight: 400;
@@ -152,7 +142,7 @@
   height: 49px;
   border-radius: 8px;
   background: var(--btn-create);
-  color: var(--text-color);
+  color: var(--text-color-sidebar);
 
   font-size: 14px;
   font-weight: 500;
@@ -172,10 +162,4 @@
   font-size: 10px;
   margin-top: 5px;
   padding-left: 14px;
-}
-
-.help_form {
-  @media screen and (min-width: 768px) {
-    width: 400px;
-  }
 }

@@ -33,7 +33,7 @@ const HelpForm = () => {
   const handleSubmit = (values, { resetForm }) => {
     const { email, message } = values;
     const credentials = { email, message };
-    console.log(credentials);
+
     dispatch(needHelpThunk(credentials));
     resetForm();
     closeModal();

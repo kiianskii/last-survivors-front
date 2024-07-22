@@ -1,6 +1,3 @@
-// import BoardList from "./BoardList/BoardList";
-
-// import BoardForm from "./BoardForm/BoardForm";
 import CreateBoard from "./CreateBoard/CreateBoard";
 import HelpForm from "./HelpForm/HelpForm";
 import LogOut from "./LogOut.jsx/LogOut";

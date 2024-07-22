@@ -7,8 +7,6 @@ import { changeColumnThunk } from "../../redux/cards/operations";
 const Tooltip = ({ children, card, showTooltip, handleBackdropClick }) => {
   const columns = useSelector(selectColumns);
   const filteredColumns = columns.filter((column) => {
-    // console.log(column._id);
-    // console.log(card.column_id);
     return column._id !== card.column_id;
   });
   const dispatch = useDispatch();
