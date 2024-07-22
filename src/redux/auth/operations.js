@@ -7,7 +7,6 @@ export const registerThunk = createAsyncThunk(
   async (credentials, thunkApi) => {
     try {
       const { data } = await projectApi.post("/api/auth/register", credentials);
-      // setToken(data.token);
 
       return data;
     } catch (error) {

@@ -17,7 +17,6 @@ const BoardItem = ({ board }) => {
   const isActive = boardId === board._id;
   const boards = useSelector(boardsSelector);
   const onDelete = () => {
-    console.log(boards);
     dispatch(deleteBoard({ _id: board._id }));
     if (boardId === board._id) {
       boards.length > 1 ? navigate(`/${boards[0]._id}`) : navigate("/");
