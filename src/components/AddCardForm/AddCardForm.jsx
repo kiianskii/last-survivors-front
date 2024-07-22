@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
@@ -11,6 +11,8 @@ import CustomRadioBtn from "../CustomRadioBtn/CustomRadioBtn";
 const AddCardForm = ({ closeModal, column }) => {
   // const date = new Date();
   const [startDate, setStartDate] = useState(new Date());
+  // const [checked, setChecked] = useState(false);
+  // const [priority, setPriority] = useState("Without");
   const dispatch = useDispatch();
   const initialValues = {
     title: "",
@@ -42,7 +44,7 @@ const AddCardForm = ({ closeModal, column }) => {
       board_id: column.board_id,
       column_id: column._id,
     };
-    console.log(query);
+    console.log(query.priority);
     if (query.deadline === null) return;
     dispatch(addCardThunk(query));
     option.resetForm();
@@ -62,11 +64,17 @@ const AddCardForm = ({ closeModal, column }) => {
           placeholder="Title"
           className={css.input}
         />
+        <ErrorMessage name="title" component="div" className={css.error} />
         <Field
           as="textarea"
           name="description"
           placeholder="Description"
           className={css.textarea}
+        />
+        <ErrorMessage
+          name="description"
+          component="div"
+          className={css.error}
         />
         <label className={css.label}>
           Label color

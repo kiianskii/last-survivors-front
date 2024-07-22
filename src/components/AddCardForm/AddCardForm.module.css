@@ -131,3 +131,13 @@
 .date_box {
   display: flex;
 }
+
+.error {
+  color: rgb(243, 10, 10);
+  font-size: 10px;
+  font-weight: 100;
+  /* position: absolute; */
+  width: 100%;
+  text-align: center;
+  /* top: 45px; */
+}
