@@ -5,21 +5,22 @@
   margin: 4px 0;
   padding: 0 24px;
   height: 61px;
-  gap: 20px;
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     width: 260px;
-    gap: 30px;
   }
 }
 .board_name {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
+  line-height: normal;
   color: var(--text-color-secondary-sidebar);
-  width: 88px;
   height: 21px;
-  padding: 20px 0;
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .button_icon {
@@ -56,6 +57,8 @@
   background-color: var(--active-board);
   position: relative;
   z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .active::after {
   content: "";
