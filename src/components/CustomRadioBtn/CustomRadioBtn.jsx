@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const CustomRadioBtn = ({ ...props }) => {
   const [field] = useField(props);
-  // const [checked, setCheked] = useState(true);
+  // console.log(props.checked);
   return (
     <label className={css.label}>
       <input
@@ -12,7 +12,7 @@ const CustomRadioBtn = ({ ...props }) => {
         {...field}
         {...props}
         className={css.radio_input}
-        // checked={checked}
+        // checked={props.checked}
       />
       <span
         className={clsx(
