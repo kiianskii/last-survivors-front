@@ -35,7 +35,6 @@ const boardsSlice = createSlice({
         state.error = payload;
       })
       .addCase(editBoard.fulfilled, (state, { payload }) => {
-        console.log(payload);
         const index = state.boards.findIndex(
           (board) => board._id === payload._id
         );
