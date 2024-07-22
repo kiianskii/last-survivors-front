@@ -9,6 +9,11 @@
   width: 287px;
   padding: 14px 18px;
   align-items: center;
+  outline: none;
+  
+  &:hover{
+    opacity: 1;
+  }
 }
 .input:active {
   border: 1.5px solid var(--color-borders-input-active);
@@ -80,6 +85,9 @@ input[type="radio"] {
 
 .background {
   border-radius: 8px;
+  &:hover{
+    border: 2px solid red;
+  }
 }
 
 .label {

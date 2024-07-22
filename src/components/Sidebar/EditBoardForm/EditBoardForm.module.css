@@ -30,9 +30,7 @@
   stroke: var(--icons-modal);
   fill: none;
   cursor: pointer;
-  &:hover{
-    fill: red;
-  }
+
 }
 
 .icon.selected {
