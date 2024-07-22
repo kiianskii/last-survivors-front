@@ -3,12 +3,12 @@
   flex-direction: column;
   overflow-x: auto;
 
-  @media screen and (min-width: 1440px){
+  @media screen and (min-width: 1440px) {
     margin-left: 260px;
   }
 }
 
-.filter_wrapper{
+.filter_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,6 @@
   width: 100vw;
   right: 0;
   position: fixed;
-  
 
   @media screen and (min-width: 768px) {
     padding: 20px 32px;
@@ -29,22 +28,22 @@
   }
 }
 .wrap_container {
- margin-bottom: 55px;
+  margin-bottom: 55px;
 
- @media screen and (min-width: 768px) {
-  margin-bottom: 68px;
- }
- @media screen and (min-width: 1440px) {
-  margin-bottom: 48px;
- }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 68px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 48px;
+  }
 }
-
 
 .wrapper {
   display: flex;
   flex-direction: row;
   gap: 34px;
   margin: 10px auto 10px 24px;
+  width: 100vw;
 
   @media screen and (min-width: 768px) {
     margin: 10px auto 10px 32px;
@@ -93,7 +92,3 @@
 .btn:hover .icon {
   stroke: var(--card-icon-hover-color);
 }
-
-
-
-
