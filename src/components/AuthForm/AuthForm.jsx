@@ -1,11 +1,13 @@
-import { useState } from "react";
+
+
+import React, { useState } from "react";
 import { Icon } from "../../icons/Icon";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import { Link, useLocation } from "react-router-dom";
 import Validation from "./Validation";
 import s from "./AuthForm.module.css";
 
-function AuthForm({ type = "register", onSubmit, initialValues }) {
+function AuthForm({ type = "register", onSubmit, initialValues, error }) { 
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -20,8 +22,8 @@ function AuthForm({ type = "register", onSubmit, initialValues }) {
 
   return (
     <div className={s.conteiner}>
-      <div className={s.formAuth}>
-        <div className={s.links}>
+          <div className={s.formAuth}>
+          <div className={s.links}>
           <Link
             to="/register"
             className={`${s.link} ${
@@ -98,6 +100,7 @@ function AuthForm({ type = "register", onSubmit, initialValues }) {
                 />
               </div>
             </div>
+            {error && <div className={s.error_mess}>{error}</div>} 
             <button type="submit" className={s.button}>
               {buttonText}
             </button>
