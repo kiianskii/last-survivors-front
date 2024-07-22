@@ -34,15 +34,12 @@
   display: flex;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid var(--stroke-boards);
+  border-top: 1px solid var(--card-wrapper-border-color);
 }
 
 .inner_wrapper {
   display: flex;
   gap: 14px;
-}
-
-.card_box {
 }
 
 .box_title {
@@ -88,10 +85,6 @@
   height: 16px;
 }
 
-.icon_border {
-  border: 1px dashed var(--card-icon-color);
-}
-
 .icon_bell_wrapper {
   width: 16px;
   height: 16px;
@@ -119,7 +112,7 @@
 }
 
 .icon_list_item:hover .icon {
-  stroke: rgb(190, 219, 176);
+  stroke: var(--card-icon-hover-color);
 }
 
 .without {

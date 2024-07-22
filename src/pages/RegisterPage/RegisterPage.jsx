@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerThunk, logInThunk } from "../../redux/auth/operations";
+import { logInThunk, registerThunk } from "../../redux/auth/operations";
 import AuthForm from "../../components/AuthForm/AuthForm";
 
 export default function RegisterPage() {

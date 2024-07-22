@@ -1,3 +1,32 @@
+.add_title {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--stroke-icons-hover);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 334px;
+  height: 56px;
+  padding: 14px 78px;
+  gap: 8px;
+  background-color: var(--header-color);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  background-color: var(--icon-plus-one);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .icon {
-  stroke: #000;
+  stroke: var(--icon-plus);
 }

@@ -11,12 +11,12 @@
   justify-content: center;
   align-items: center;
   color: rgb(22, 22, 22);
-  font-family: Poppins;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: -2%;
   column-gap: 8px;
+  padding: 0;
   &:hover {
     background-color: var(--add-another-card-btn-hover-color);
     transition: 200ms ease-out;

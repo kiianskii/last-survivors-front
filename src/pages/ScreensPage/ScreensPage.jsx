@@ -1,23 +1,27 @@
 import { useDispatch, useSelector } from "react-redux";
 import AddColumnBtn from "../../components/AddColumnBtn/AddColumnBtn";
-import EditUserForm from "../../components/EditUserForm/EditUserForm";
-import Modal from "../../components/Modal/Modal";
-import { useToggle } from "../../hooks/useToggle";
 import { selectColumns } from "../../redux/boardByID/slice";
 import ColumnList from "../../components/ColumnList/ColumnList";
-import { useParams } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 import { fetchColumnsThunk } from "../../redux/boardByID/operations";
 import { boardsSelector } from "../../redux/boards/slice";
 import s from "./ScreensPage.module.css";
+import { useParams } from "react-router-dom";
+import { useToggle } from "../../hooks/useToggle";
+import Modal from "../../components/Modal/Modal";
+import FilterForm from "../../components/FilterForm/FilterForm";
+import { Icon } from "../../icons/Icon";
 
 function ScreensPage() {
-  const { openModal, closeModal, isOpen } = useToggle();
   const boards = useSelector(boardsSelector);
   const dispatch = useDispatch();
   const { boardId } = useParams();
 
   const [board, setBoardId] = useState(null);
+  const { openModal, closeModal, isOpen } = useToggle();
+
+  const index = boards.findIndex((board) => board._id === boardId);
 
   useEffect(() => {
     if (boards.length > 0) {
@@ -32,9 +36,10 @@ function ScreensPage() {
   }, [dispatch, boardId, board]);
 
   const columns = useSelector(selectColumns);
-  const classname = "class";
+
   return (
-    <div>
+    <div className={s.wrap}>
+      <h2 className={s.title}>{boards[index]?.name}</h2>
       <div className={s.wrapper}>
         {columns
           ? columns.map((column) => {
@@ -42,16 +47,18 @@ function ScreensPage() {
             })
           : ""}
         <AddColumnBtn />
+        <button className={s.btn} onClick={openModal}>
+          <Icon size={16} id={"filter"} className={s.icon} />
+          Filter
+        </button>
+        {isOpen && (
+          <Modal title="Filter" closeModal={closeModal}>
+            <FilterForm closeModal={closeModal} />
+          </Modal>
+        )}
       </div>
-      <button onClick={openModal}>Update user</button>
-      {isOpen && (
-        <Modal title="Edit profile" closeModal={closeModal} classname={classname}>
-          <EditUserForm closeModal={closeModal} />
-        </Modal>
-      )}
     </div>
   );
 }
 
 export default ScreensPage;
-

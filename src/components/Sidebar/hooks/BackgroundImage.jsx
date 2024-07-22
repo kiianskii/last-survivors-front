@@ -8,7 +8,7 @@ const BackgroundImage = ({ url, size, className }) => {
         height: size,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        repeat: "no-repeat",
+        backgroundRepeat: 'no-repeat',
       }}
     ></div>
   );

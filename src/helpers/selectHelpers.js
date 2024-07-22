@@ -16,37 +16,41 @@ export function getSelectOptions(options) {
     return newOptions;
 }
 
-export function range({
-    to,
-    from,
-    step,
-    length = Math.ceil((to - from + 1) / step),
-}) {
-    return Array.from({ length }, (_, i) => from + i * step);
-}
-
 export const animatedComponents = makeAnimated();
 
 export function styleSelect(theme) {
     return {
-        option: (provided) => {
+        option: (provided, state) => {
             return {
                 ...provided,
                 border: "none",
                 textAlign: "left",
 
-                color: themeColors[theme].color1,
+                color: state.isSelected
+                    ? themeColors[theme].background1
+                    : themeColors[theme].color1,
                 fontFamily: "Poppins",
                 fontSize: "14px",
                 fontWeight: "500",
                 letterSpacing: "-0.28px",
 
-                backgroundColor: themeColors[theme].background2,
+                backgroundColor: state.isSelected
+                    ? themeColors[theme].color2
+                    : themeColors[theme].background2,
                 transition:
-                    "background-color .5s ease-in-out, color .5s ease-in-out",
+                    "color .5s ease-in-out, background-color .5s ease-in-out",
                 cursor: "pointer",
                 "&:hover, &:focus": {
-                    color: themeColors[theme].color2,
+                    color: state.isSelected
+                        ? themeColors[theme].background1
+                        : themeColors[theme].color2,
+                    backgroundColor: state.isSelected
+                        ? themeColors[theme].color2
+                        : themeColors[theme].hoverColor,
+                },
+                "&:disabled": {
+                    color: themeColors[theme].background1,
+                    backgroundColor: themeColors[theme].color2,
                 },
             };
         },
@@ -55,18 +59,20 @@ export function styleSelect(theme) {
             width: "100px",
 
             color: themeColors[theme].color1,
-            border: "none",
-            backgroundColor: themeColors[theme].background2,
-            transition:
-                "background-color .5s ease-in-out, color .5s ease-in-out",
+            backgroundColor: "transparent",
+            transition: "background-color .5s ease-in-out",
             cursor: "pointer",
+            border: "none",
+            "&:hover, &:focus, &:focus-within": {
+                backgroundColor: themeColors[theme].hoverColor,
+            },
         }),
 
         singleValue: (provided) => {
             return {
                 ...provided,
                 right: 5,
-                color: themeColors[theme].color1,
+                color: "transparent",
                 fontFamily: "Poppins",
                 fontSize: "14px",
                 fontWeight: "500",
@@ -103,19 +109,7 @@ export function styleSelect(theme) {
             return {
                 ...provided,
                 margin: "0px",
-            };
-        },
-
-        placeholder: (defaultStyles) => {
-            return {
-                ...defaultStyles,
-                opacity: ".7",
-
                 color: themeColors[theme].color1,
-                fontFamily: "Poppins",
-                fontSize: "14px",
-                fontWeight: "500",
-                letterSpacing: "-0.28px",
             };
         },
     };

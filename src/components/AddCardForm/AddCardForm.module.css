@@ -12,20 +12,25 @@
   opacity: 0.4;
   padding: 14px 0 14px 18px;
   margin-bottom: 14px;
-  /* color: rgb(22, 22, 22);
+  outline: none;
+}
+.input:hover,
+.input:focus,
+.textarea:hover,
+.textarea:focus {
+  opacity: 1;
+}
+::placeholder {
+  color: var(--add-card-placeholder);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: -0.02em; */
-  &::placeholder {
-    color: var(--add-card-placeholder);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  }
-  &:focus-visible {
-    outline: 1px solid var(--datepicker-color);
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 302px;
   }
 }
 
@@ -39,15 +44,12 @@
   resize: none;
   margin-bottom: 24px;
   padding: 14px 0 14px 18px;
-  &::placeholder {
-    color: var(--add-card-placeholder);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: -0.02em;
-  }
-  &:focus-visible {
-    outline: 1px solid var(--datepicker-color);
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .textarea {
+    width: 302px;
   }
 }
 
@@ -106,6 +108,12 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .add_btn {
+    width: 302px;
+  }
+}
+
 .icon_wrapper {
   width: 28px;
   height: 28px;
@@ -118,4 +126,8 @@
 
 .icon {
   stroke: var(--icon-plus);
+}
+
+.date_box {
+  display: flex;
 }

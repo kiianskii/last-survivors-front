@@ -8,19 +8,30 @@
   height: 49px;
   border: 1px solid var(--datepicker-color);
   border-radius: 8px;
-  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.078);
   opacity: 0.4;
   padding: 14px 0 14px 18px;
   margin-bottom: 14px;
-  &::placeholder {
-    color: var(--add-card-placeholder);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  }
-  &:focus-visible {
-    outline: 1px solid var(--datepicker-color);
+  outline: none;
+}
+.input:hover,
+.input:focus,
+.textarea:hover,
+.textarea:focus {
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--add-card-placeholder);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 302px;
   }
 }
 
@@ -98,6 +109,12 @@
   &:hover {
     background-color: var(--add-another-card-btn-hover-color);
     transition: 200ms ease-out;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .add_btn {
+    width: 302px;
   }
 }
 

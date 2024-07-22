@@ -17,11 +17,11 @@
   }
 }
 .logout_icon:hover {
-  stroke: var(--icon-logout-hover-color);
+  stroke: var(--icon-logout-color-hover);
 }
 
 .logout_text {
-  color: var(--text-color);
+  color: var(--text-color-sidebar);
   font-size: 14px;
   font-weight: 500;
 }

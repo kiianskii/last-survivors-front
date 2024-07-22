@@ -7,15 +7,51 @@
     justify-content: flex-end;
     align-items: center;
     gap: 14px;
-}
-.burger {
-    stroke: currentColor;
+
+    background-color: var(--header-color);
+    color: var(--text-color);
 }
 
 .profile {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: currentColor;
+    transition: color 0.5s ease-in-out;
+}
+
+.profile:hover,
+.profile:focus,
+.profile:active {
+    color: var(--text-color-color);
+}
+
+.selectContainer {
+    position: relative;
+}
+
+.placeholder {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.28px;
+
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    opacity: 0.7;
+
+    padding: 16px;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text {

@@ -1,4 +1,48 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px;
+  overflow: scroll;
+}
+
 .wrapper {
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  gap: 34px;
+  margin: 10px auto 10px 24px;
+}
+.title {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  margin: 10px auto auto 24px;
+  color: var(--text-color);
+}
+
+.btn {
+  width: 64px;
+  height: 20px;
+  background: transparent;
+  color: var(--filter-btn-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 200ms ease;
+}
+
+.icon {
+  fill: transparent;
+  stroke: var(--filter-btn-color);
+  transition: 200ms ease;
+}
+
+.btn:hover {
+  color: var(--card-icon-hover-color);
+}
+
+.btn:hover .icon {
+  stroke: var(--card-icon-hover-color);
 }
