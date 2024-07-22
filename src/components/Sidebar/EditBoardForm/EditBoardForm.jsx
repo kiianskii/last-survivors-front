@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { editBoard } from "../../../redux/boards/operations";
@@ -9,8 +9,8 @@ import { Icon } from "../../../icons/Icon";
 import BackgroundImage from "../hooks/BackgroundImage.jsx";
 
 const EditBoardForm = ({ board, closeModal }) => {
-  const [icon_name, setIcon] = useState(icons[0].id);
-  const [background_url, setBackground] = useState(backgrounds[0].class);
+  const [icon_name, setIcon] = useState(board.icon_name);
+  const [background_url, setBackground] = useState(board.background_url);
 
   const dispatch = useDispatch();
 

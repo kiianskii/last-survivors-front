@@ -56,13 +56,14 @@ const AddBoardForm = ({ closeModal }) => {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
+        <ErrorMessage name="name" component="div" className={css.error} />
         <Field
           name="name"
           type="text"
           placeholder="Title"
           className={css.input}
         />
-        <ErrorMessage name="name" component="div" className={css.error} />
+
         <p className={css.icons_p}>Icons</p>
         {icons.map((iconOption) => (
           <label key={iconOption.id}>

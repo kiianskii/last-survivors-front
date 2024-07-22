@@ -44,7 +44,6 @@ const AddCardForm = ({ closeModal, column }) => {
       board_id: column.board_id,
       column_id: column._id,
     };
-    console.log(query.priority);
     if (query.deadline === null) return;
     dispatch(addCardThunk(query));
     option.resetForm();

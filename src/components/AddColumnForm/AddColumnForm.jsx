@@ -22,7 +22,6 @@ function AddColumnForm({ closeModal }) {
       ...data,
       board_id: boardId,
     };
-    console.log(credentials);
 
     dispatch(addColumnThunk(credentials));
     option.resetForm();
