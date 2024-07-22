@@ -20,6 +20,7 @@ const initialState = {
   token: "",
   isLoggedIn: false,
   isRefreshing: false,
+  error: null,
 };
 
 const slice = createSlice({
@@ -33,6 +34,7 @@ const slice = createSlice({
     selectIsRefreshing: (state) => state.isRefreshing,
     selectAvatar: (state) => state.user.avatarURL,
     selectTheme: (state) => state.user.theme,
+    selectError: (state) => state.error,
   },
   extraReducers: (builder) => {
     builder
@@ -41,6 +43,8 @@ const slice = createSlice({
         state.user.name = payload.username;
         state.user.email = payload.email;
         state.user.theme = payload.theme;
+        state.error = null;
+
       })
       .addCase(logInThunk.fulfilled, (state, { payload }) => {
         state.user.id = payload.user.id;
@@ -50,6 +54,7 @@ const slice = createSlice({
         state.token = payload.token;
         state.isLoggedIn = true;
         state.user.avatarURL = payload.user.avatarURL;
+        state.error = null;
       })
       .addCase(logOutThunk.fulfilled, () => {
         return initialState;
@@ -62,6 +67,10 @@ const slice = createSlice({
         state.isLoggedIn = true;
         state.isRefreshing = false;
         state.user.avatarURL = payload.avatarURL;
+        state.error = null;
+      })
+      .addCase(registerThunk.rejected, (state, { payload }) => {
+        state.error = payload;
       })
       .addCase(themeThunk.fulfilled, (state, { payload }) => {
         state.user.theme = payload;
@@ -71,6 +80,7 @@ const slice = createSlice({
       })
       .addCase(refreshThunk.rejected, (state) => {
         state.isRefreshing = false;
+        state.error = "Unable to refresh user.";
       })
       .addCase(editUserThunk.fulfilled, (state, { payload }) => {
         state.user.theme = payload.theme;
@@ -92,4 +102,5 @@ export const {
   selectId,
   selectAvatar,
   selectTheme,
+  selectError,
 } = slice.selectors;

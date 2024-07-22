@@ -7,9 +7,11 @@ export const registerThunk = createAsyncThunk(
   async (credentials, thunkApi) => {
     try {
       const { data } = await projectApi.post("/api/auth/register", credentials);
-
       return data;
     } catch (error) {
+      if (error.response && error.response.status === 409) {
+        return thunkApi.rejectWithValue("User with this email already exists.");
+      }
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -21,7 +23,6 @@ export const logInThunk = createAsyncThunk(
     try {
       const { data } = await projectApi.post("/api/auth/login", credentials);
       setToken(data.token);
-
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

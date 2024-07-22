@@ -108,7 +108,7 @@ body {
 }
 .user_error,
 .email_error,
-.password_error {
+.password_error{
     color: rgb(243, 10, 10);
     font-size: 10px;
     font-weight: 100;
@@ -117,7 +117,15 @@ body {
     text-align: center;
     top: 45px;
 }
-
+.error_mess {
+    color: rgb(243, 10, 10);
+    font-size: 10px;
+    font-weight: 100;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 75px;
+}
 .inputContainer {
     position: relative;
     display: flex;
@@ -245,6 +253,15 @@ body {
         transform: translateY(-50%);
         border: none;
         cursor: pointer;
+    }
+    .error_mess {
+        color: rgb(243, 10, 10);
+        font-size: 10px;
+        font-weight: 100;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 90px;
     }
 }
 @media screen and (min-width: 1280px) {
