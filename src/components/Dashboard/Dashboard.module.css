@@ -37,7 +37,7 @@
 
 @media screen and (min-width: 1440px) {
   .wrapper {
-    margin: 281px 347px 349px 607px !important;
+    margin: 281px 347px 417px 607px !important;
   }
 }
 
@@ -45,4 +45,6 @@
   display: flex;
   background-color: var(--color-background-dashboard);
   height: 100vh;
+  width: 100vw;
+  position: fixed;
 }
