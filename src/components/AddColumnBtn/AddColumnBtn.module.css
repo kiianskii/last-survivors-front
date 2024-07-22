@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
-  width: 334px;
+  min-width: 334px;
   height: 56px;
   padding: 14px 78px;
   gap: 8px;

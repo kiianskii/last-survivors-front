@@ -8,7 +8,10 @@
   width: 287px;
   padding: 14px 18px;
   align-items: center;
-  
+  outline: none;
+  &:hover{
+    opacity: 1;
+  }
 }
 .input:active {
   border: 1.5px solid var(--color-borders-input-active);
@@ -26,6 +29,10 @@
   padding: 5px;
   stroke: var(--icons-modal);
   fill: none;
+  cursor: pointer;
+  &:hover{
+    fill: red;
+  }
 }
 
 .icon.selected {
@@ -76,10 +83,14 @@ input[type="radio"] {
   margin-bottom: 40px;
   margin-right: 35px;
   width: 252px;
+  cursor: pointer;
 }
 
 .background {
   border-radius: 8px;
+  &:hover{
+    border: 2px solid red;
+  }
 }
 
 .label {
