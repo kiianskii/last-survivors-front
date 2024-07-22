@@ -30,7 +30,7 @@
 
 .uploadButton {
   position: absolute;
-  background: #bedbb0;
+  background: var(--btn-plus-color);
   border: none;
   border-radius: 20%;
   width: 24px;

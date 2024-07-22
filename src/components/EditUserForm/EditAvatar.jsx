@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme, selectAvatar } from "../../redux/auth/authSlice";
 import { editAvatarThunk } from "../../redux/auth/operations";
