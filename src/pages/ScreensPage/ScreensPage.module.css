@@ -1,26 +1,72 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  margin-left: 260px;
-  overflow: scroll;
+  overflow-x: auto;
+
+  @media screen and (min-width: 1440px){
+    margin-left: 260px;
+  }
 }
+
+.filter_wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px 20px;
+  background-color: #fcfcfc66;
+  backdrop-filter: blur(3px);
+  width: 100vw;
+  right: 0;
+  position: fixed;
+  
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 10px 24px 10px 284px;
+    top: 74px;
+  }
+}
+.wrap_container {
+ margin-bottom: 55px;
+
+ @media screen and (min-width: 768px) {
+  margin-bottom: 68px;
+ }
+ @media screen and (min-width: 1440px) {
+  margin-bottom: 48px;
+ }
+}
+
 
 .wrapper {
   display: flex;
   flex-direction: row;
   gap: 34px;
   margin: 10px auto 10px 24px;
+
+  @media screen and (min-width: 768px) {
+    margin: 10px auto 10px 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 10px 50px 10px 24px;
+  }
 }
 .title {
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: -0.02em;
-  margin: 10px auto auto 24px;
   color: var(--text-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .btn {
-  width: 64px;
-  height: 20px;
+  min-width: 64px;
+  min-height: 20px;
+  padding: 0;
   background: transparent;
   color: var(--filter-btn-color);
   font-size: 14px;
@@ -30,6 +76,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   transition: 200ms ease;
 }
 
@@ -46,3 +93,7 @@
 .btn:hover .icon {
   stroke: var(--card-icon-hover-color);
 }
+
+
+
+
