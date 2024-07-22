@@ -95,7 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(22, 22, 22);
+  color: var(--background-color-btn-plus);
   font-family: Poppins;
   font-size: 14px;
   font-weight: 500;

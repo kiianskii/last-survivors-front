@@ -5,11 +5,51 @@ button {
 }
 
 .background0 {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+.background1 {
   background-image: image-set(
-    url("./img/background/mobilebackMobile.webp") 1x,
-    url("./img/background/mobilebackMobile@2x.webp") 2x,
-    url("./img/background/mobilebackMobile.jpg") 1x,
-    url("./img/background/mobilebackMobile@2x.jpg") 2x
+    url("../src/img/mobile/one-mob@1x.webp") 1x,
+    url("../src/img/mobile/one-mob@2x.webp") 2x,
+    url("../src/img/mobile/one-mob@1x.png") 1x,
+    url("../src/img/mobile/one-mob@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .background1 {
+    background-image: image-set(
+      url("../src/img/tablet/one-tab@1x.webp") 1x,
+      url("../src/img/tablet/one-tab@2x.webp") 2x,
+      url("../src/img/tablet/one-tab@1x.png") 1x,
+      url("../src/img/tablet/one-tab@2x.png") 2x
+    );
+
+    position: relative;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background1 {
+    background-image: image-set(
+      url("../src/img/desktop/one-desk@1x.webp") 1x,
+      url("../src/img/desktop/one-desk@2x.webp") 2x,
+      url("../src/img/desktop/one-desk@1x.png") 1x,
+      url("../src/img/desktop/one-desk@2x.png") 2x
+    );
+  }
+}
+
+.background2 {
+  background-image: image-set(
+    url("../src/img/mobile/two-mob@1x.webp") 1x,
+    url("../src/img/mobile/two-mob@2x.webp") 2x,
+    url("../src/img/mobile/two-mob@1x.png") 1x,
+    url("../src/img/mobile/two-mob@2x.png") 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,29 +58,478 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .background0 {
+  .background2 {
     background-image: image-set(
-      url("./img/background/tabletbackTab.jpg") 1x,
-      url("./img/background/tabletbackTab@2x.jpg") 2x
+      url("../src/img/tablet/two-tab@1x.webp") 1x,
+      url("../src/img/tablet/two-tab@2x.webp") 2x,
+      url("../src/img/tablet/two-tab@1x.png") 1x,
+      url("../src/img/tablet/two-tab@2x.png") 2x
     );
 
     position: relative;
   }
 }
 
-/* @media screen and (min-width: 1440px) {
-  .background0 {
+@media screen and (min-width: 1440px) {
+  .background2 {
     background-image: image-set(
-      url("./img/background/iMac.webp") 1x,
-      url("./img/background/iMac@2x.webp") 2x,
-      url("./img/background/iMac.jpg") 1x,
-      url("./img/background/iMac@2x.jpg") 2x
+      url("../src/img/desktop/two-desk@1x.webp") 1x,
+      url("../src/img/desktop/two-desk@2x.webp") 2x,
+      url("../src/img/desktop/two-desk@1x.png") 1x,
+      url("../src/img/desktop/two-desk@2x.png") 2x
     );
   }
-} */
+}
+
+.background3 {
+  background-image: image-set(
+    url("../src/img/mobile/three-mob@1x.webp") 1x,
+    url("../src/img/mobile/three-mob@2x.webp") 2x,
+    url("../src/img/mobile/three-mob@1x.png") 1x,
+    url("../src/img/mobile/three-mob@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background3 {
+    background-image: image-set(
+      url("../src/img/tablet/three-tab@1x.webp") 1x,
+      url("../src/img/tablet/three-tab@2x.webp") 2x,
+      url("../src/img/tablet/three-tab@1x.png") 1x,
+      url("../src/img/tablet/three-tab@2x.png") 2x
+    );
+
+    position: relative;
+  }
+}
 
 @media screen and (min-width: 1440px) {
-  .background0 {
-    background-color: #000;
+  .background3 {
+    background-image: image-set(
+      url("../src/img/desktop/three-desk@1x.webp") 1x,
+      url("../src/img/desktop/three-desk@2x.webp") 2x,
+      url("../src/img/desktop/three-desk@1x.png") 1x,
+      url("../src/img/desktop/three-desk@2x.png") 2x
+    );
+  }
+}
+
+.background4 {
+  background-image: image-set(
+    url("../src/img/mobile/one-mob@1x.webp") 1x,
+    url("../src/img/mobile/four-mob@2x.webp") 2x,
+    url("../src/img/mobile/four-mob@1x.png") 1x,
+    url("../src/img/mobile/four-mob@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background4 {
+    background-image: image-set(
+      url("../src/img/tablet/four-tab@1x.webp") 1x,
+      url("../src/img/tablet/four-tab@2x.webp") 2x,
+      url("../src/img/tablet/four-tab@1x.png") 1x,
+      url("../src/img/tablet/four-tab@2x.png") 2x
+    );
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background4 {
+    background-image: image-set(
+      url("../src/img/desktop/four-desk@1x.webp") 1x,
+      url("../src/img/desktop/four-desk@2x.webp") 2x,
+      url("../src/img/desktop/four-desk@1x.png") 1x,
+      url("../src/img/desktop/four-desk@2x.png") 2x
+    );
+  }
+}
+
+.background5 {
+  background-image: image-set(
+    url("../src/img/mobile/five-mob@1x.webp") 1x,
+    url("../src/img/mobile/five-mob@2x.webp") 2x,
+    url("../src/img/mobile/five-mob@1x.png") 1x,
+    url("../src/img/mobile/five-mob@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background5 {
+    background-image: image-set(
+      url("../src/img/tablet/five-tab@1x.webp") 1x,
+      url("../src/img/tablet/five-tab@2x.webp") 2x,
+      url("../src/img/tablet/five-tab@1x.png") 1x,
+      url("../src/img/tablet/five-tab@2x.png") 2x
+    );
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background5 {
+    background-image: image-set(
+      url("../src/img/desktop/five-desk@1x.webp") 1x,
+      url("../src/img/desktop/five-desk@2x.webp") 2x,
+      url("../src/img/desktop/five-desk@1x.png") 1x,
+      url("../src/img/desktop/five-desk@2x.png") 2x
+    );
+  }
+}
+
+
+.background6 {
+  background-image: image-set(
+    url("../src/img/mobile/six-mob@1x.webp") 1x,
+      url("../src/img/mobile/six-mob@2x.webp") 2x,
+      url("../src/img/mobile/six-mob@1x.png") 1x,
+      url("../src/img/mobile/six-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background6 {
+    background-image: image-set(
+      url("../src/img/tablet/six-tab@1x.webp") 1x,
+        url("../src/img/tablet/six-tab@2x.webp") 2x,
+        url("../src/img/tablet/six-tab@1x.png") 1x,
+        url("../src/img/tablet/six-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background6 {
+    background-image: image-set(
+      url("../src/img/desktop/six-desk@1x.webp") 1x,
+        url("../src/img/desktop/six-desk@2x.webp") 2x,
+        url("../src/img/desktop/six-desk@1x.png") 1x,
+        url("../src/img/desktop/six-desk@2x.png") 2x);
+  }
+}
+
+.background7 {
+  background-image: image-set(
+    url("../src/img/mobile/seven-mob@1x.webp") 1x,
+      url("../src/img/mobile/seven-mob@2x.webp") 2x,
+      url("../src/img/mobile/seven-mob@1x.png") 1x,
+      url("../src/img/mobile/seven-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background7 {
+    background-image: image-set(
+      url("../src/img/tablet/seven-tab@1x.webp") 1x,
+        url("../src/img/tablet/seven-tab@2x.webp") 2x,
+        url("../src/img/tablet/seven-tab@1x.png") 1x,
+        url("../src/img/tablet/seven-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background7 {
+    background-image: image-set(
+      url("../src/img/desktop/seven-desk@1x.webp") 1x,
+        url("../src/img/desktop/seven-desk@2x.webp") 2x,
+        url("../src/img/desktop/seven-desk@1x.png") 1x,
+        url("../src/img/desktop/seven-desk@2x.png") 2x);
+  }
+}
+
+.background8 {
+  background-image: image-set(
+    url("../src/img/mobile/eight-mob@1x.webp") 1x,
+      url("../src/img/mobile/eight-mob@2x.webp") 2x,
+      url("../src/img/mobile/eight-mob@1x.png") 1x,
+      url("../src/img/mobile/eight-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background8 {
+    background-image: image-set(
+      url("../src/img/tablet/eight-tab@1x.webp") 1x,
+        url("../src/img/tablet/eight-tab@2x.webp") 2x,
+        url("../src/img/tablet/eight-tab@1x.png") 1x,
+        url("../src/img/tablet/eight-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background8 {
+    background-image: image-set(
+      url("../src/img/desktop/eight-desk@1x.webp") 1x,
+        url("../src/img/desktop/eight-desk@2x.webp") 2x,
+        url("../src/img/desktop/eight-desk@1x.png") 1x,
+        url("../src/img/desktop/eight-desk@2x.png") 2x);
+  }
+}
+
+.background9 {
+  background-image: image-set(
+    url("../src/img/mobile/nine-mob@1x.webp") 1x,
+      url("../src/img/mobile/nine-mob@2x.webp") 2x,
+      url("../src/img/mobile/nine-mob@1x.png") 1x,
+      url("../src/img/mobile/nine-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background9 {
+    background-image: image-set(
+      url("../src/img/tablet/nine-tab@1x.webp") 1x,
+        url("../src/img/tablet/nine-tab@2x.webp") 2x,
+        url("../src/img/tablet/nine-tab@1x.png") 1x,
+        url("../src/img/tablet/nine-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background9 {
+    background-image: image-set(
+      url("../src/img/desktop/nine-desk@1x.webp") 1x,
+        url("../src/img/desktop/nine-desk@2x.webp") 2x,
+        url("../src/img/desktop/nine-desk@1x.png") 1x,
+        url("../src/img/desktop/nine-desk@2x.png") 2x);
+  }
+}
+
+.background10 {
+  background-image: image-set(
+    url("../src/img/mobile/ten-mob@1x.webp") 1x,
+      url("../src/img/mobile/ten-mob@2x.webp") 2x,
+      url("../src/img/mobile/ten-mob@1x.png") 1x,
+      url("../src/img/mobile/ten-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background10 {
+    background-image: image-set(
+      url("../src/img/tablet/ten-tab@1x.webp") 1x,
+        url("../src/img/tablet/ten-tab@2x.webp") 2x,
+        url("../src/img/tablet/ten-tab@1x.png") 1x,
+        url("../src/img/tablet/ten-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background10 {
+    background-image: image-set(
+      url("../src/img/desktop/ten-desk@1x.webp") 1x,
+        url("../src/img/desktop/ten-desk@2x.webp") 2x,
+        url("../src/img/desktop/ten-desk@1x.png") 1x,
+        url("../src/img/desktop/ten-desk@2x.png") 2x);
+  }
+}
+
+.background11 {
+  background-image: image-set(
+    url("../src/img/mobile/eleven-mob@1x.webp") 1x,
+      url("../src/img/mobile/eleven-mob@2x.webp") 2x,
+      url("../src/img/mobile/eleven-mob@1x.png") 1x,
+      url("../src/img/mobile/eleven-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background11 {
+    background-image: image-set(
+      url("../src/img/tablet/eleven-tab@1x.webp") 1x,
+        url("../src/img/tablet/eleven-tab@2x.webp") 2x,
+        url("../src/img/tablet/eleven-tab@1x.png") 1x,
+        url("../src/img/tablet/eleven-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background11 {
+    background-image: image-set(
+      url("../src/img/desktop/eleven-desk@1x.webp") 1x,
+        url("../src/img/desktop/eleven-desk@2x.webp") 2x,
+        url("../src/img/desktop/eleven-desk@1x.png") 1x,
+        url("../src/img/desktop/eleven-desk@2x.png") 2x);
+  }
+}
+
+
+.background12 {
+  background-image: image-set(
+    url("../src/img/mobile/twelve-mob@1x.webp") 1x,
+      url("../src/img/mobile/twelve-mob@2x.webp") 2x,
+      url("../src/img/mobile/twelve-mob@1x.png") 1x,
+      url("../src/img/mobile/twelve-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background12 {
+    background-image: image-set(
+      url("../src/img/tablet/twelve-tab@1x.webp") 1x,
+        url("../src/img/tablet/twelve-tab@2x.webp") 2x,
+        url("../src/img/tablet/twelve-tab@1x.png") 1x,
+        url("../src/img/tablet/twelve-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background12 {
+    background-image: image-set(
+      url("../src/img/desktop/twelve-desk@1x.webp") 1x,
+        url("../src/img/desktop/twelve-desk@2x.webp") 2x,
+        url("../src/img/desktop/twelve-desk@1x.png") 1x,
+        url("../src/img/desktop/twelve-desk@2x.png") 2x);
+  }
+}
+
+.background13 {
+  background-image: image-set(
+    url("../src/img/mobile/thirteen-mob@1x.webp") 1x,
+      url("../src/img/mobile/thirteen-mob@2x.webp") 2x,
+      url("../src/img/mobile/thirteen-mob@1x.png") 1x,
+      url("../src/img/mobile/thirteen-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background13 {
+    background-image: image-set(
+      url("../src/img/tablet/thirteen-tab@1x.webp") 1x,
+        url("../src/img/tablet/thirteen-tab@2x.webp") 2x,
+        url("../src/img/tablet/thirteen-tab@1x.png") 1x,
+        url("../src/img/tablet/thirteen-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background13 {
+    background-image: image-set(
+      url("../src/img/desktop/thirteen-desk@1x.webp") 1x,
+        url("../src/img/desktop/thirteen-desk@2x.webp") 2x,
+        url("../src/img/desktop/thirteen-desk@1x.png") 1x,
+        url("../src/img/desktop/thirteen-desk@2x.png") 2x);
+  }
+}
+
+.background14 {
+  background-image: image-set(
+    url("../src/img/mobile/fourteen-mob@1x.webp") 1x,
+      url("../src/img/mobile/fourteen-mob@2x.webp") 2x,
+      url("../src/img/mobile/fourteen-mob@1x.png") 1x,
+      url("../src/img/mobile/fourteen-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background14 {
+    background-image: image-set(
+      url("../src/img/tablet/fourteen-tab@1x.webp") 1x,
+        url("../src/img/tablet/fourteen-tab@2x.webp") 2x,
+        url("../src/img/tablet/fourteen-tab@1x.png") 1x,
+        url("../src/img/tablet/fourteen-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background14 {
+    background-image: image-set(
+      url("../src/img/desktop/fourteen-desk@1x.webp") 1x,
+        url("../src/img/desktop/fourteen-desk@2x.webp") 2x,
+        url("../src/img/desktop/fourteen-desk@1x.png") 1x,
+        url("../src/img/desktop/fourteen-desk@2x.png") 2x);
+  }
+}
+
+.background15 {
+  background-image: image-set(
+    url("../src/img/mobile/fifteen-mob@1x.webp") 1x,
+      url("../src/img/mobile/fifteen-mob@2x.webp") 2x,
+      url("../src/img/mobile/fifteen-mob@1x.png") 1x,
+      url("../src/img/mobile/fifteen-mob@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background15 {
+    background-image: image-set(
+      url("../src/img/tablet/fifteen-tab@1x.webp") 1x,
+        url("../src/img/tablet/fifteen-tab@2x.webp") 2x,
+        url("../src/img/tablet/fifteen-tab@1x.png") 1x,
+        url("../src/img/tablet/fifteen-tab@2x.png") 2x);
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background15 {
+    background-image: image-set(
+      url("../src/img/desktop/fifteen-desk@1x.webp") 1x,
+        url("../src/img/desktop/fifteen-desk@2x.webp") 2x,
+        url("../src/img/desktop/fifteen-desk@1x.png") 1x,
+        url("../src/img/desktop/fifteen-desk@2x.png") 2x);
   }
 }

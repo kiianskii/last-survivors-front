@@ -48,7 +48,7 @@
   align-items: center;
   height: 28px;
   width: 28px;
-  background-color: var(--sidebar-color);
+  background-color: var(--background-color-btn-plus);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -60,7 +60,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--stroke-icons-hover);
+  color: var(--background-color-btn-plus);
 }
 
 .error {
