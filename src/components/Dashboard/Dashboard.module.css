@@ -24,6 +24,7 @@
 
 .span {
   color: var(--text-color-color);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "../../icons/Icon";
 import { changeColumnThunk } from "../../redux/cards/operations";
 
-const Tooltip = ({ children, card, showTooltip, handleBackdropClick }) => {
+const Tooltip = ({ children, card, showTooltip }) => {
   const columns = useSelector(selectColumns);
   const filteredColumns = columns.filter((column) => {
     return column._id !== card.column_id;
@@ -32,7 +32,7 @@ const Tooltip = ({ children, card, showTooltip, handleBackdropClick }) => {
                             column_id: column._id,
                             oldColumn_id: card.column_id,
                           },
-                        })
+                        }),
                       );
                     }}
                   >
