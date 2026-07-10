@@ -3,17 +3,35 @@ import css from "./Tooltip.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "../../icons/Icon";
 import { changeColumnThunk } from "../../redux/cards/operations";
+import { useEffect, useRef } from "react";
 
-const Tooltip = ({ children, card, showTooltip }) => {
+const Tooltip = ({ children, card, showTooltip, setShowTooltip }) => {
   const columns = useSelector(selectColumns);
   const filteredColumns = columns.filter((column) => {
     return column._id !== card.column_id;
   });
+  const tooltipRef = useRef(null);
+  useEffect(() => {
+    if (!showTooltip) return;
+
+    const handleClickOutside = (e) => {
+      if (tooltipRef.current && !tooltipRef.current.contains(e.target)) {
+        setShowTooltip(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showTooltip, setShowTooltip]);
+
   const dispatch = useDispatch();
 
   return (
     <div className={css.wrapper}>
-      <div className={css.container}>
+      <div className={css.container} ref={tooltipRef}>
         {children}
         <div className={showTooltip ? css.open : css.tooltip}>
           <ul className={css.list}>

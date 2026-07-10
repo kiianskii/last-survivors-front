@@ -1,7 +1,7 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 
   @media screen and (min-width: 1440px) {
     margin-left: 260px;
@@ -15,16 +15,13 @@
   padding: 14px 20px 20px;
   background-color: #fcfcfc66;
   backdrop-filter: blur(3px);
-  width: 100vw;
   right: 0;
-  position: fixed;
 
   @media screen and (min-width: 768px) {
     padding: 20px 32px;
   }
   @media screen and (min-width: 1440px) {
-    padding: 10px 24px 10px 284px;
-    top: 74px;
+    padding: 10px 24px 10px;
   }
 }
 .wrap_container {
@@ -58,7 +55,6 @@
   flex-direction: row;
   gap: 34px;
   margin: 10px auto 10px 24px;
-  width: 100vw;
   overflow-x: auto;
 
   padding-bottom: 24px;
@@ -67,11 +63,11 @@
   scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
 
   @media screen and (min-width: 768px) {
-    margin: 10px auto 10px 32px;
+    margin: 10px 10px 10px 32px;
   }
 
   @media screen and (min-width: 1440px) {
-    margin: 10px 50px 10px 24px;
+    margin: 10px 30px 10px 24px;
   }
 
   &::-webkit-scrollbar {

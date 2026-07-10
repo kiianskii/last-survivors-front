@@ -37,22 +37,19 @@ function ScreensPage() {
 
   const columns = useSelector(selectColumns);
 
-
-  
   return (
     <div className={s.wrap}>
       <div className={s.wrap_container}>
         <div className={s.filter_wrapper}>
-        <h2 className={s.title}>{boards[index]?.name}</h2>
-      <button className={s.btn} onClick={openModal}>
-          <Icon size={16} id={"filter"} className={s.icon} />
-          Filters
-        </button>
+          <h2 className={s.title}>{boards[index]?.name}</h2>
+          <button className={s.btn} onClick={openModal}>
+            <Icon size={16} id={"filter"} className={s.icon} />
+            Filters
+          </button>
+        </div>
       </div>
-      </div>
-      
+
       <div className={s.wrapper}>
-        
         {columns
           ? columns.map((column) => {
               return <ColumnList key={column._id} column={column} />;
